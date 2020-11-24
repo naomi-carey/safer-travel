@@ -1,35 +1,29 @@
-import React, { useEffect, useState } from 'react'; //Effect, State Hook
-import GoogleMapReact from 'google-map-react'; //google map package
-import axios from "axios"; //package to use api/ less lines/target .json
+import React, { useEffect, useState } from 'react'; 
+import GoogleMapReact from 'google-map-react';
+import axios from "axios";
 import './Map.css';
 
 const apiUrl = 'https://corona.lmao.ninja/v2/countries?sort=countries'
 const API_KEY = `${process.env.REACT_APP_API_GOOGLEMAP_KEY}`;
 
 function Map() {
-// Declare a new state variable result, method setLatest to []
-// useState hook lets you add state to components
-  const [result, setLatest] = useState([]);
+    const [result, setLatest] = useState([]);
 
- // useEffect callback function, fancy way then {componentDidMount & componentDidUpdate}
-  useEffect(() => {
+    useEffect(() => {
     axios.get(apiUrl)
     .then(response => {
       setLatest(response.data);
     })
     .catch(err => {
-      console.log(err); // if the API fails
+      console.log(err);
     });
   });
 
-  // Variable, result target/map (data)
   const countriesLocations = result.map((data) => {
     return(
       <div
-        // Declare a lat,lng variable
         lat={data.countryInfo.lat}
         lng={data.countryInfo.long}
-        // style the map
         style={{
           height: '100px',
           width: '100px',
@@ -49,26 +43,20 @@ function Map() {
   });
   
   return (
-    <div className="Map">
       <div style={{ height: '100vh', width: '100%', margin: '20px' }}>
         <GoogleMapReact
           bootstrapURLKeys={{ key: API_KEY }}
-          defaultCenter={{lat: 47, lng: 20}}
+          defaultCenter={{lat: 46, lng: 2}}
           options={{styles: light}}
           defaultZoom={5.5}>
           
           {countriesLocations} 
-          {/* // Value slapped inside the map */}
+    
         </GoogleMapReact>
       </div>
-
-    
-     
-    </div>
   );
 }
 
-// mapStyle
 const light = [
   {
       "featureType": "administrative",
