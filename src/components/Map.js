@@ -1,31 +1,35 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react'; //Effect, State Hook
 import GoogleMapReact from 'google-map-react'; //google map package
-// import mapStyle from './mapStyle'; //styled google map 
-import axios from "axios"; //package to use api from Rest
+import axios from "axios"; //package to use api/ less lines/target .json
 import './Map.css';
 
 const apiUrl = 'https://corona.lmao.ninja/v2/countries?sort=countries'
 const API_KEY = `${process.env.REACT_APP_API_GOOGLEMAP_KEY}`;
 
 function Map() {
-
+// Declare a new state variable result, method setLatest to []
+// useState hook lets you add state to components
   const [result, setLatest] = useState([]);
 
+ // useEffect callback function, fancy way then {componentDidMount & componentDidUpdate}
   useEffect(() => {
     axios.get(apiUrl)
     .then(response => {
       setLatest(response.data);
     })
     .catch(err => {
-      console.log(err);
+      console.log(err); // if the API fails
     });
   });
 
-  const countriesLocations = result.map((data, i) => {
+  // Variable, result target/map (data)
+  const countriesLocations = result.map((data) => {
     return(
       <div
+        // Declare a lat,lng variable
         lat={data.countryInfo.lat}
         lng={data.countryInfo.long}
+        // style the map
         style={{
           height: '100px',
           width: '100px',
@@ -38,7 +42,7 @@ function Map() {
 
         <img height='20px' src={data.countryInfo.flag} />
         <br />
-        <sup>Cases:{data.todayCases}</sup>
+        <sup>Cases:{data.cases}</sup>
         
       </div>
     );
@@ -53,7 +57,8 @@ function Map() {
           options={{styles: light}}
           defaultZoom={5.5}>
           
-          {countriesLocations}
+          {countriesLocations} 
+          {/* // Value slapped inside the map */}
         </GoogleMapReact>
       </div>
 
@@ -63,7 +68,7 @@ function Map() {
   );
 }
 
-
+// mapStyle
 const light = [
   {
       "featureType": "administrative",
