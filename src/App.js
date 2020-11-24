@@ -1,10 +1,13 @@
 import React from "react";
+import Statistics from "./components/Statistics";
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <h3>Safer Travel App</h3>
+    <div>
+     
+      
+      < Statistics />
     </div>
   );
 }
