@@ -6,7 +6,7 @@ class Statistics extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: "",
+      showCountry: false,
       // countries: [
       //   { id: "1", country: "United States"},
       //   { id: "2", country: "Germany"},
@@ -21,6 +21,9 @@ class Statistics extends React.Component {
       // ]
     };
 
+    // showCountryStats = () => {
+    //   console.log("hi");
+    // };
     // this.handleChange = this.handleChange.bind(this);
     // this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -45,7 +48,7 @@ class Statistics extends React.Component {
           <form>
             <button id="btn">Total</button>
 
-            <select defaultValue="">
+            <select onClick={this.state.showCountryStats} defaultValue="">
               {countries.worldwide.map((item) => (
                 <option key={item.id} value={item.country}>
                   {item.flag} {item.country}
