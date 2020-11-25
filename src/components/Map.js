@@ -33,29 +33,31 @@ function Map() {
           color: 'black',
           margin: '2px'
         }}>
-
+        
         <img height='20px' src={data.countryInfo.flag} />
         <br />
-        <sup>Cases:{data.cases}</sup>
+        <sup>Cases:{data.todayCases}</sup>
         
       </div>
-    );
-  });
+        );
+        });
   
-  return (
-      <div style={{ height: '100vh', width: '100%', margin: '20px' }}>
+    return (
+      <div style={{ height: '100vh', width: '100vw', margin: '20px' }}>
         <GoogleMapReact
           bootstrapURLKeys={{ key: API_KEY }}
           defaultCenter={{lat: 46, lng: 2}}
-          options={{styles: light}}
+          options={{styles: light,
+            disableDefaultUI: true,}}
           defaultZoom={5.5}>
+          
           
           {countriesLocations} 
     
         </GoogleMapReact>
       </div>
-  );
-}
+        );
+    }
 
 const light = [
   {
