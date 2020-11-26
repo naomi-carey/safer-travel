@@ -1,0 +1,32 @@
+.main-footer{
+    color: grey;
+    background-color: rgb(245, 247, 248);
+    padding-top: 3em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.container {
+    border: 1px solid black;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.col {
+    float: left;
+    width: 33%;
+    color: rgb(0, 97, 162);
+}
+
+.list-unstyled {
+    color: grey;
+}
+
+
+.col ul li {
+    list-style: none;
+}
+
+.row {
+    margin-top: 20px;
+}

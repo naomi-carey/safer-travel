@@ -5,7 +5,9 @@ import Map from "./components/Map"
 import Statistics from "./components/Statistics";
 
 import './App.css';
-import Navbar from './components/Navbar/Navbar'
+import Navbar from './components/Navbar/Navbar';
+
+import Footer from './components/Footer/Footer_one';
 
 function App() {
   return (
@@ -19,7 +21,10 @@ function App() {
 
      <Map/>
 
-     < Statistics />
+     <Statistics />
+
+     <Footer />
+
 
 
     </div>
