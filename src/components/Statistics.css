@@ -35,6 +35,12 @@ h3 {
   margin: 20px;
 }
 
+.statistics-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 30px;
+}
 form {
   display: flex;
   align-content: center;
@@ -45,10 +51,9 @@ form {
 #header {
   /* background-color: indigo; */
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   /* align-items: left; */
-  /* text-align: center; */
-  width: 100%;
+  text-align: center;
   margin-bottom: 4%;
 }
 
@@ -68,7 +73,7 @@ tr {
   border: solid rgb(202, 196, 196) 2px;
 }
 
-#btn {
+/* #btn {
   background-color: #5387a1;
   color: white;
   padding: 10px;
@@ -77,17 +82,18 @@ tr {
   border-radius: 12px;
   cursor: pointer;
   width: 10%;
-}
+} */
 
 select {
   border-radius: 12px;
   font-size: 16px;
   /* background-color: #eff2f3; */
   background-color: #bec4c6;
-  width: 22%;
   padding: 10px;
   margin: 3px;
+  width: 70%;
   opacity: 75%;
+  margin-top: 10px;
 }
 .btn:hover {
   border-radius: 50px;

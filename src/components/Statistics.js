@@ -7,30 +7,43 @@ class Statistics extends React.Component {
     super(props);
     this.state = {
       showCountry: false,
-      // countries: [
-      //   { id: "1", country: "United States"},
-      //   { id: "2", country: "Germany"},
-      //   { id: "3", country: "Ireland"},
-      //   { id: "4", country: "England"},
-      //   { id: "5", country: "Italy"},
-      //   { id: "6", country: "France"},
-      //   { id: "7", country: "Spain"},
-      //   { id: "8", country: "Spain"},
-      //   { id: "9", country: "Ecuador"},
-
-      // ]
+      countryCovidStats: {},
+      selectedCountry: {},
+      todayCases: "",
+      activeCases: "",
+      deathCases: "",
     };
+  }
+  showCountryStats = (event) => {
+    let selectedCountry = event.target.value;
+    let countryInfo = this.state.countryCovidStats.filter(
+      (country) => country.country === selectedCountry
+    );
+    this.setState({
+      todayCases: countryInfo[0].cases,
+      activeCases: countryInfo[0].active,
+      deathCases: countryInfo[0].deaths,
+    });
 
-    // showCountryStats = () => {
-    //   console.log("hi");
-    // };
-    // this.handleChange = this.handleChange.bind(this);
-    // this.handleSubmit = this.handleSubmit.bind(this);
+    // this.setState({ selectedCountry: countryInfo[0] });
+    // this.setState({ numberCases: countryInfo });
+    // this.setState({ recoveredCases: countryInfo[0] });
+    // this.setState({ deathCases: countryInfo[0] });
+  };
+
+  componentDidMount() {
+    fetch("https://corona.lmao.ninja/v2/countries?sort=countries")
+      .then((response) => response.json())
+      .then((data) =>
+        this.setState({
+          countryCovidStats: data,
+        })
+      );
   }
 
-  handleChange(event) {
-    this.setState({ value: event.target.value });
-  }
+  // handleChange(event) {
+  //   this.setState({ value: event.target.value });
+  // }
 
   // handleSubmit(event) {
   //   alert("Your destination country is: " + this.state.value);
@@ -42,29 +55,44 @@ class Statistics extends React.Component {
     return (
       <div className="container">
         <h1>Popular Destinations</h1>
+        <div className="statistics-info">
+          <div class="dropdown">
+            {/* <form onSubmit={this.handleSubmit}> */}
 
-        <div class="dropdown">
-          {/* <form onSubmit={this.handleSubmit}> */}
-          <form>
-            <button id="btn">Total</button>
+            <form>
+              <select onChange={this.showCountryStats} defaultValue="">
+                {countries.worldwide.map((item) => (
+                  <option key={item.id} value={item.country}>
+                    {item.flag} {item.country}
+                  </option>
+                ))}
+              </select>
 
-            <select onClick={this.state.showCountryStats} defaultValue="">
-              {countries.worldwide.map((item) => (
-                <option key={item.id} value={item.country}>
-                  {item.flag} {item.country}
-                </option>
-              ))}
-            </select>
-
-            {/* <input id="btn" type="submit" value="Submit" /> */}
-          </form>
-        </div>
-        <div id="header">
-          <h2>Cases &nbsp; Recovered &nbsp; Deaths &nbsp; </h2>
-          <h3>
-            55.1M &nbsp; &nbsp; &nbsp; 35.4M &nbsp; &nbsp; &nbsp; 1.33M &nbsp;
-            &nbsp; &nbsp;{" "}
-          </h3>
+              {/* <input id="btn" type="submit" value="Submit" /> */}
+            </form>
+          </div>
+          <div id="header">
+            <div className="active-deaths">
+              <h2>Today </h2>
+              {this.state.todayCases && (
+                <div>
+                  <h3>{this.state.todayCases}</h3>
+                </div>
+              )}
+            </div>
+            <div className="numbers">
+              <h2>Active </h2>
+              {this.state.activeCases && (
+                <div>
+                  <h3>{this.state.activeCases}</h3>
+                </div>
+              )}
+            </div>
+            <div className="numbers">
+              <h2>Safe </h2>
+              <h3>GREEN</h3>
+            </div>
+          </div>
         </div>
         <div class="table-props">
           <table>

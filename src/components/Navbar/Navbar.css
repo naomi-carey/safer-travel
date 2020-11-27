@@ -1,0 +1,85 @@
+.Navbar{
+    height: 100px;
+    text-align: left;
+    border-bottom: 1.5px solid rgb(194, 194, 194);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.NavbarLinks {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: space-around;
+    list-style: none;
+    text-decoration: none;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.hamburger-toggle {
+    color: rgb(44, 189, 237);
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger-toggle:hover {
+    cursor: pointer;
+    color: rgb(42, 109, 255);
+    
+}
+
+.link a {
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 25px;
+    text-decoration: none;
+    color: rgb(0, 97, 162)
+}
+
+.link a:hover {
+    font-size: 20px;
+    margin-right: 25px;
+    text-decoration: none;
+    color: rgb(0, 0, 119);
+    font-weight: bold;
+    
+}
+
+.NavbarLogo {
+    height: 80px;
+    width: 100px;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 850px){
+    body {
+        overflow-x:hidden ;
+    }
+
+    .hamburger-toggle {
+        display: block;
+        margin: 50px;
+    }
+    .NavbarLinks {
+        position: absolute;
+        right: 0px;
+        display: flex;
+        flex-direction: column;
+        height:92vh ;
+        align-items: center;
+        width: 100%;
+        top:8vh;
+        background-color: rgb(190, 234, 248);
+        transition: transform 0.5s ease-in;
+        transform: translateX(100%);
+        font-size: 32px;
+    }
+
+    .active {
+        transform: translateX(0%);
+    }
+}
