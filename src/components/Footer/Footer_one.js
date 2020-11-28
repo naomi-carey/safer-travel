@@ -1,50 +1,30 @@
 import React from "react";
 import './Footer_one.css';
+import Socialmedia from './Socialmedia';
+
 
 const Footer = () => {
   return (
-      <div className='main-footer'>
-        <div className='container'>
-            <div className='rows'>
-                <div className='col'>
-                    <h4>CONTACT US</h4>
-                    <ul className='list-unstyled'>
-                        <li>Safer Travel App</li>
-                        <li>342-420 7895</li>
-                        <li>Madrid, Spain</li>
-                        <li>123 Calle Sud</li>
-                    </ul>
-                </div>
-                
-                <div className='col'>
-                    <h4>SUPPORT US</h4>
-                    <ul className='list-unstyled'>
-                        <button>MAKE A GIFT</button>
+        <div>
 
-                    </ul>
-                </div>
-                <div className='col'>
-                    <h4>FOLLOW US</h4>
-                    <ul className='list-unstyled'>
-                        <li className='socialmedia'><img src="https://www.flaticon.com/authors/freepik" alt="facebook"></img></li>
-                        <li className='socialmedia'><img src="https://www.flaticon.com/authors/freepik" alt="instagram"></img></li>
-                        <li className='socialmedia'><img src="https://www.flaticon.com/authors/freepik" alt="twitter"></img></li>
-                    </ul>
-                </div>
-
+            <div className='top.container'>
+            <img className='logo' src='https://safetravel.id/img/ico.jpg' alt='logo'></img>
+            <h1 className='h1.footer'>Safer Travel App</h1>
             </div>
-            <hr />
-            <div className='row'>
-                <p className='col-sm'>
-                    &copy;{new Date().getFullYear()} Safer Travel App | All rights reserved | Terms of Service | Privacy
-                </p>
 
-
+            <div className='social.container'>
+            <Socialmedia />
             </div>
-        </div> 
-      </div>
-  
-  );
+
+            <div className='bottom.container'>
+            <p class='copyright'>©{new Date().getFullYear()} Safer Travel App Inc.</p>
+            <p class='privacy'>Privacy Policy</p>
+            <p class='termsofservice'>Terms of Service</p>      
+            </div>
+
+        </div>
+
+  )
 }
 
 export default Footer;

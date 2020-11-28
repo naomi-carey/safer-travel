@@ -1,32 +1,84 @@
-.main-footer{
-    color: grey;
-    background-color: rgb(245, 247, 248);
-    padding-top: 3em;
+.top-container {
+    background-color: #e4f9f5;
     position: relative;
-    bottom: 0;
-    width: 100%;
+    padding-top: 100px;
 }
-.container {
-    border: 1px solid black;
+
+.logo {
+    height: 3rem;
+    width: 3rem;
+    margin-left: 1rem;
+}
+
+.h1.footer {
+    font-size: 12px;
+}
+
+
+
+
+
+/* SOCIAL MEDIA STUFF 
+https://www.youtube.com/watch?v=58RRl1JTJvY
+*/
+
+.social-container {
+    background: #eee;
+    padding: 25px 50px;
+    text-align: center;
+}
+.social-title {
+    color: darkgray;
+    font-family: sans-serif;
+}
+
+a.social {
+    margin: 0 2rem;
+    transition: transform 250ms;
+    display: inline-block;
+}
+
+a.social:hover {
+    color: white;
+    transform: translateY(-2px);
+}
+
+a.coffee.social {
+    color: darkgray;
+}
+
+a.twitter.social{
+    color: black;
+}
+
+
+
+
+
+/* BOTTOM CONTAINER */
+
+.bottom-container {
+    border:1px solid black;
+    
+}
+
+.copyright {
+    color: darkgray;
+    font-size: 0.75rem;
     padding: 20px;
-    margin-bottom: 40px;
+    display: inline;
 }
 
-.col {
-    float: left;
-    width: 33%;
-    color: rgb(0, 97, 162);
+.privacy {
+    color: darkgray;
+    font-size: 0.75rem;
+    padding: 20px;
+    display: inline;
 }
 
-.list-unstyled {
-    color: grey;
-}
-
-
-.col ul li {
-    list-style: none;
-}
-
-.row {
-    margin-top: 20px;
+.termsofservice {
+    color: darkgray;
+    font-size: 0.75rem;
+    padding: 20px;
+    display: inline;
 }
