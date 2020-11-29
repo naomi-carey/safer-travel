@@ -8,8 +8,8 @@ import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 
 export default function Socialmedia () {
   return (
-    <div className='social-container'>
-      <h3 className='social-title'>STAY CONNECTED</h3>
+    <div className='social.container'>
+      <h3 className='h3.footer'>STAY CONNECTED</h3>
       <a
       href='https://19grams.coffee/en/coffee/berlinkaffee/organic-fairtrade'
       className='coffee.social'

@@ -1,31 +1,64 @@
-.top-container {
-    background-color: #e4f9f5;
-    position: relative;
-    padding-top: 100px;
+/*https://colorhunt.co/palette/220258*/
+
+.body-footer {
+    background-color: #f3eac2;  
+}
+
+.h3.footer {
+    font-family: sans-serif;
+}
+
+
+
+.logo.title {
+    border: 1px solid black;
 }
 
 .logo {
-    height: 3rem;
-    width: 3rem;
-    margin-left: 1rem;
+    height: 40px;
+    margin-right: 750px;
+    margin-top: 20px;
+
 }
 
-.h1.footer {
-    font-size: 12px;
+.h1-footer {
+    font-size: 16px;
+    color: #f5b461;
+    margin-right: 500px;
+}    
+
+
+
+/*3 COLUMNS 
+.flex-grid {
+    display: flex;
 }
 
+.social.container {
+    flex: 1;
+}
+
+.explore.container {
+    flex: 1;
+}
+
+.blog.container{
+    flex: 1;
+}
+*/
 
 
-
-
-/* SOCIAL MEDIA STUFF 
+/* TITLE and SOCIAL MEDIA STUFF 
 https://www.youtube.com/watch?v=58RRl1JTJvY
 */
 
+
 .social-container {
-    background: #eee;
-    padding: 25px 50px;
-    text-align: center;
+    float: left;
+    width: 33%;
+    height: 200px;
+    border: 1px solid black;
+
 }
 .social-title {
     color: darkgray;
@@ -52,13 +85,60 @@ a.twitter.social{
 }
 
 
+/* EXPLORE CONTAINER */
 
+.explore-container  {
+    float: left;
+    width: 33%;
+    height: 200px;
+    border: 1px solid black;
+}
+
+.btn {
+    background: #11cdd4;
+    background-image: -webkit-linear-gradient(top, #11cdd4, #11999e);
+    background-image: -moz-linear-gradient(top, #11cdd4, #11999e);
+    background-image: -ms-linear-gradient(top, #11cdd4, #11999e);
+    background-image: -o-linear-gradient(top, #11cdd4, #11999e);
+    background-image: linear-gradient(to bottom, #11cdd4, #11999e);
+    -webkit-border-radius: 60;
+    -moz-border-radius: 60;
+    border-radius: 60px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 10px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    background: #30e3cb;
+    background-image: -webkit-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: -moz-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: -ms-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: -o-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
+    text-decoration: none;
+  }
+
+/* BLOG CONTAINER */
+ .blog-container {
+    float: left;
+    width: 33%;
+    height: 200px;
+    border:1px solid black;
+ }
+
+ .blog.preview {
+     font-size: 1px;
+ }
 
 
 /* BOTTOM CONTAINER */
 
 .bottom-container {
     border:1px solid black;
+    margin: 30px;
     
 }
 
