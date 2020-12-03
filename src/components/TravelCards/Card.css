@@ -1,0 +1,78 @@
+.card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.card {
+    border: 1px solid grey;
+    width: 270px;
+    border-radius: 15px;
+    border-bottom-left-radius: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 70px;
+    
+}
+
+.card-button {
+    width: 120px;
+    height: 40px;
+    border-radius: 15px;
+    background-color: rgb(101, 137, 228);
+    color: white;
+    margin: 10px;
+    border: 0;
+}
+
+.card-image {
+    width: 270px;
+    height: 220px;
+    border-radius: 15px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.status-yellow {
+    color: orange;
+}
+
+.status-green {
+    color: green;
+}
+
+.status-red {
+    color: red;
+}
+
+.btn {
+    width: 270px;
+    height: 35px;
+    background-color: rgb(247, 247, 247);
+    border: 1px solid rgb(186, 186, 186);
+    margin: 20px;
+    border-radius: 15px;
+    font-size: 15px;
+    margin-top: 40px;
+    margin-right: 65px;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-left: 30px;
+    
+}
+
+@media screen and (max-width: 850px){
+    .btn-container{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+}
