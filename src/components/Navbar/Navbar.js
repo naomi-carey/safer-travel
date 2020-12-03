@@ -9,10 +9,10 @@ const Navbar = () => {
     }
 
     const renderClasses = () => {
-        let classes = 'NavbarLinks';
+        let classes = 'NavbarLinks active';
 
-        if (navLinkOpen) {
-            classes += 'active'
+        if (!navLinkOpen) {
+            classes = 'NavbarLinks'
         } 
         return classes;
     };
