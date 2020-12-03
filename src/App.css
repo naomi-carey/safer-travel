@@ -41,3 +41,11 @@ body {
     transform: rotate(360deg);
   }
 }
+.airport-search {
+  display: flex;
+}
+
+.calendar {
+  border-radius: 30px;
+  width: 300px;
+}

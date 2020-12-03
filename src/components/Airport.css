@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(245, 247, 248);
+  color: black;
+}
+
+/* .App {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+} */
+
+#searchBar {
+  height: 60px;
+  width: 300px;
+  font-size: 22px;
+  padding: 30px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  border-radius: 20px;
+  color: grey;
+  display: flex;
+  flex-direction: column;
+}
+
+.suggestions {
+  display: flex;
+  height: 60px;
+  width: 300px;
+}
+
+h1,
+h2 {
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.header {
+  display: flex;
+  margin: 40px;
+}
+
+.dropdown-flights {
+  border: grey 1px solid;
+  border-radius: 10px;
+  margin-top: 3px;
+  background-color: #a9b1be;
+  box-shadow: 1px 1px 1px black;
+  color: white;
+  width: 300px;
+}
+
+option {
+  font-size: 22px;
+}
+
+option:hover {
+  background-color: #696c85;
+  opacity: 84%;
+}
