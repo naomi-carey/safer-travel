@@ -20,14 +20,14 @@
 }
 
 .hamburger-toggle {
-    color: rgb(44, 189, 237);
+    color: rgb(44, 89, 237);
     display: none;
     cursor: pointer;
 }
 
 .hamburger-toggle:hover {
     cursor: pointer;
-    color: rgb(42, 109, 255);
+    color: rgb(149, 183, 255);
     
 }
 
@@ -43,7 +43,7 @@
     font-size: 20px;
     margin-right: 25px;
     text-decoration: none;
-    color: rgb(0, 0, 119);
+    color: rgb(230, 206, 113);
     font-weight: bold;
     
 }
@@ -57,7 +57,7 @@
 
 @media screen and (max-width: 850px){
     body {
-        overflow-x:hidden ;
+        overflow-x: hidden;
     }
 
     .hamburger-toggle {
@@ -69,15 +69,21 @@
         right: 0px;
         display: flex;
         flex-direction: column;
-        height:92vh ;
+        height:55vh ;
         align-items: center;
         width: 100%;
-        top:8vh;
-        background-color: rgb(190, 234, 248);
-        transition: transform 0.5s ease-in;
+        top:7vh;
+        background-color: rgb(33, 107, 186);
+        transition: transform 0.3s ease-in;
         transform: translateX(100%);
-        font-size: 32px;
+        font-size: 30px;
+        color: white;
     }
+
+    .link a {
+        color: white;
+    }
+
 
     .active {
         transform: translateX(0%);
