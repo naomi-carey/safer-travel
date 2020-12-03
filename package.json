@@ -8,13 +8,6 @@
     "@testing-library/react": "^11.2.1",
     "@testing-library/user-event": "^12.2.2",
     "axios": "^0.21.0",
-<<<<<<< HEAD
-=======
-
-
-    "axios": "^0.21.0",
-
->>>>>>> vietBranch
     "font-awesome": "^4.7.0",
     "google-map-react": "^2.1.9",
     "react": "^17.0.1",
