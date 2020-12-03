@@ -40,8 +40,9 @@ function Map() {
       <GoogleMapReact
         bootstrapURLKeys={{ key: API_KEY }}
         defaultCenter={{ lat: 46, lng: 2 }}
-        options={{ styles: MapStyle.light }}
-        defaultZoom={5}
+        options={{ styles: MapStyle.light,
+                  scrollwheel:false }}
+        defaultZoom={0}
       >
         {result.map((data, index) => {
           return (

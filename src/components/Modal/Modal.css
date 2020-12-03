@@ -1,61 +1,63 @@
 .modal-wrapper {
+    border: solid 1px black;
+    display: inline-flex;
+    flex-direction: column;
     background: #fff;
-    width: 80%;
-    max-width: 800px;
-    margin: 4rem auto;
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    position: absolute; 
+    z-index: 1; 
 }
 
 .modal-header {
-    background: #2c2c2c;
-    color: blue;
-    padding: 1rem;
+    color: black;
+    padding-top: 40px;
+    padding-left: 20px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+}
+
+.modal-header h1 {
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+}
+
+.modal-header img {
+    height: 30px;
 }
 
 .modal-header span {
-    font-size: 1.5rem;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
     cursor: pointer;
 }
 
 .modal-content {
-    padding: 1.5rem 1rem;
+    padding: 10px;
 }
 
 .modal-body {   
-    margin-bottom: 1rem;
-}
-
-.modal-body h4 {
-    font-size: 1.8rem;
-    color: blue;
+    margin-bottom: 10px;
 }
 
 .modal-body p {
-    font-size: 1rem;
+    font-size: small;
+    font-family: Arial, Helvetica, sans-serif;
     background: #eee;
-    color: #333;
-    padding: 1rem;
-    margin: 1rem 0 2rem 0;
+    color: black;
+    padding: 5px;
 }
 
 .modal-footer button {
-    display: block;
+    border-radius: 5px;
     font-size: 1rem;
-    margin-left: auto;
     padding: 0.5rem 1.8rem;
-    background: blue;
-    color: #fff;
+    background: #eee;
+    color: black;
     border: none;
-    outline: none;
     cursor: pointer;
-}
-
-.back-drop {
-    background: rgba(63, 61, 61, 0.692);
-    height: 100%;
-    position: fixed;
-    transition: all 1.3s;
-    width: 100%;
 }
