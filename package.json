@@ -8,7 +8,14 @@
     "@testing-library/react": "^11.2.1",
     "@testing-library/user-event": "^12.2.2",
     "axios": "^0.21.0",
+<<<<<<< HEAD
     "components": "^0.1.0",
+=======
+
+
+    "axios": "^0.21.0",
+
+>>>>>>> e4e8083b433cf6926aedd3135c090d35527af6ee
     "font-awesome": "^4.7.0",
     "google-map-react": "^2.1.9",
     "react": "^17.0.1",
