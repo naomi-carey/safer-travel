@@ -43,9 +43,24 @@ body {
 }
 .airport-search {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 30px;
+  justify-content: left;
 }
 
 .calendar {
-  border-radius: 30px;
-  width: 300px;
+  /* border: black solid 1px; */
+  height: 60px;
+
+  /* background-color: lightcoral; */
 }
+
+/* @media screen and (max-width: 850px) {
+  .airport-search {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+} */
