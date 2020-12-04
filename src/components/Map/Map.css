@@ -1,0 +1,13 @@
+.marker {
+    border: none;
+    outline:none;
+    background: none;
+    width: 15px;
+    color: #05752a;
+    
+}
+
+.marker:hover {
+    transform: scale(1.5);
+    transition-duration: 0.5s;
+}
