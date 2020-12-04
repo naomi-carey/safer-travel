@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Map from "./components/Map";
+import Map from "./components/Map/Map";
 import Statistics from "./components/Statistics";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
