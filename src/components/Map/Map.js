@@ -21,7 +21,7 @@ function Map() {
       .then(response => {
 
         let responseWithToggleShow = response.data.map(data => ({ ...data, showModal: false }))
-        console.log(responseWithToggleShow)
+        // console.log(responseWithToggleShow)
         setLatest(responseWithToggleShow);
       })
       .catch(err => {
