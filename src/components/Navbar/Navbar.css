@@ -75,7 +75,7 @@
         top:7vh;
         background-color: rgb(33, 107, 186);
         transition: transform 0.3s ease-in;
-        transform: translateX(100%);
+        transform: translateY(-120%);
         font-size: 30px;
         color: white;
     }
