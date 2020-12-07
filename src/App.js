@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Map from "./components/Map/Map";
 import Statistics from "./components/Statistics";
+import Banner from './components/Banner/Banner';
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import AttractionsCard from "./components/TravelCards/AttractionsCard";
@@ -77,6 +78,7 @@ export default class App extends Component {
       <div className="App">
         <div>
         <Navbar />
+        <Banner />
         </div>
 
         <div className="airport-search">
