@@ -1,7 +1,13 @@
-.card {
+.flightcard-container {
+    margin: 100px;
+    margin-bottom: 300px;
+    font-weight: bold;
+}
+
+.flight-card {
     display: flex;
     flex-direction: row;
-    width: 459px;
+    width: 500px;
     border-radius: 10px;
     border: 1px black solid;
     height: 200px;
@@ -10,33 +16,39 @@
     border-right: 0;
     box-shadow: 0px 6px 6px #cac9c9;  
     background-color: white; 
+
 }
-hr {
-    height: 1px;
+.flight-hr {
+    height: 2.5px;
     background-color: black;
+    
     width: 80px;
 }
 
 .ryanair {
     width: 70px;
     height: 50px;
-    
     margin: 0;
+  
 }
 
-.card1 {
+.flight-card {
     display: flex;
     flex-direction: row;
+    
 
 }
 
 .airline {
-    margin-left: 20px;
-    margin-top: 30px;
+    margin-left: 40px;
+   
 }
 
 .departure {
     margin: 20px;
+    color: black;
+    margin-left: 20px;
+    
   
 }
 
@@ -47,14 +59,14 @@ hr {
 }
 
 .duration {
-    margin: 25px;
+    margin: 15px;
     
 }
 
 .price-card {
     border: 1px black solid;
     border-radius: 10px;
-    width: 200px;
+    width: 250px;
     height: 200px;
     border-left:2px rgb(143, 142, 142) dashed;
     align-items: center;
@@ -65,9 +77,8 @@ hr {
 }
 
 .price {
-    width: 100px;
+    width: 120px;
     margin: 20px;
-    margin-top: 60px;
     text-align: center;
     align-items: center;
   
@@ -87,27 +98,36 @@ hr {
 }
 
 .price-figure {
-    margin: 20px;
+ margin-top: 40px;
+ margin-left: 20px;
+    color: black;
 
 }
 
+.flight-info {
+    color: black;
+    margin: 0;
+    padding: 10px;
+    
+}
+
+
 @media screen and (max-width: 850px){
-    .card {
+    .flightcard-container {
+
+        text-align: center;
+    }
+
+    .flight-card {
         box-shadow: 0px 0px 0px 0px;
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        border: 1px solid black;
+        border: 1px solid rgb(138, 136, 136);
         border-bottom: 0;
         align-items: center;
-        height: 150px;
-
-    }
-
-    .card1  {
-        padding-top: 30px;
-        align-items: center;
-        height: 80px;
+        height: 200px;
+        width: 550px;
        
     }
 
@@ -116,7 +136,47 @@ hr {
     }
 
     .price-card {
-        margin-top: 40px;
+        width: 550px;
+        border: 1px solid black;
+        height: 70px;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+        box-shadow: 0;
+        border-top: 2px dashed grey;
+    }
+    .price-btn {
+        margin-left: 20px;
+        margin-right: 30px;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .flightcard-container {
+        text-align: center;
+        margin: 0;
+        margin-left: 40px;
+        margin-bottom: 150px;
+    }
+
+    .flight-card {
+        box-shadow: 0px 0px 0px 0px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        border-bottom: 0;
+        align-items: center;
+        height: 150px;
+        width: 400px;
+
+    }
+
+    .price {
+        margin-top: 20px;
+    }
+
+    .price-card {
         width: 500px;
         border: 1px solid black;
         height: 70px;
@@ -131,4 +191,27 @@ hr {
         margin-left: 20px;
         margin-right: 30px;
     }
+    
+.airline {
+    margin-left: 10px;
+   
+}
+
+.departure {
+    margin: 10px;
+    color: black;
+   
+    
+  
+}
+
+.arrival {
+    margin: 10px;
+    
+}
+
+.duration {
+    margin: 5px;
+    
+}
 }
