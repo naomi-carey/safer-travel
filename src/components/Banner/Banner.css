@@ -1,0 +1,22 @@
+.Banner {
+    width: 100%;
+}
+
+.Banner2 {
+    width: 100%;
+}
+
+@media screen and (max-width: 751px){
+    .Banner2 {
+        display: none;
+ 
+     }
+}
+
+@media screen and (min-width: 750px){
+
+    .Banner {
+       display: none;
+
+    }
+}
