@@ -1,24 +1,23 @@
 import React, { Component } from "react";
 import "./Airport.css";
-import { airports } from "./Airports.js";
+// import { airports } from "./Airports.js";
 
 export default class Airport extends Component {
   state = {
     filteredSuggestions: [],
     showSuggestions: false,
     userInput: "",
-    cities: airports.map((city) => city.city),
+    // cities: airports.map((city) => city.city),
   };
 
   inputChange = (event) => {
-    const suggestions = this.state.cities;
+    const suggestions = this.props.cities;
     const userInput = event.currentTarget.value;
 
     const filteredCities = suggestions.filter(
       (suggestion) =>
-        suggestion.toLowerCase().indexOf(userInput.toLowerCase()) > -1
+        suggestion.city.toLowerCase().indexOf(userInput.toLowerCase()) > -1
     );
-
     this.setState({
       filteredSuggestions: filteredCities,
       showSuggestions: true,
@@ -26,11 +25,8 @@ export default class Airport extends Component {
     });
   };
 
-  suggestionClicked = (event) => {
-    this.props.selectCity(
-      event.currentTarget.innerText,
-      this.props.originDestination
-    );
+  suggestionClicked = (event, suggestion) => {
+    this.props.selectCity(suggestion, this.props.originDestination);
     this.setState({
       filteredSuggestions: [],
       showSuggestions: false,
@@ -42,6 +38,7 @@ export default class Airport extends Component {
     return (
       <div className="main">
         <input
+          autoComplete="off"
           id="searchBar"
           type="text"
           onChange={this.inputChange}
@@ -56,9 +53,9 @@ export default class Airport extends Component {
                 <option
                   classname="options"
                   key={index}
-                  onClick={this.suggestionClicked}
+                  onClick={(event) => this.suggestionClicked(event, suggestion)}
                 >
-                  {suggestion}
+                  {suggestion.city}
                 </option>
               ))}
               ;
