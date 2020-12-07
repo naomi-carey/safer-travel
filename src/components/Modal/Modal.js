@@ -1,6 +1,6 @@
 import React from 'react';
 import './Modal.css';
-import Map from '../Map/Map'
+// import Map from '../Map/Map'
 
 export const Modal = ({ close, index, data }) => {
 
