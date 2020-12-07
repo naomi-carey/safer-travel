@@ -41,11 +41,41 @@ body {
     transform: rotate(360deg);
   }
 }
+
+/* Flight and calendar search area comming from Airport and App.js components */
 .airport-search {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 30px;
+  justify-content: left;
+}
+
+.find-flights {
+  height: 63px;
+  width: 300px;
+  border-radius: 10px;
+  margin-left: 20px;
+  background-color: rgb(15, 60, 184);
+  color: white;
+  font-size: 18px;
+  font-weight: 900;
+}
+.find-flights:hover {
+  background-color: #0056c8;
 }
 
 .calendar {
-  border-radius: 30px;
-  width: 300px;
+  display: flex;
+  margin-bottom: 20px;
+  margin-left: 10px;
 }
+
+/* @media screen and (max-width: 850px) {
+  .airport-search {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+} */

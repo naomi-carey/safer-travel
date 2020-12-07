@@ -1,44 +1,42 @@
-import React from 'react'
-import './FlightCard.css'
-import axios from 'axios';
+import React from "react";
+import "./FlightCard.css";
+import axios from "axios";
 
 class FlightCard extends React.Component {
-        constructor(props) {
-        super(props);
-        this.state = {
-        TravelInfo: {},
-        }
+  constructor(props) {
+    super(props);
+    this.state = {
+      TravelInfo: {},
     };
+  }
 
-    componentDidMount() {
-      this.getTravelInfo()
-    }
+  componentDidMount() {
+    this.getTravelInfo();
+  }
 
+  getTravelInfo = () =>
+    axios
+      .get(
+        `https://api.skypicker.com/flights?flyFrom=${this.props.cityFrom["iata_code"]}&to=${this.props.cityTo["iata_code"]}&dateFrom=${this.props.startDate}&dateTo=${this.props.endDate}&partner=picky&v=3`
+      )
+      .then((response) => {
+        console.log(response);
+        this.setState({
+          departure: response.data.data[0].dTime,
+          arrival: response.data.data[0].aTime,
+          flyFrom: response.data.data[0].flyFrom,
+          flyTo: response.data.data[0].flyTo,
+          duration: response.data.data[0].fly_duration,
+          price: response.data.data[0].price,
+        });
+      });
 
-    getTravelInfo = () => 
-    axios.get('https://api.skypicker.com/flights?flyFrom=PRG&to=STN&dateFrom=23/12/2020&dateTo=23/12/2020&partner=picky&v=3')
-        .then (response => {
-            console.log(response)
-          this.setState({
-            departure: response.data.data[0].dTime,
-            arrival: response.data.data[0].aTime,
-            flyFrom: response.data.data[0].flyFrom,
-            flyTo: response.data.data[0].flyTo,
-            duration: response.data.data[0].fly_duration,
-            price: response.data.data[0].price,
+  render() {
+    const date = new Date(parseInt(this.state.departure) * 1000);
+    const hour_min = date.toLocaleTimeString().slice(0, 5);
 
-    })
-
-});
-
-    render() {
-
-        const date = new Date(parseInt(this.state.departure)*1000);
-        const hour_min = date.toLocaleTimeString().slice(0, 5);
-
-        const date2 = new Date(parseInt(this.state.arrival)*1000);
-        const hour1_min = date2.toLocaleTimeString().slice(0, 5);
-
+    const date2 = new Date(parseInt(this.state.arrival) * 1000);
+    const hour1_min = date2.toLocaleTimeString().slice(0, 5);
 
     return (
         <div>
@@ -72,11 +70,12 @@ class FlightCard extends React.Component {
                             </div>
                         </div>
             </div>
-            </div>
+            
+          </div>
         </div>
-    )
-}
+      
+    );
+  }
 }
 
 export default FlightCard;
-
