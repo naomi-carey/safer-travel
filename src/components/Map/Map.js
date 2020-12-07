@@ -45,13 +45,27 @@ function Map() {
         defaultZoom={0}
       >
         {result.map((data, index) => {
+        // console.log(data.country);
+        const getColorInfected = () => {
+          if (data.cases >= 1000) {
+            return "red"
+          }
+          else if (data.cases >= 100) {
+            return "yellow"
+          }
+          else {
+            return "green"
+          } 
+          } //color stat
           return (
             <div key={index}
               lat={data.countryInfo.lat}
               lng={data.countryInfo.long}
             >
               <div>
-                <button onClick={() => toggleShowModal(index)} className="marker"><FaGenderless /></button>
+                <button onClick={() => toggleShowModal(index)} className="marker"
+                style={{color: getColorInfected(data.cases)}} //color stat 
+                ><FaGenderless /></button>
                 {
                   data.showModal &&
                     <Modal index={index} data={data} close={toggleShowModal} />

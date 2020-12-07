@@ -1,4 +1,10 @@
-const light = [
+const light = [{
+        "featureType": "administrative",
+        "elementType": "geometry.fill",
+        "stylers": [
+            { "visibility": "off" }
+        ]
+    },
     {
         "featureType": "administrative",
         "elementType": "labels.text.fill",
