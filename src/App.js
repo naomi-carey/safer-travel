@@ -3,7 +3,7 @@ import Map from "./components/Map/Map";
 import Statistics from "./components/Statistics";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
-import Card from "./components/TravelCards/Card";
+import AttractionsCard from "./components/TravelCards/AttractionsCard";
 import FlightCard from "./components/Flights/FlightCard";
 import Airport from "./components/Airport";
 import { DateRangePicker } from "react-dates";
@@ -49,7 +49,9 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
+        <div>
         <Navbar />
+        </div>
 
         <div className="airport-search">
           <h2 className="from">From: </h2>
@@ -85,6 +87,8 @@ export default class App extends Component {
         <FlightCard />
         <Map />
         <Statistics />
+          <div><AttractionsCard /></div>
+        
       </div>
     );
   }

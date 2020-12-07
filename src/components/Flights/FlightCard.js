@@ -42,24 +42,24 @@ class FlightCard extends React.Component {
 
     return (
         <div>
-            <div className='card-container'>
-                    <div className='card'>
-                        <div className='card1'>
+            <div className='flightcard-container'>
+                    <div className='flight-card'>
+                        <div className='flight-card'>
                             <div className='airline'>
                                 <img className='ryanair' src='https://i0.wp.com/www.logoquizcheat.com/1984kqjmmm-22lqc/uploads/ryanair-meeyo-logo-quiz.jpg' alt='Ryanair Logo' />
-                                <p>Ryanair</p>
+                                <p className='flight-info'>Ryanair</p>
                             </div>
                             <div className='departure'>
-                                <h2>{hour_min}</h2>
-                                <h3>{this.state.flyFrom}</h3>
+                                <h2 className='flight-info'>{hour_min}</h2>
+                                <h3 className='flight-info'>{this.state.flyFrom}</h3>
                             </div>
                             <div className='duration'>
-                                <p>{this.state.duration}</p>
-                                <hr></hr>
+                                <p className='flight-info'>{this.state.duration}</p>
+                                <hr className='flight-hr'></hr>
                             </div>
                             <div className='arrival'>
-                                <h2>{hour1_min}</h2>
-                                <h3>{this.state.flyTo}</h3>
+                                <h2 className='flight-info'>{hour1_min}</h2>
+                                <h3 className='flight-info'>{this.state.flyTo}</h3>
                             </div>
                         
                     </div>
