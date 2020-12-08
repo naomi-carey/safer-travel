@@ -45,7 +45,6 @@ class Statistics extends React.Component {
           firstdata = response1;
           myHistoricalData = response2;
 
-          /*calculate that shit*/
           myHistoricalData.map((country) => {
             increment =
               ((country.timeline.cases[
@@ -92,7 +91,7 @@ class Statistics extends React.Component {
           this.setState({
             countryCovidStats: myFinalData,
           });
-          console.log(this.state.countryCovidStats[0].increment);
+          // console.log(this.state.countryCovidStats[0].increment);
         });
     };
     apiCall();
@@ -103,12 +102,28 @@ class Statistics extends React.Component {
     return (
       <div className="container">
         <h1>Popular Destinations</h1>
+        <h3>Get the latest COVID updates before booking your trip!</h3>
+
         <div className="statistics-info">
-          <div className="dropdown">
+          {/* <button className="total-btn">Total</button> */}
+          <div className="stats-dropdown">
+            <button className="total-btn">Total</button>
             {/* <form onSubmit={this.handleSubmit}> */}
 
             <form>
-              <select onChange={this.showCountryStats} defaultValue="">
+              {/* <select onChange={this.showCountryStats} defaultValue="">
+                {countries.worldwide.map((item) => (
+                  <option key={item.id} value={item.country}>
+                    {item.flag} {item.country}
+                  </option>
+                ))}
+              </select> */}
+
+              <select
+                className="country-select2"
+                onChange={this.showCountryStats}
+                defaultValue=""
+              >
                 {countries.worldwide.map((item) => (
                   <option key={item.id} value={item.country}>
                     {item.flag} {item.country}
@@ -119,7 +134,7 @@ class Statistics extends React.Component {
               {/* <input id="btn" type="submit" value="Submit" /> */}
             </form>
           </div>
-          <div id="header">
+          <div className="stats-header">
             <div className="active-deaths">
               <h2>Today </h2>
               {this.state.todayCases && (

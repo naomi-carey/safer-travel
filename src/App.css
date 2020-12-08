@@ -56,13 +56,15 @@ body {
   width: 300px;
   border-radius: 10px;
   margin-left: 20px;
-  background-color: rgb(15, 60, 184);
+  background-color: #3b749e;
+  /* background-color: rgb(15, 60, 184); */
   color: white;
   font-size: 18px;
   font-weight: 900;
 }
 .find-flights:hover {
-  background-color: #0056c8;
+  /* background-color: #0056c8; */
+  background-color: #3ea5f0;
 }
 
 .calendar {
