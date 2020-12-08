@@ -1,56 +1,112 @@
-import React from "react";
-import './Footer_one.css';
-import Socialmedia from './Socialmedia';
+import React from 'react';
+import './Footer.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 
 
 const Footer = () => {
-  return (
-        <div className='body-footer'>
-
-            <div className='logo.title'>
-                <img className='logo' src='https://safetravel.id/img/ico.jpg' alt='logo'></img>
-                <h1 className='h1-footer'>Safer Travel App</h1>
+return (
+   
+        <footer class="footer">
+            <div class="footer__addr">
+                <h1 class="footer__logo">Safer Travel App</h1>
+                
+                <h2>Contact</h2>
+            
+                <address>
+                5534 The Other Street<br /> 
+                Nova Scotia, Canada<br />
+                
+                <a class="footer__btn" href="mailto:example@safer-travel.com">Email Us</a>
+                </address>
             </div>
+  
+  <ul class="footer__nav">
+    <li class="nav__item">
+      <h2 class="nav__title">Stay connected</h2>
 
+      <ul class="nav__ul">
+        <li>
+          <a href='https://19grams.coffee/en/coffee/berlinkaffee/organic-fairtrade'><FontAwesomeIcon icon={faCoffee} size='2x'/></a>
+        </li>
 
-             <div className='social-container'>
-                <Socialmedia />
-                <p>info@safer-travel.com</p>
-             </div>
+        <li>
+          <a href='https://twitter.com'><FontAwesomeIcon icon={faTwitter} size='2x'/></a>
+        </li>
 
-             <div className='explore-container'>
-                <h3 className='h3.footer'>EXPLORE</h3>
-                <btn className='btn'>✈️</btn>
-                    <p className="btn-info">Flights</p>
-                <btn className='btn'>✈️</btn>
-                    <p className="btn-info">Attractions</p>
-                <btn className='btn'>✈️</btn>
-                    <p className="btn-info">Blog</p>
-                <btn className='btn'>✈️</btn>
-                    <p className="btn-info">Community</p>
-             </div>
+        <li>
+          <a href='https://youtube.com'><FontAwesomeIcon icon={faYoutube} size='2x'/></a>
+        </li>
 
-
-             <div className='blog-container'>
-                <h3 className='h3.footer'>LATEST BLOG POST</h3>
-                <div className='blog.preview'>malesuada fames ac turpis egestas integer eget aliquet nibh praesent</div>
-                <div className='blog.preview'>malesuada fames ac turpis egestas integer eget aliquet nibh praesent</div>
-                <div className='blog.preview'>malesuada fames ac turpis egestas integer eget aliquet nibh praesent</div>
-             </div>
-
-
-
-
-            <div className='bottom.container'>
-            <hr className='hr'></hr>
-            <p class='copyright'>©{new Date().getFullYear()} Safer Travel App Inc.</p>
-            <p class='privacy'>Privacy Policy</p>
-            <p class='termsofservice'>Terms of Service</p>      
-            </div>
-
-        </div>
-
-  )
+        <li>
+          <a href='https://facebook.com'><FontAwesomeIcon icon={faFacebook} size='2x'/></a>
+        </li>
+            
+      </ul>
+    </li>
+    
+    <li class="nav__item nav__item--extra">
+      <h2 class="nav__title">Explore</h2>
+      
+      <ul class="nav__ul nav__ul--extra">
+        <li>
+          <a href="#">Attractions</a>
+        </li>
+        
+        <li>
+          <a href="#">Flights</a>
+        </li>
+        
+        <li>
+          <a href="#">Statistics</a>
+        </li>
+        
+        <li>
+          <a href="#">Map</a>
+        </li>
+        
+        <li>
+          <a href="#">Blog</a>
+        </li>
+        
+        <li>
+          <a href="#">Community</a>
+        </li>
+      </ul>
+    </li>
+    
+    <li class="nav__item">
+      <h2 class="nav__title">Legal</h2>
+      
+      <ul class="nav__ul">
+        <li>
+          <a href="#">Privacy Policy</a>
+        </li>
+        
+        <li>
+          <a href="#">Terms of Use</a>
+        </li>
+        
+        <li>
+          <a href="#">Sitemap</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  
+  <div class="legal">
+    <p>&copy; {new Date().getFullYear()} Safer Travel App Inc. All rights reserved.</p>
+    
+    <div class="legal__links">
+      <span>Made with <span class="heart">♥</span> remotely from around the world</span>
+    </div>
+  </div>
+</footer>
+       
+)
 }
 
 export default Footer;

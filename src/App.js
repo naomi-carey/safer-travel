@@ -4,6 +4,7 @@ import Statistics from "./components/Statistics";
 import Banner from './components/Banner/Banner';
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer_one"
 import AttractionsCard from "./components/TravelCards/AttractionsCard";
 import FlightCard from "./components/Flights/FlightCard";
 import Airport from "./components/Airport";
@@ -48,8 +49,6 @@ export default class App extends Component {
       [originDestination]: city,
     });
   };
-<<<<<<< HEAD
-=======
 
   getDates = (startDate, endDate) => {
     let formattedStartDate = startDate
@@ -70,18 +69,15 @@ export default class App extends Component {
 
   findFlights = () => this.setState({ showTicket: true });
 
->>>>>>> a51bbb17cdb42de5ed2a5c5d42674a41ddc10e32
   render() {
     return (
       <div className="App">
         <div>
         <Navbar />
-<<<<<<< HEAD
-=======
         <Banner />
+        <Footer />
         </div>
 
->>>>>>> a51bbb17cdb42de5ed2a5c5d42674a41ddc10e32
         <div className="airport-search">
           <h2 className="from">From: </h2>
           <Airport
@@ -138,12 +134,8 @@ export default class App extends Component {
         )} 
         <Map />
         <Statistics />
-<<<<<<< HEAD
-        </Footer />
-=======
           <div><AttractionsCard /></div>
         
->>>>>>> a51bbb17cdb42de5ed2a5c5d42674a41ddc10e32
       </div>
     );
   }
