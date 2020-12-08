@@ -1,4 +1,5 @@
 import React from "react";
+import { FaCreativeCommonsPd } from "react-icons/fa";
 import "./Country.json";
 import "./Statistics.css";
 
@@ -6,49 +7,96 @@ class Statistics extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showCountry: false,
-      countryCovidStats: {},
+      countryCovidStats: [],
       selectedCountry: {},
-      todayCases: "",
-      activeCases: "",
-      deathCases: "",
     };
   }
+
   showCountryStats = (event) => {
     let selectedCountry = event.target.value;
     let countryInfo = this.state.countryCovidStats.filter(
       (country) => country.country === selectedCountry
     );
+
     this.setState({
       todayCases: countryInfo[0].cases,
       activeCases: countryInfo[0].active,
-      deathCases: countryInfo[0].deaths,
+      changeCases: countryInfo[0].increment,
+      // deathCases: countryInfo[0].deaths,
     });
-
-    // this.setState({ selectedCountry: countryInfo[0] });
-    // this.setState({ numberCases: countryInfo });
-    // this.setState({ recoveredCases: countryInfo[0] });
-    // this.setState({ deathCases: countryInfo[0] });
   };
-
   componentDidMount() {
-    fetch("https://corona.lmao.ninja/v2/countries?sort=countries")
-      .then((response) => response.json())
-      .then((data) =>
-        this.setState({
-          countryCovidStats: data,
+    let incrementArray = [];
+    let myHistoricalData = [];
+    let firstdata = [];
+    let increment = "";
+    let myFinalData = [];
+
+    const apiCall = () => {
+      Promise.all([
+        fetch("https://corona.lmao.ninja/v2/countries?sort=countries"),
+        fetch("https://disease.sh/v3/covid-19/historical?/"),
+      ])
+        .then(([response1, response2]) => {
+          return Promise.all([response1.json(), response2.json()]);
         })
-      );
+
+        .then(([response1, response2]) => {
+          firstdata = response1;
+          myHistoricalData = response2;
+
+          /*calculate that shit*/
+          myHistoricalData.map((country) => {
+            increment =
+              ((country.timeline.cases[
+                Object.keys(country.timeline.cases)[
+                  Object.keys(country.timeline.cases).length - 1
+                ]
+              ] -
+                country.timeline.cases[
+                  Object.keys(country.timeline.cases)[
+                    Object.keys(country.timeline.cases).length - 8
+                  ]
+                ]) /
+                (country.timeline.cases[
+                  Object.keys(country.timeline.cases)[
+                    Object.keys(country.timeline.cases).length - 8
+                  ]
+                ] -
+                  country.timeline.cases[
+                    Object.keys(country.timeline.cases)[
+                      Object.keys(country.timeline.cases).length - 15
+                    ]
+                  ])) *
+              100;
+            incrementArray.push({
+              name: country.country,
+              increment: increment,
+            });
+          });
+
+          firstdata.map((first) => {
+            incrementArray.map((second) => {
+              first.country.toLowerCase() === second.name.toLowerCase() &&
+                myFinalData.push({
+                  country: first.country,
+                  active: first.active,
+                  cases: first.cases,
+                  increment: second.increment,
+                });
+            });
+          });
+
+          // console.log(myFinalData);
+
+          this.setState({
+            countryCovidStats: myFinalData,
+          });
+          console.log(this.state.countryCovidStats[0].increment);
+        });
+    };
+    apiCall();
   }
-
-  // handleChange(event) {
-  //   this.setState({ value: event.target.value });
-  // }
-
-  // handleSubmit(event) {
-  //   alert("Your destination country is: " + this.state.value);
-  //   event.preventDefault();
-  // }
 
   render() {
     const countries = require("./Country.json");
@@ -56,7 +104,7 @@ class Statistics extends React.Component {
       <div className="container">
         <h1>Popular Destinations</h1>
         <div className="statistics-info">
-          <div class="dropdown">
+          <div className="dropdown">
             {/* <form onSubmit={this.handleSubmit}> */}
 
             <form>
@@ -88,9 +136,34 @@ class Statistics extends React.Component {
                 </div>
               )}
             </div>
+
             <div className="numbers">
-              <h2>Safe </h2>
-              <h3>GREEN</h3>
+              <h2>Increment/Decrement</h2>
+              {this.state.changeCases && (
+                <div className="increment-main">
+                  <h3>
+                    {this.state.changeCases.toString() === "NaN" ||
+                    this.state.changeCases === Infinity
+                      ? "not available"
+                      : Math.round(this.state.changeCases)}
+                  </h3>
+
+                  <div>
+                    <div
+                      className={
+                        this.state.changeCases.toString() === "NaN" ||
+                        this.state.changeCases === Infinity
+                          ? "indicator indicator-grey"
+                          : this.state.changeCases < 80
+                          ? "indicator indicator-green"
+                          : this.state.changeCases > 120
+                          ? "indicator indicator-red"
+                          : "indicator indicator-yellow"
+                      }
+                    ></div>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -99,39 +172,38 @@ class Statistics extends React.Component {
             <tr>
               <th className="location">Location</th>
               <th>Cases</th>
-              <th>Recovered</th>
-              <th>Deaths</th>
+              <th>Active</th>
+              <th>Increment</th>
             </tr>
-            <tr>
-              <td>🇺🇸 United States</td>
-              <td>11.3M</td>
-              <td>30%</td>
-              <td>247k</td>
-            </tr>
-            <tr>
-              <td>🇮🇪 Ireland</td>
-              <td>11.3M</td>
-              <td>30%</td>
-              <td>247k</td>
-            </tr>
-            <tr>
-              <td>🇬🇧 United Kingdom</td>
-              <td>11.3M</td>
-              <td>30%</td>
-              <td>247k</td>
-            </tr>
-            <tr>
-              <td>🇩🇪 Germany</td>
-              <td>11.3M</td>
-              <td>30%</td>
-              <td>247k</td>
-            </tr>
-            <tr>
-              <td>🇪🇸 Spain</td>
-              <td>11.3M</td>
-              <td>30%</td>
-              <td>247k</td>
-            </tr>
+            {this.state.countryCovidStats.map((countryData) => (
+              <tr>
+                <td>{countryData.country}</td>
+                <td>{countryData.cases}</td>
+                <td>{countryData.active}</td>
+                <td className="incrementContainer">
+                  <div className="increment-data">
+                    {countryData.increment.toString() === "NaN" ||
+                    countryData.increment === Infinity
+                      ? "not available"
+                      : Math.round(countryData.increment)}
+                  </div>
+                  <div className="indicator-container">
+                    <div
+                      className={
+                        countryData.increment.toString() === "NaN" ||
+                        countryData.increment === Infinity
+                          ? "indicator indicator-grey"
+                          : countryData.increment < 80
+                          ? "indicator indicator-green"
+                          : countryData.increment > 120
+                          ? "indicator indicator-red"
+                          : "indicator indicator-yellow"
+                      }
+                    ></div>
+                  </div>
+                </td>
+              </tr>
+            ))}
           </table>
         </div>
       </div>
