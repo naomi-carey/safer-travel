@@ -75,7 +75,7 @@ export default class App extends Component {
         <div>
         <Navbar />
         <Banner />
-        <Footer />
+       
         </div>
 
         <div className="airport-search">
@@ -135,7 +135,7 @@ export default class App extends Component {
         <Map />
         <Statistics />
           <div><AttractionsCard /></div>
-        
+        <Footer />
       </div>
     );
   }
