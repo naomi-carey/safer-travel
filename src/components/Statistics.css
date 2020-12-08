@@ -101,6 +101,69 @@ select {
   color: #fff;
 }
 
+.incrementContainer {
+  width: 60%;
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  margin: 0 auto;
+}
+
+.increment-main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.increment-data {
+  margin-right: 20%;
+}
+
+.indicator-down-red {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid red;
+  font-size: 0;
+  line-height: 0;
+  float: left;
+}
+
+.indicator-up-green {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid green;
+  font-size: 0;
+  line-height: 0;
+  float: left;
+}
+
+.indicator {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+.indicator-container {
+  width: 20%;
+}
+.indicator-red {
+  background-color: red;
+}
+.indicator-green {
+  background-color: green;
+}
+.indicator-yellow {
+  background-color: yellow;
+}
+.indicator-grey {
+  background-color: grey;
+}
+
 /*DESKTOP*/
 @media only screen and (min-width: 700px) {
 }
