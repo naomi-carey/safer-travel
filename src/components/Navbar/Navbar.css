@@ -69,13 +69,13 @@
         right: 0px;
         display: flex;
         flex-direction: column;
-        height:55vh ;
+        height:90vh ;
         align-items: center;
         width: 100%;
         top:7vh;
         background-color: rgb(33, 107, 186);
         transition: transform 0.3s ease-in;
-        transform: translateX(100%);
+        transform: translateY(-120%);
         font-size: 30px;
         color: white;
     }

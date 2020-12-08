@@ -1,10 +1,10 @@
 body {
-  background-color: rgb(232, 241, 242);
+  background-color: rgb(255, 255, 255);
 }
 
 .App {
   text-align: center;
-  background-color: rgb(232, 241, 242);
+  background-color: rgb(255, 255, 255);
 }
 
 .App-logo {
@@ -41,6 +41,8 @@ body {
     transform: rotate(360deg);
   }
 }
+
+/* Flight and calendar search area comming from Airport and App.js components */
 .airport-search {
   display: flex;
   flex-wrap: wrap;
@@ -49,11 +51,24 @@ body {
   justify-content: left;
 }
 
-.calendar {
-  /* border: black solid 1px; */
-  height: 60px;
+.find-flights {
+  height: 63px;
+  width: 300px;
+  border-radius: 10px;
+  margin-left: 20px;
+  background-color: rgb(15, 60, 184);
+  color: white;
+  font-size: 18px;
+  font-weight: 900;
+}
+.find-flights:hover {
+  background-color: #0056c8;
+}
 
-  /* background-color: lightcoral; */
+.calendar {
+  display: flex;
+  margin-bottom: 20px;
+  margin-left: 10px;
 }
 
 /* @media screen and (max-width: 850px) {
