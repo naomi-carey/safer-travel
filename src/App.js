@@ -79,6 +79,7 @@ export default class App extends Component {
         <FlightCard />
         <Map />
         <Statistics />
+        </Footer />
       </div>
     );
   }
