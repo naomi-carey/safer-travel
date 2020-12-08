@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 import Map from "./components/Map/Map";
-import Statistics from "./components/Statistics";
-import Banner from './components/Banner/Banner';
+import Statistics from "./components/Statistics/Statistics";
+import Banner from "./components/Banner/Banner";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import AttractionsCard from "./components/TravelCards/AttractionsCard";
 import FlightCard from "./components/Flights/FlightCard";
-import Airport from "./components/Airport";
+import Airport from "./components/Airport/Airport";
 import { DateRangePicker } from "react-dates";
 import "react-dates/initialize";
 import "react-dates/lib/css/_datepicker.css";
-import { airports } from "./components/Airports";
+import { airports } from "./components/Airport/AirportMap";
 import moment from "moment";
 // import "./react_dates_overrides.css";
 
@@ -40,13 +40,13 @@ export default class App extends Component {
       );
   }
 
-  alertStartDate = () => {
-    console.log(this.state.startDate);
-  };
+  // alertStartDate = () => {
+  //   console.log(this.state.startDate);
+  // };
 
-  alertEndDate = () => {
-    console.log(this.state.endDate);
-  };
+  // alertEndDate = () => {
+  //   console.log(this.state.endDate);
+  // };
 
   getCityAutoComplete = (city, originDestination) => {
     this.setState({
@@ -77,8 +77,8 @@ export default class App extends Component {
     return (
       <div className="App">
         <div>
-        <Navbar />
-        <Banner />
+          <Navbar />
+          <Banner />
         </div>
 
         <div className="airport-search">
@@ -94,19 +94,6 @@ export default class App extends Component {
             originDestination="cityTo"
             cities={this.state.airportsAndCities}
           />
-          {/* <div className="calendar">
-            <DateRangePicker
-              startDate={this.state.startDate} // momentPropTypes.momentObj or null,
-              startDateId="your_unique_start_date_id" // PropTypes.string.isRequired,
-              endDate={this.state.endDate} // momentPropTypes.momentObj or null,
-              endDateId="your_unique_end_date_id" // PropTypes.string.isRequired,
-              onDatesChange={({ startDate, endDate }) =>
-                this.getDates(startDate, endDate)
-              } // PropTypes.func.isRequired,
-              focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
-              onFocusChange={(focusedInput) => this.setState({ focusedInput })} // PropTypes.func.isRequired,
-            />
-          </div> */}
 
           <button className="find-flights" onClick={this.findFlights}>
             Find Flights
@@ -134,11 +121,12 @@ export default class App extends Component {
             endDate={this.state.finalEndDate}
             startDate={this.state.finalStartDate}
           />
-        )} 
+        )}
         <Map />
         <Statistics />
-          <div><AttractionsCard /></div>
-        
+        <div>
+          <AttractionsCard />
+        </div>
       </div>
     );
   }
