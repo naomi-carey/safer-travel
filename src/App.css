@@ -67,6 +67,10 @@ body {
   background-color: #3ea5f0;
 }
 
+/* .DateRangePicker {
+  border-radius: 25px;
+  overflow: hidden;
+} */
 .calendar {
   display: flex;
   margin-bottom: 20px;
