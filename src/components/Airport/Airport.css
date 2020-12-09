@@ -48,7 +48,8 @@ h2 {
   border: grey 1px solid;
   border-radius: 10px;
   margin-top: 3px;
-  background-color: #a9b1be;
+  /* background-color: rgb(15, 60, 184); */
+  background-color: #3b749e;
   box-shadow: 1px 1px 1px black;
   color: white;
   width: 300px;
@@ -59,6 +60,8 @@ option {
 }
 
 option:hover {
-  background-color: #696c85;
+  /* background-color: #696c85; */
+  background-color: #3ea5f0;
+
   opacity: 84%;
 }

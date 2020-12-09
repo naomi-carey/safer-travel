@@ -56,20 +56,27 @@ body {
   width: 300px;
   border-radius: 10px;
   margin-left: 20px;
-  background-color: rgb(15, 60, 184);
+  background-color: #3b749e;
+  /* background-color: rgb(15, 60, 184); */
   color: white;
   font-size: 18px;
   font-weight: 900;
 }
 .find-flights:hover {
-  background-color: #0056c8;
+  /* background-color: #0056c8; */
+  background-color: #3ea5f0;
 }
 
+/* .DateRangePicker {
+  border-radius: 25px;
+  overflow: hidden;
+} */
 .calendar {
   display: flex;
   margin-bottom: 20px;
   margin-left: 10px;
 }
+/* End of Flight and calendar CSS */
 
 /* @media screen and (max-width: 850px) {
   .airport-search {
