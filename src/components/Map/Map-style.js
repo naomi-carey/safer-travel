@@ -7,6 +7,20 @@ const light = [{
     },
     {
         "featureType": "administrative",
+        "elementType": "geometry",
+        "stylers": [
+            {"visibility": "off"}
+        ]
+    },
+    {
+        "featureType": "administrative.country",
+        "elementType": "labels",
+        "stylers": [
+            {"visibility": "off"}
+        ]
+    },
+    {
+        "featureType": "administrative",
         "elementType": "labels.text.fill",
         "stylers": [
             {
@@ -94,7 +108,7 @@ const light = [{
         "elementType": "all",
         "stylers": [
             {
-                "visibility": "simplified"
+                "visibility": "off"
             }
         ]
     },
@@ -121,13 +135,7 @@ const light = [{
         "elementType": "geometry.fill",
         "stylers": [
             {
-                "visibility": "on"
-            },
-            {
-                "saturation": "3"
-            },
-            {
-                "lightness": "-36"
+                "visibility": "off"
             }
         ]
     },
@@ -199,7 +207,7 @@ const light = [{
         "elementType": "all",
         "stylers": [
             {
-                "color": "#92c0d3"
+                "color": "#ccdeff"
             },
             {
                 "visibility": "on"
