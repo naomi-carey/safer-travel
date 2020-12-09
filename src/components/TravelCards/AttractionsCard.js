@@ -1,36 +1,26 @@
 import React from 'react'
 import './AttractionsCard.css';
-import axios from 'axios';
+import './AttractionsList';
+import { AttractionsList } from './AttractionsList';
+import AttractionsButton from './AttractionsButton';
 
 class AttractionsCard extends React.Component {
-//     constructor(props) {
-//         super(props);
-//         this.state = {
-//         Attractions: {},
-//         }
-//     };
 
-//     componentDidMount() {
-//       this.getAttractions()
-//     }
+    state = {
+        showAbout: false
+    }
 
+    showModal = () => {
+        this.setState ({
+            showAbout: true
+        })
+    }
 
-//     getgetAttractions = () => 
-//     axios.get('')
-//         .then (response => {
-//             console.log(response)
-//           this.setState({
-//             image:
-//             location:
-//             about:
-
-
-
-//     })
-
-// });
-
-
+    closeModal = () => {
+        this.setState ({
+            showAbout: false
+        })
+    }
 
 
     render() {
@@ -43,41 +33,40 @@ class AttractionsCard extends React.Component {
 
             </div>
 
-            <div className='attractionscard-container'>
-            <div className ='attractions-card'>
-            <img className='card-image' src='https://images.theconversation.com/files/182776/original/file-20170821-27160-1kwep4u.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip' alt='Big Ben London' />
-            <h3>Big Ben</h3>
-            <h4 className='status-yellow'>Status: Moderate</h4>
-            <p>Big Ben in london is currently on moderate level as London is in lockdown. </p>
-            <button className='card-button' >More Info</button>
+            <div className='attractions-container'>
+            {AttractionsList.map((attractions) => {
+                return (
+                <div className= 'attractions-card'>
+                <img className='card-image' src={attractions.picture} alt={attractions.attraction} />
+                <h3>{attractions.location}</h3>
+                <h4>{attractions.city}</h4>
+                <h4>{attractions.Attraction}</h4>
+                <h4 className='status-yellow'>{attractions.status}</h4>
+                <div>
+                <AttractionsButton className='card-button' text='Show more' action={this.showModal} />
+                </div>
+                {
+          this.state.showAbout &&
+          <div className='modal'>
+            <img className='card-image' src={attractions.picture} alt={attractions.attraction} />
+            <h3>{attractions.location}</h3>
+            <h4>{attractions.city}</h4>
+            <h4>{attractions.Attraction}</h4>     
+            <AttractionsButton text='Close' action={this.closeModal} />
+          </div>
+        }
+                </div>
+               
+            ) 
+            })}
             </div>
+            </div>
+        
 
-            <div className ='attractions-card'>
-            <img className='card-image' src='https://tourscanner.com/blog/wp-content/uploads/2019/05/London-Eye-tickets-deals.png' alt='London Eye' />
-            <h3>London Eye</h3>
-            <h4 className='status-red'>Status: Closed</h4>
-            <p>Big Ben in london is currently on moderate level as London is in lockdown. </p>
-            <button className='card-button' >More Info</button>
-            </div>
+           
 
-            <div className ='attractions-card'>
-            <img className='card-image' src='https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/07/10/20/buckingham-palace-pa.jpg' alt='Buckingham Palace' />
-            <h3>Buckingham Palace</h3>
-            <h4 className='status-green'>Status: Open</h4>
-            <p>Big Ben in london is currently on moderate level as London is in lockdown. </p>
-            <button className='card-button' >More Info</button>
-            </div>
-
-            <div className ='attractions-card'>
-            <img className='card-image' src='https://www.p.city-walks.info/London/HM-Oxford-Circus.jpg' alt='Oxford Street London' />
-            <h3>Oxford Street</h3>
-            <h4 className='status-yellow'>Status: Moderate</h4>
-            <p>Big Ben in london is currently on moderate level as London is in lockdown. </p>
-            <button className='card-button' >More Info</button>
-            </div>
-
-            </div>
-        </div>
+            
+       
     )
 }
 }
