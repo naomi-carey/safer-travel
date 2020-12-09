@@ -24,11 +24,11 @@ class Statistics extends React.Component {
       activeCases: countryInfo[0].active,
       changeCases: countryInfo[0].increment,
       showDetailedStats: false,
-      // deathCases: countryInfo[0].deaths,
     });
   };
 
-  getDetailedStats = () => this.setState({ showDetailedStats: true });
+  getDetailedStats = () =>
+    this.setState({ showDetailedStats: !this.state.showDetailedStats });
 
   componentDidMount() {
     let incrementArray = [];
@@ -91,12 +91,9 @@ class Statistics extends React.Component {
             });
           });
 
-          // console.log(myFinalData);
-
           this.setState({
             countryCovidStats: myFinalData,
           });
-          // console.log(this.state.countryCovidStats[0].increment);
         });
     };
     apiCall();
@@ -112,18 +109,11 @@ class Statistics extends React.Component {
         <div className="statistics-info">
           <div className="stats-dropdown">
             <button className="total-btn" onClick={this.getDetailedStats}>
+              {this.state.showDetailedStats ? true : false}
               Total
             </button>
 
             <form>
-              {/* <select onChange={this.showCountryStats} defaultValue="">
-                {countries.worldwide.map((item) => (
-                  <option key={item.id} value={item.country}>
-                    {item.flag} {item.country}
-                  </option>
-                ))}
-              </select> */}
-
               <select
                 className="country-select2"
                 onChange={this.showCountryStats}
@@ -131,12 +121,11 @@ class Statistics extends React.Component {
               >
                 {countries.worldwide.map((item) => (
                   <option key={item.id} value={item.country}>
+                    {/* World Wide */}
                     {item.flag} {item.country}
                   </option>
                 ))}
               </select>
-
-              {/* <input id="btn" type="submit" value="Submit" /> */}
             </form>
           </div>
           <div className="stats-header">
@@ -235,51 +224,3 @@ class Statistics extends React.Component {
 }
 
 export default Statistics;
-
-{
-  /* <div class="table-props">
-          <table>
-            <tr>
-              <th className="location">Location</th>
-              <th>Cases</th>
-              <th>Active</th>
-              <th>Increment</th>
-            </tr>
-            {this.state.countryCovidStats.map((countryData) => (
-              <tr>
-                <td>{countryData.country}</td>
-                <td>{countryData.cases}</td>
-                <td>{countryData.active}</td>
-                <td className="incrementContainer">
-                  <div className="increment-data">
-                    {countryData.increment.toString() === "NaN" ||
-                    countryData.increment === Infinity
-                      ? "not available"
-                      : Math.round(countryData.increment)}
-                  </div>
-                  <div className="indicator-container">
-                    <div
-                      className={
-                        countryData.increment.toString() === "NaN" ||
-                        countryData.increment === Infinity
-                          ? "indicator indicator-grey"
-                          : countryData.increment < 80
-                          ? "indicator indicator-green"
-                          : countryData.increment > 120
-                          ? "indicator indicator-red"
-                          : "indicator indicator-yellow"
-                      }
-                    ></div>
-                  </div>
-                </td>
-              </tr>
-            ))}
-          </table>
-        </div>
-      </div>
-    );
-  }
-}
-
-export default Statistics; */
-}

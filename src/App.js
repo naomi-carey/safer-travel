@@ -12,7 +12,7 @@ import "react-dates/initialize";
 import "react-dates/lib/css/_datepicker.css";
 import { airports } from "./components/Airport/AirportMap";
 import moment from "moment";
-import Loading from './components/LoadingScreen/Loading'
+import Loading from "./components/LoadingScreen/Loading";
 // import "./react_dates_overrides.css";
 
 export default class App extends Component {
@@ -103,6 +103,9 @@ export default class App extends Component {
 
         <div className="calendar">
           <DateRangePicker
+            className="DateRangePicker"
+            startDatePlaceholderText="Depart"
+            endDatePlaceholderText="Return"
             startDate={this.state.startDate} // momentPropTypes.momentObj or null,
             startDateId="your_unique_start_date_id" // PropTypes.string.isRequired,
             endDate={this.state.endDate} // momentPropTypes.momentObj or null,
@@ -127,7 +130,7 @@ export default class App extends Component {
         <Statistics />
         <div>
           <AttractionsCard />
-          <Loading/>
+          <Loading />
         </div>
       </div>
     );
