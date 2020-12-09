@@ -9,6 +9,7 @@ class Statistics extends React.Component {
     this.state = {
       countryCovidStats: [],
       selectedCountry: {},
+      showDetailedStats: false,
     };
   }
 
@@ -22,9 +23,13 @@ class Statistics extends React.Component {
       todayCases: countryInfo[0].cases,
       activeCases: countryInfo[0].active,
       changeCases: countryInfo[0].increment,
+      showDetailedStats: false,
       // deathCases: countryInfo[0].deaths,
     });
   };
+
+  getDetailedStats = () => this.setState({ showDetailedStats: true });
+
   componentDidMount() {
     let incrementArray = [];
     let myHistoricalData = [];
@@ -105,10 +110,10 @@ class Statistics extends React.Component {
         <h3>Get the latest COVID updates before booking your trip!</h3>
 
         <div className="statistics-info">
-          {/* <button className="total-btn">Total</button> */}
           <div className="stats-dropdown">
-            <button className="total-btn">Total</button>
-            {/* <form onSubmit={this.handleSubmit}> */}
+            <button className="total-btn" onClick={this.getDetailedStats}>
+              Total
+            </button>
 
             <form>
               {/* <select onChange={this.showCountryStats} defaultValue="">
@@ -182,7 +187,57 @@ class Statistics extends React.Component {
             </div>
           </div>
         </div>
-        <div class="table-props">
+
+        {this.state.showDetailedStats && (
+          <div class="table-props">
+            <table>
+              <tr>
+                <th className="location">Location</th>
+                <th>Cases</th>
+                <th>Active</th>
+                <th>Increment</th>
+              </tr>
+              {this.state.countryCovidStats.map((countryData) => (
+                <tr>
+                  <td>{countryData.country}</td>
+                  <td>{countryData.cases}</td>
+                  <td>{countryData.active}</td>
+                  <td className="incrementContainer">
+                    <div className="increment-data">
+                      {countryData.increment.toString() === "NaN" ||
+                      countryData.increment === Infinity
+                        ? "not available"
+                        : Math.round(countryData.increment)}
+                    </div>
+                    <div className="indicator-container">
+                      <div
+                        className={
+                          countryData.increment.toString() === "NaN" ||
+                          countryData.increment === Infinity
+                            ? "indicator indicator-grey"
+                            : countryData.increment < 80
+                            ? "indicator indicator-green"
+                            : countryData.increment > 120
+                            ? "indicator indicator-red"
+                            : "indicator indicator-yellow"
+                        }
+                      ></div>
+                    </div>
+                  </td>
+                </tr>
+              ))}
+            </table>
+          </div>
+        )}
+      </div>
+    );
+  }
+}
+
+export default Statistics;
+
+{
+  /* <div class="table-props">
           <table>
             <tr>
               <th className="location">Location</th>
@@ -226,4 +281,5 @@ class Statistics extends React.Component {
   }
 }
 
-export default Statistics;
+export default Statistics; */
+}
