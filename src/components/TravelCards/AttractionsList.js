@@ -5,7 +5,7 @@ export const AttractionsList = [
       Attraction: 'Big Ben',
       status: 'Status: Moderate',
       longAbout: ['Big Ben is the nickname for the Great Bell of the striking clock at the north end of the Palace of Westminster in London;[1] the name is frequently extended to refer to both the clock and the clock tower.[2][3] The official name of the tower in which Big Ben is located was originally the Clock Tower; it was renamed Elizabeth Tower in 2012 to mark the Diamond Jubilee of Elizabeth II, Queen of the United Kingdom. The tower was designed by Augustus Pugin in a neo-Gothic style. When completed in 1859, its clock was the largest and most accurate four-faced striking and chiming clock in the world. The tower stands 315 feet (96 m) tall, and the climb from ground level to the belfry is 334 steps. Its base is square, measuring 39 feet (12 m) on each side. Dials of the clock are 23 feet (7.0 m) in diameter. On 31 May 2009 celebrations were held to mark the towers 150th anniversary.'],
-      picture: 'https://cdn.londonandpartners.com/visit/london-organisations/big-ben/100225-640x360-elisabeth-tower-clock-face-640.jpg',
+      picture: '/images/bigben.jpg',
     },
     {
         location: 'United Kingdom',
@@ -13,7 +13,7 @@ export const AttractionsList = [
         Attraction: 'White Heart Lane',
         status: 'Status: Moderate',
         longAbout: ['White Hart Lane was a football stadium in Tottenham, North London and the home of Tottenham Hotspur Football Club from 1899 to 2017. Its capacity varied over the years; when changed to all-seater it had a capacity of 36,284 before demolition. The stadium was fully demolished after the end of the 2016–17 season and was replaced by Tottenham Hotspur Stadium as the clubs home ground. The stadium, which was known amongst Spurs fans as The Lane, had hosted 2,533 competitive Spurs games in its 118-year history. It had also been used for England national football matches and England under-21 football matches. White Hart Lane once had capacity of nearly 80,000 with attendances in the early 1950s that reached the 70,000s, but as seating was introduced, the stadiums capacity decreased to a modest number in comparison to other Premier League clubs. The record attendance at the ground was 75,038, for an FA Cup tie on 5 March 1938 against Sunderland. Tottenhams final game at White Hart Lane was played on 14 May 2017 with a 2–1 victory against Manchester United. In 2019, Tottenham moved to a new stadium with a capacity of 62,062 designed by Populous. The new stadium was built in almost the exact same location, instead of moving elsewhere within or away from the borough of Haringey.'],
-        picture: 'https://i2-prod.birminghammail.co.uk/incoming/article17854600.ece/ALTERNATES/s615/1_ViewNorthUppercorner.jpg',
+        picture: '/images/whl.jpg',
       },
       {
         location: 'United Kingdom',
@@ -21,7 +21,7 @@ export const AttractionsList = [
         Attraction: 'London Eye',
         status: 'Status: Closed',
         longAbout: ['The London Eye, or the Millennium Wheel, is a cantilevered observation wheel on the South Bank of the River Thames in London. It is Europes tallest cantilevered observation wheel, and is the most popular paid tourist attraction in the United Kingdom with over 3 million visitors annually, and has made many appearances in popular culture. The structure is 135 metres (443 ft) tall and the wheel has a diameter of 120 metres (394 ft). When it opened to the public in 2000 it was the worlds tallest Ferris wheel. Its height was surpassed by the 160-metre (525 ft) Star of Nanchang in 2006, the 165-metre (541 ft) Singapore Flyer in 2008, and the 167-metre-tall (547.9 ft) High Roller (Las Vegas) in 2014. Supported by an A-frame on one side only, unlike the taller Nanchang and Singapore wheels, the Eye is described by its operators as the worlds tallest cantilevered observation wheel. The London Eye used to offer the highest public viewing point in London until it was superseded by the 245-metre-high (804 ft) observation deck on the 72nd floor of The Shard, which opened to the public on 1 February 2013. The London Eye adjoins the western end of Jubilee Gardens (previously the site of the former Dome of Discovery), on the South Bank of the River Thames between Westminster Bridge and Hungerford Bridge beside County Hall, in the London Borough of Lambeth. The nearest tube station is Westminister which is at the walking distance of 0.42 km. In March 2020 the London Eye celebrated its 20th birthday by turning its pods into experiences in partnership with its sponsor lastminute.com. The special experiences included a pub in a capsule, a west end theatre pod and a garden party with flower arrangements to represent the eight London Royal parks.'],
-        picture: 'https://i2-prod.birminghammail.co.uk/incoming/article17854600.ece/ALTERNATES/s615/1_ViewNorthUppercorner.jpg',
+        picture: '/images/londoneye.jpeg',
       },
       {
         location: 'United Kingdom',
@@ -29,7 +29,7 @@ export const AttractionsList = [
         Attraction: 'Wembley',
         status: 'Status: Closed',
         longAbout: ['Wembley Stadium (branded as Wembley Stadium connected by EE for sponsorship reasons) is a football stadium in Wembley, London. It opened in 2007 on the site of the original Wembley Stadium, which was demolished from 2002 to 2003. The stadium hosts major football matches including home matches of the England national football team, and the FA Cup Final. Wembley Stadium is owned by the governing body of English football, the Football Association (the FA), whose headquarters are in the stadium, through its subsidiary Wembley National Stadium Ltd (WNSL). With 90,000 seats, it is the largest stadium in the UK and the second-largest stadium in Europe.Designed by Populous and Foster and Partners, the stadium is crowned by the 134-metre-high (440 ft) Wembley Arch which serves aesthetically as a landmark across London as well as structurally, with the arch supporting over 75% of the entire roof load. The stadium was built by Australian firm Multiplex at a cost of £798 million (£1.2 billion today).[12] Contrary to popular belief, Wembley Stadium does not have a retractable roof which covers the playing surface. Two partially retractable roof structures over the east and west end of the stadium can be opened to allow sunlight and aid pitch growth.'],
-        picture: 'https://i2-prod.birminghammail.co.uk/incoming/article17854600.ece/ALTERNATES/s615/1_ViewNorthUppercorner.jpg',
+        picture: '/images/Wembley.jpg',
       },
       {
         location: 'United Kingdom',
@@ -37,7 +37,7 @@ export const AttractionsList = [
         Attraction: 'Tower of London',
         status: 'Status: Closed',
         longAbout: ['The Tower of London, officially Her Majestys Royal Palace and Fortress of the Tower of London, is a historic castle on the north bank of the River Thames in central London. It lies within the London Borough of Tower Hamlets, which is separated from the eastern edge of the square mile of the City of London by the open space known as Tower Hill. It was founded towards the end of 1066 as part of the Norman Conquest of England. The White Tower, which gives the entire castle its name, was built by William the Conqueror in 1078 and was a resented symbol of oppression, inflicted upon London by the new ruling elite. The castle was also used as a prison from 1100 (Ranulf Flambard) until 1952 (Kray twins), although that was not its primary purpose. A grand palace early in its history, it served as a royal residence. As a whole, the Tower is a complex of several buildings set within two concentric rings of defensive walls and a moat. There were several phases of expansion, mainly under kings Richard I, Henry III, and Edward I in the 12th and 13th centuries. The general layout established by the late 13th century remains despite later activity on the site.'],
-        picture: 'https://i2-prod.birminghammail.co.uk/incoming/article17854600.ece/ALTERNATES/s615/1_ViewNorthUppercorner.jpg',
+        picture: '/images/TowerOfLondon1.jpg',
       },
       {
         location: 'United Kingdom',
@@ -45,7 +45,7 @@ export const AttractionsList = [
         Attraction: 'Oxford Street',
         status: 'Status: Open',
         longAbout: ['Oxford Street is a major road in the City of Westminster in the West End of London, running from Tottenham Court Road to Marble Arch via Oxford Circus. It is Europes busiest shopping street, with around half a million daily visitors, and as of 2012 had approximately 300 shops. It is designated as part of the A40, a major road between London and Fishguard, though it is not signed as such, and traffic is regularly restricted to buses and taxis. The road was originally part of the Via Trinobantina, a Roman road between Essex and Hampshire via London. It was known as Tyburn Road through the Middle Ages when it was notorious for public hangings of prisoners at Tyburn Gallows. It became known as Oxford Road and then Oxford Street in the 18th century, and began to change from residential to commercial and retail use by the late 19th century, attracting street traders, confidence tricksters and prostitution. The first department stores in the UK opened in the early 20th century, including Selfridges, John Lewis & Partners and HMV. Unlike nearby shopping streets such as Bond Street, it has retained an element of downmarket trading alongside more prestigious retail stores. The street suffered heavy bombing during World War II, and several longstanding stores including John Lewis were completely destroyed and rebuilt from scratch.'],
-        picture: 'https://i2-prod.birminghammail.co.uk/incoming/article17854600.ece/ALTERNATES/s615/1_ViewNorthUppercorner.jpg',
+        picture: '/images/oxford.webp',
       },
       {
         location: 'United Kingdom',
@@ -53,7 +53,7 @@ export const AttractionsList = [
         Attraction: 'Hyde Park',
         status: 'Status: Open',
         longAbout: ['Hyde Park is a Grade I-listed major park in Central London. It is the largest of four Royal Parks that form a chain from the entrance of Kensington Palace through Kensington Gardens and Hyde Park, via Hyde Park Corner and Green Park past the main entrance to Buckingham Palace. The park is divided by the Serpentine and the Long Water lakes. The park was established by Henry VIII in 1536 when he took the land from Westminster Abbey and used it as a hunting ground. It opened to the public in 1637 and quickly became popular, particularly for May Day parades. Major improvements occurred in the early 18th century under the direction of Queen Caroline. Several duels took place in Hyde Park during this time, often involving members of the nobility. The Great Exhibition of 1851 was held in the park, for which The Crystal Palace, designed by Joseph Paxton, was erected. Free speech and demonstrations have been a key feature of Hyde Park since the 19th century. Speakers Corner has been established as a point of free speech and debate since 1872, while the Chartists, the Reform League, the suffragettes, and the Stop the War Coalition have all held protests there. In the late 20th century, the park was known for holding large-scale free rock music concerts, featuring groups such as Pink Floyd, The Rolling Stones and Queen. Major events in the park have continued into the 21st century, such as Live 8 in 2005, and the annual Hyde Park Winter Wonderland from 2007.'],
-        picture: 'https://i2-prod.birminghammail.co.uk/incoming/article17854600.ece/ALTERNATES/s615/1_ViewNorthUppercorner.jpg',
+        picture: '/images/hydepark.jpg',
       },
       {
         location: 'United Kingdom',
@@ -61,7 +61,7 @@ export const AttractionsList = [
         Attraction: 'Buckingham Palace',
         status: 'Status: Closed',
         longAbout: ['Buckingham Palace is the London residence and administrative headquarters of the monarch of the United Kingdom. Located in the City of Westminster, the palace is often at the centre of state occasions and royal hospitality. It has been a focal point for the British people at times of national rejoicing and mourning. Originally known as Buckingham House, the building at the core of todays palace was a large townhouse built for the Duke of Buckingham in 1703 on a site that had been in private ownership for at least 150 years. It was acquired by King George III in 1761 as a private residence for Queen Charlotte and became known as The Queens House. During the 19th century it was enlarged, principally by architects John Nash and Edward Blore, who constructed three wings around a central courtyard. Buckingham Palace became the London residence of the British monarch on the accession of Queen Victoria in 1837. The last major structural additions were made in the late 19th and early 20th centuries, including the East Front, which contains the well-known balcony on which the British royal family traditionally congregates to greet crowds. A German bomb destroyed the palace chapel during the Second World War; the Queens Gallery was built on the site and opened to the public in 1962 to exhibit works of art from the Royal Collection. The original early 19th-century interior designs, many of which survive, include widespread use of brightly coloured scagliola and blue and pink lapis, on the advice of Sir Charles Long. King Edward VII oversaw a partial redecoration in a Belle Époque cream and gold colour scheme. Many smaller reception rooms are furnished in the Chinese regency style with furniture and fittings brought from the Royal Pavilion at Brighton and from Carlton House. The palace has 775 rooms, and the garden is the largest private garden in London. The state rooms, used for official and state entertaining, are open to the public each year for most of August and September and on some days in winter and spring.'],
-        picture: 'https://i2-prod.birminghammail.co.uk/incoming/article17854600.ece/ALTERNATES/s615/1_ViewNorthUppercorner.jpg',
+        picture: '/images/buckingham.webp',
       },
       {
         location: 'Ireland',
@@ -69,7 +69,7 @@ export const AttractionsList = [
         Attraction: 'Phoenix Park',
         status: 'Status: Open',
         longAbout: ['The Phoenix Park (Irish: Páirc an Fhionnuisce) is an urban park in Dublin, Ireland, lying 2–4 km west of the city centre, north of the River Liffey. Its 11 km perimeter wall encloses 707 hectares (1,750 acres); it is one of the largest enclosed recreational spaces within any European capital city. It includes large areas of grassland and tree-lined avenues, and since the 17th century has been home to a herd of wild fallow deer. The English name comes from the Irish fionn uisce meaning "clear water". The Irish Government is lobbying UNESCO to have the park designated as a world heritage site.'],
-        picture: 'https://i2-prod.birminghammail.co.uk/incoming/article17854600.ece/ALTERNATES/s615/1_ViewNorthUppercorner.jpg',
+        picture: '/images/pp.jpg',      
       },
       {
         location: 'Ireland',
@@ -77,7 +77,7 @@ export const AttractionsList = [
         Attraction: 'Guinness Storehouse',
         status: 'Status: Closed',
         longAbout: ['Guinness Storehouse is a tourist attraction at St. James Gate Brewery in Dublin, Ireland. Since opening in 2000, it has received over twenty million visitors.The Storehouse covers seven floors surrounding a glass atrium shaped in the form of a pint of Guinness. The ground floor introduces the beers four ingredients (water, barley, hops and yeast), and the brewerys founder, Arthur Guinness. Other floors feature the history of Guinness advertising and include an interactive exhibit on responsible drinking. The seventh floor houses the Gravity Bar with views of Dublin and where visitors may drink a pint of Guinness included in the price of admission.'],
-        picture: 'https://i2-prod.birminghammail.co.uk/incoming/article17854600.ece/ALTERNATES/s615/1_ViewNorthUppercorner.jpg',
+        picture: '/images/guinness.jpg',
       },
       {
         location: 'Ireland',
@@ -85,7 +85,7 @@ export const AttractionsList = [
         Attraction: 'The Spire',
         status: 'Status: Open',
         longAbout: ['The spire was designed by Ian Ritchie Architects, who sought an "Elegant and dynamic simplicity bridging art and technology". The contract was awarded to SIAC-Radley JV and it was manufactured by Radley Engineering of Dungarvan, County Waterford, and erected by SIAC Construction Ltd & GDW Engineering Ltd. The first section was installed on 18 December 2002. Construction of the sculpture was delayed because of difficulty in obtaining planning permission and environmental regulations.[6] The Spire consists of eight hollow stainless steel cone sections, the longest being 20 m (66 ft), which were installed on 21 January 2003. It is an elongated cone of diameter 3 m (9.8 ft) at the base, narrowing to 15 cm (5.9 in) at the top. It features two tuned mass dampers, designed by engineers Arup, to counteract sway. The steel underwent shot peening to alter the quality of light reflected from it. The pattern around the base of the Spire is based on a core sample of rock formation taken from the ground where the spire stands and the DNA double helix.[3] The pattern was applied by bead blasting the steel through rubber stencil masks whose patterns were created by water jet cutting based on core sample drawings supplied by the contractor. The design around the 10 m (33 ft) lower part of the Spire was created by the architects making a 3D pattern model combining the core sample and double helix and then digitally translated to a 2D image drawing supplied to the contractor and used by specialists for cutting the masking material. At dusk, the base of the monument is lit and the top 10 m (33 ft) is illuminated through 11,884 holes through which light-emitting diodes shine.'],
-        picture: 'https://i2-prod.birminghammail.co.uk/incoming/article17854600.ece/ALTERNATES/s615/1_ViewNorthUppercorner.jpg',
+        picture: '/images/spire.jpg',
       },
       {
         location: 'Ireland',
@@ -93,7 +93,7 @@ export const AttractionsList = [
         Attraction: 'Temple Bar',
         status: 'Status: Open',
         longAbout: ['Temple Bar (Irish: Barra an Teampaill) is an area on the south bank of the River Liffey in central Dublin, Ireland. The area is bounded by the Liffey to the north, Dame Street to the south, Westmoreland Street to the east and Fishamble Street to the west. It is promoted as Dublins cultural quarter and, as a centre of Dublins city centres nightlife, is a tourist destination. Temple Bar is in the Dublin 2 postcode.'],
-        picture: 'https://i2-prod.birminghammail.co.uk/incoming/article17854600.ece/ALTERNATES/s615/1_ViewNorthUppercorner.jpg',
+        picture: '/images/templebar.jpg',
       },
       {
         location: 'Ireland',
@@ -101,7 +101,7 @@ export const AttractionsList = [
         Attraction: 'Cliffs of Moher',
         status: 'Status: Open',
         longAbout: ['The Cliffs of Moher (Irish: Aillte an Mhothair) are sea cliffs located at the southwestern edge of the Burren region in County Clare, Ireland. They run for about 14 kilometres (9 miles). At their southern end, they rise 120 metres (390 ft) above the Atlantic Ocean at Hags Head, and, 8 kilometres (5 miles) to the north, they reach their maximum height of 214 metres (702 ft) just north of OBriens Tower, a round stone tower near the midpoint of the cliffs, built in 1835 by Sir Cornelius OBrien, then continue at lower heights. The closest settlements are the villages of Liscannor 6 km (4 miles) to the south, and Doolin 7 km (4 miles) to the north. From the cliffs, and from atop the tower, visitors can see the Aran Islands in Galway Bay, the Maumturks and Twelve Pins mountain ranges to the north in County Galway, and Loop Head to the south.[5] The cliffs rank among the most visited tourist sites in Ireland, with around 1.5 million visits per annum.'],
-        picture: 'https://i2-prod.birminghammail.co.uk/incoming/article17854600.ece/ALTERNATES/s615/1_ViewNorthUppercorner.jpg',
+        picture: '/images/moher.jpg',
       },
       {
         location: 'Ireland',
@@ -109,7 +109,7 @@ export const AttractionsList = [
         Attraction: 'Giants Causeway',
         status: 'Status: Open',
         longAbout: ['The Giants Causeway is an area of about 40,000 interlocking basalt columns, the result of an ancient volcanic fissure eruption. It is located in County Antrim on the north coast of Northern Ireland, about three miles (4.8 km) northeast of the town of Bushmills. It was declared a World Heritage Site by UNESCO in 1986 and a national nature reserve in 1987 by the Department of the Environment for Northern Ireland. In a 2005 poll of Radio Times readers, the Giants Causeway was named the fourth greatest natural wonder in the United Kingdom. The tops of the columns form stepping stones that lead from the cliff foot and disappear under the sea. Most of the columns are hexagonal, although there are also some with four, five, seven or eight sides. The tallest are about 12 metres (39 ft) high, and the solidified lava in the cliffs is 28 metres (92 ft) thick in places. Much of the Giants Causeway and Causeway Coast World Heritage Site is owned and managed by the National Trust. It is one of the most popular tourist attractions in Northern Ireland, receiving over 998,000 visitors in 2019. Access to the Giant’s Causeway is free of charge: it is not necessary to go via the visitor centre, which charges a fee. The remainder of the site is owned by the Crown Estate and several private landowners.'],
-        picture: 'https://i2-prod.birminghammail.co.uk/incoming/article17854600.ece/ALTERNATES/s615/1_ViewNorthUppercorner.jpg',
+        picture: '/images/giantscauseway.jpg',
       },
       {
         location: 'Ireland',
@@ -117,7 +117,7 @@ export const AttractionsList = [
         Attraction: 'Titanic Museum',
         status: 'Status: Open',
         longAbout: ['Titanic Belfast is a visitor attraction opened in 2012, a monument to Belfasts maritime heritage on the site of the former Harland & Wolff shipyard in the citys Titanic Quarter where the RMS Titanic was built. It tells the stories of the Titanic, which hit an iceberg and sank during her maiden voyage in 1912, and her sister ships RMS Olympic and HMHS Britannic. The building contains more than 12,000 square metres (130,000 sq ft) of floor space, most of which is occupied by a series of galleries, private function rooms and community facilities, plus the addition of Hickson’s Point destination bar in March 2018.'],
-        picture: 'https://i2-prod.birminghammail.co.uk/incoming/article17854600.ece/ALTERNATES/s615/1_ViewNorthUppercorner.jpg',
+        picture: '/images/titanic-belfast.jpg',
       },
       {
         location: 'Ireland',
@@ -125,7 +125,7 @@ export const AttractionsList = [
         Attraction: 'Wicklow Mountains',
         status: 'Status: Open',
         longAbout: ['The Wicklow Mountains (Irish: Sléibhte Chill Mhantáin) form the largest continuous upland area in the Republic of Ireland. They occupy the whole centre of County Wicklow and stretch outside its borders into the counties of Dublin, Wexford and Carlow. Where the mountains extend into County Dublin, they are known locally as the Dublin Mountains (Sléibhte Bhaile Átha Cliath). The highest peak is Lugnaquilla at 925 metres (3,035 feet). The mountains are primarily composed of granite surrounded by an envelope of mica-schist and much older rocks such as quartzite. They were pushed up during the Caledonian orogeny at the start of the Devonian period and form part of the Leinster Chain, the largest continuous area of granite in Ireland and Britain. The mountains owe much of their present topography to the effects of the last ice age, which deepened the valleys and created corrie and ribbon lakes. Copper and lead have been the main metals mined in the mountains and a brief gold rush occurred in the 18th century. Several major river systems have their source in the mountains, such as the Liffey, Dargle, Slaney and Avoca rivers. Powerscourt Waterfall is the tallest in Ireland at 121 metres (397 feet). A number of these rivers have been harnessed to create reservoirs for drinking water for Dublin and its surroundings. The Wicklow Mountains experience a temperate oceanic climate with mild, damp summers and cool, wet winters. The dominant habitat of the uplands consists of blanket bog, heath and upland grassland. The uplands support a number of bird species, including merlin and peregrine falcon. The valleys are a mixture of coniferous and deciduous woodland.'],
-        picture: 'https://i2-prod.birminghammail.co.uk/incoming/article17854600.ece/ALTERNATES/s615/1_ViewNorthUppercorner.jpg',
+        picture: '/images/wicklow.jpg',
       },
       {
         location: 'Spain',
@@ -133,7 +133,7 @@ export const AttractionsList = [
         Attraction: 'Museo del Prado',
         status: 'Status: Open',
         longAbout: ['The Prado Museum (Spanish: Museo del Prado), officially known as Museo Nacional del Prado, is the main Spanish national art museum, located in central Madrid. It is widely considered to have one of the worlds finest collections of European art, dating from the 12th century to the early 20th century, based on the former Spanish Royal Collection, and the single best collection of Spanish art. Founded as a museum of paintings and sculpture in 1819, it also contains important collections of other types of works. The Prado Museum is one of the most visited sites in the world, and it is considered one of the greatest art museums in the world. The numerous works by Francisco Goya, the single most extensively represented artist, as well as by Hieronymus Bosch, El Greco, Peter Paul Rubens, Titian, and Diego Velázquez, are some of the highlights of the collection. '],
-        picture: 'https://i2-prod.birminghammail.co.uk/incoming/article17854600.ece/ALTERNATES/s615/1_ViewNorthUppercorner.jpg',
+        picture: '/images/prado.jpg',
       },
       {
         location: 'Spain',
@@ -141,7 +141,7 @@ export const AttractionsList = [
         Attraction: 'Royal Palace & Gardens',
         status: 'Status: Open',
         longAbout: ['The Royal Palace of Madrid (Spanish: Palacio Real de Madrid) is the official residence of the Spanish royal family at the city of Madrid, although now used only for state ceremonies. The palace has 135,000 square metres (1,450,000 sq ft) of floor space and contains 3,418 rooms. It is the largest functioning royal palace and the largest by floor area in Europe.[3]  King Felipe VI and the royal family do not reside in the palace, choosing instead the significantly more modest Palace of Zarzuela on the outskirts of Madrid. The palace is now open to the public, except during state functions, although it is so large that only a selection of the best rooms are on the visitor route at any one time, the route being changed every few months. An admission fee of €13 is charged; however, at some times it is free. The palace is owned by the Spanish state and administered by the Patrimonio Nacional, a public agency of the Ministry of the Presidency. The palace is on Calle de Bailén ("Bailén Street") in the western part of downtown Madrid, east of the Manzanares River, and is accessible from the Ópera metro station. The palace is on the site of a 9th-century Moorish Alcázar, near the town of Magerit, constructed as an outpost by Muhammad I of Córdoba and inherited after 1036 by the independent Moorish Taifa of Toledo. After Madrid fell to King Alfonso VI of Castile in 1083, the edifice was only rarely used by the kings of Castile. In 1329, King Alfonso XI of Castile convened the Cortes of Madrid for the first time. King Felipe II moved his court to Madrid in 1561.'],
-        picture: 'https://i2-prod.birminghammail.co.uk/incoming/article17854600.ece/ALTERNATES/s615/1_ViewNorthUppercorner.jpg',
+        picture: '/images/palacemadrid.jpg',
       },
       {
         location: 'Spain',
@@ -149,7 +149,7 @@ export const AttractionsList = [
         Attraction: 'Basilica de San Francisco el Grande',
         status: 'Status: Open',
         longAbout: ['The Royal Basilica of San Francisco el Grande (Spanish: Real Basílica de San Francisco el Grande) is a Roman Catholic church in central Madrid, Spain, located in the neighborhood of Palacio. The main façade faces the Plaza of San Francisco, at the intersection of Bailén, the Gran Vía de San Francisco, and the Carrera de San Francisco. It forms part of the convent of Jesús y María of the Franciscan order. The convent was founded in the 13th century at the site of a chapel. The building was erected on the plot previously occupied by a primitive Franciscan convent (according to tradition founded by the very same Francis of Assisi in 1217), demolished on the occasion upon orders by Charles III, who sought to build a new convent from scratch. It was designed in a Neoclassic style in the second half of the 18th century, based on a design by Francisco Cabezas, developed by Antonio Pló, and completed by Francesco Sabatini. The church contains paintings by Zurbarán and Francisco Goya. The walls of the temple was painted in the 19th century. The temple once functioned as the National pantheon and enshrined the remains of famous artists and politicians. Today is an important tourism point.'],
-        picture: 'https://i2-prod.birminghammail.co.uk/incoming/article17854600.ece/ALTERNATES/s615/1_ViewNorthUppercorner.jpg',
+        picture: '/images/madrid-basilica.jpg',
       },
       {
         location: 'Spain',
@@ -157,7 +157,7 @@ export const AttractionsList = [
         Attraction: 'Santiago Bernabéu Stadium',
         status: 'Status: Closed',
         longAbout: ['The Santiago Bernabéu Stadium (Spanish: Estadio Santiago Bernabéu) is a football stadium in Madrid, Spain. With a current seating capacity of 81,044, it has been the home stadium of Real Madrid since its completion in 1947. It is the 2nd-largest stadium in Spain and the largest in the Community of Madrid. The Santiago Bernabéu is one of the worlds most famous football venues. It has hosted the final of the European Cup/UEFA Champions League on four occasions: in 1957, 1969, 1980, 2010. The stadium also hosted the second leg of the 2018 Copa Libertadores Finals, making Santiago Bernabéu the first (and only) stadium to host the two most important premier continental cup finals (UEFA Champions League and Copa Libertadores). The final matches for the 1964 European Nations Cup and the 1982 FIFA World Cup, were also held at the Bernabéu, making it the first stadium in Europe to host both a UEFA Euro final and a FIFA World Cup final.'],
-        picture: 'https://i2-prod.birminghammail.co.uk/incoming/article17854600.ece/ALTERNATES/s615/1_ViewNorthUppercorner.jpg',
+        picture: '/images/madridstadium.jpg',
       },
       {
         location: 'Spain',
@@ -165,7 +165,7 @@ export const AttractionsList = [
         Attraction: 'Camp Nou',
         status: 'Status: Open',
         longAbout: ['Camp Nou is a football stadium in Barcelona, Spain. It opened in 1957 and has been the home stadium of FC Barcelona since its completion. With a seating capacity of 99,354, it is the largest stadium in Spain and Europe, and the fourth largest football stadium in the world in capacity. It has hosted two Champions League finals in 1989 and 1999, two European Cup Winners Cup finals, four Inter-Cities Fairs Cup final games, five UEFA Super Cup games, four Copa del Rey finals, two Copa de la Liga finals, and twenty-one Supercopa de España finals. It also hosted five matches in the 1982 FIFA World Cup, including the opening game, two out of four matches at the 1964 European Nations Cup, and the football tournaments final at the 1992 Summer Olympics.'],
-        picture: 'https://i2-prod.birminghammail.co.uk/incoming/article17854600.ece/ALTERNATES/s615/1_ViewNorthUppercorner.jpg',
+        picture: '/images/campnou.jpg',
       },
       {
         location: 'Spain',
@@ -173,7 +173,7 @@ export const AttractionsList = [
         Attraction: 'La Sagrada Familia',
         status: 'Status: Open',
         longAbout: ['The Basílica de la Sagrada Família (Spanish: Basílica de la Sagrada Familia), also known as the Sagrada Família, is a large unfinished Roman Catholic minor basilica in the Eixample district of Barcelona, Catalonia, Spain. Designed by Spanish/Catalan architect Antoni Gaudí (1852–1926), his work on the building is part of a UNESCO World Heritage Site. On 7 November 2010, Pope Benedict XVI consecrated the church and proclaimed it a minor basilica. On 19 March 1882, construction of the Sagrada Família began under architect Francisco de Paula del Villar. In 1883, when Villar resigned,[5] Gaudí took over as chief architect, transforming the project with his architectural and engineering style, combining Gothic and curvilinear Art Nouveau forms. Gaudí devoted the remainder of his life to the project, and he is buried in the crypt. At the time of his death in 1926, less than a quarter of the project was complete. Relying solely on private donations, the Sagrada Famílias construction progressed slowly and was interrupted by the Spanish Civil War. In July 1936, revolutionaries set fire to the crypt and broke their way into the workshop, partially destroying Gaudís original plans, drawings and plaster models, which led to 16 years of work to piece together the fragments of the master model. Construction resumed to intermittent progress in the 1950s. Advancements in technologies such as computer aided design and computerised numerical control (CNC) have since enabled faster progress and construction passed the midpoint in 2010. However, some of the projects greatest challenges remain, including the construction of ten more spires, each symbolising an important Biblical figure in the New Testament. It is anticipated that the building can be completed by 2026, the centenary of Gaudís death.'],
-        picture: 'https://i2-prod.birminghammail.co.uk/incoming/article17854600.ece/ALTERNATES/s615/1_ViewNorthUppercorner.jpg',
+        picture: '/images/cathedral.jpg',
       },
       {
         location: 'Spain',
@@ -181,7 +181,7 @@ export const AttractionsList = [
         Attraction: 'Cathedral of Barcelona',
         status: 'Status: Open',
         longAbout: ['The Cathedral of the Holy Cross and Saint Eulalia, also known as Barcelona Cathedral, is the Gothic cathedral and seat of the Archbishop of Barcelona, Catalonia, Spain. The cathedral was constructed from the thirteenth to fifteenth centuries, with the principal work done in the fourteenth century. The cloister, which encloses the Well of the Geese was completed in 1448. In the late nineteenth century, the neo-Gothic façade was constructed over the nondescript exterior that was common to Catalan churches. The roof is notable for its gargoyles, featuring a wide range of animals, both domestic and mythical. Its form is pseudo-basilica, vaulted over five aisles, the outer two divided into chapels. The transept is truncated. The east end is a chevet of nine radiating chapels connected by an ambulatory. The high altar is raised, allowing a clear view into the crypt. The cathedral is dedicated to Eulalia of Barcelona, co-patron saint of Barcelona, a young virgin who, according to Catholic tradition, suffered martyrdom during Roman times in the city. One story says that she was exposed naked in the public square and a miraculous snowfall in mid-spring covered her nudity. '],
-        picture: 'https://i2-prod.birminghammail.co.uk/incoming/article17854600.ece/ALTERNATES/s615/1_ViewNorthUppercorner.jpg',
+        picture: '/images/cathedral-barcelona.jpg',
       },
       {
         location: 'Spain',
@@ -189,7 +189,7 @@ export const AttractionsList = [
         Attraction: 'La Rambla',
         status: 'Status: Open',
         longAbout: ['La Rambla is a street in central Barcelona. A tree-lined pedestrian street, it stretches for 1.2 km connecting the Plaça de Catalunya in its center with the Christopher Columbus Monument at Port Vell. La Rambla forms the boundary between the neighbourhoods of the Barri Gòtic to the east and the El Raval to the west. La Rambla can be crowded, especially during the height of the tourist season. Its popularity with tourists has affected the character of the street, which has shifted in composition to pavement cafes and souvenir kiosks. It has also suffered from the attention of pickpockets. The Spanish poet Federico García Lorca once said that La Rambla was "the only street in the world which I wish would never end.'],
-        picture: 'https://i2-prod.birminghammail.co.uk/incoming/article17854600.ece/ALTERNATES/s615/1_ViewNorthUppercorner.jpg',
+        picture: '/images/rambla.jpeg',
       },
       {
         location: 'Germany',
@@ -197,7 +197,7 @@ export const AttractionsList = [
         Attraction: 'Munich Residenz',
         status: 'Status: Open',
         longAbout: ['For centuries the seat of the dukes, electors, and kings of Bavaria, the Munich Residenz is one of Europes most spectacular palaces. Laid out around seven large courts, the vast Residenz complex comprises three main sections: the Königsbau, fronting onto Max-Joseph-Platz; the Alte Residenz, facing Residenzstrasse; and the Festsaalbau (Banqueting Hall), overlooking the Hofgarten. The earliest section of this huge complex was the magnificent Antiquarium, built in 1579 and now part of the outstanding Residenz Museum. The Alte Residenz, a masterpiece of the late Renaissance and testimony to the growing power of Bavaria, followed soon after, and the final components - the Neoclassical Königsbau, the Festsaalbau, and the Court Church - were completed in 1848. Today, the Residenz houses a number of monuments and museums, including the Residenz Museum, the Treasury, the Court Church of All Saints (Allerheiligen-Hofkirche), and Cuvilliés-Theater. Be sure to explore the palace grounds, too, with its many wonderful old courtyards - including the beautiful Court Garden - as well as numerous fountains, ponds, and gardens.'],
-        picture: 'https://i2-prod.birminghammail.co.uk/incoming/article17854600.ece/ALTERNATES/s615/1_ViewNorthUppercorner.jpg',
+        picture: '/images/munichrez.jpg',
       },
       {
         location: 'Germany',
@@ -205,7 +205,7 @@ export const AttractionsList = [
         Attraction: 'Victuals Market',
         status: 'Status: Open',
         longAbout: ['The Viktualienmarkt is a daily food market and a square in the center of Munich, Germany. The Viktualienmarkt developed from an original farmers market to a popular market for gourmets. In an area covering 22,000 m², 140 stalls and shops offer flowers, exotic fruit, game, poultry, spices, cheese, fish, juices and so on. Most stalls and shops are open during the official opening hours; but the Biergarten doesnt open until 9 a.m. Many stalls close at 6 p.m., before the standard closing time. There are special opening hours for flower shops, bakeries and restaurants.'],
-        picture: 'https://i2-prod.birminghammail.co.uk/incoming/article17854600.ece/ALTERNATES/s615/1_ViewNorthUppercorner.jpg',
+        picture: '/images/market.jpeg',
       },
       {
         location: 'Germany',
@@ -213,7 +213,7 @@ export const AttractionsList = [
         Attraction: 'Frauenkirche',
         status: 'Status: Open',
         longAbout: ['Munichs huge brick Frauenkirche - the Cathedral Church of Our Lady - was completed in 1488, a Late Gothic church that owes its impact to its great size. Massive twin 100-meter-tall towers, with their characteristic Renaissance domes, tower over a high building 109 meters long by 40 meters wide. Highlights inside the cathedral include the 1622 Tomb of the Emperor Ludwig the Bavarian in black marble with bronze figures, a 1620 altarpiece of the Assumption by Peter Candid, and the Baroque red marble font in the Baptistery with its early 14th-century Sorrowing Christ. A popular curiosity is the strange footprint in the floor of the porch, said to have been left by the devil after he came to inspect the church. So delighted was he that the windows seemed to have been forgotten (the row of columns hides them when the church is viewed from the entrance), he stamped his foot, leaving the footprint that can still be seen today. The twin towers of Frauenkirche are a good landmark for orientation, visible from all over the city. You can climb to the top for views across the city to the Bavarian Alps.'],
-        picture: 'https://i2-prod.birminghammail.co.uk/incoming/article17854600.ece/ALTERNATES/s615/1_ViewNorthUppercorner.jpg',
+        picture: '/images/frauenkirche.jpeg',
       },
       {
         location: 'Germany',
@@ -221,7 +221,7 @@ export const AttractionsList = [
         Attraction: 'The Brandenburg Gate',
         status: 'Status: Open',
         longAbout: ['Berlins most famous historic landmark is the Brandenburg Gate (Brandenburger Tor), once a symbol of a divided nation and now a symbol of unity and peace. This Neoclassical gate was commissioned by King Frederick Wilhelm II in 1788, and its design was inspired by the Propylaea in Athens Acropolis. The sandstone monument is 26 meters tall, standing in the Mitte districts Pariser Platz, just a block from the Reichstag building. During the Cold War, its physical and symbolic position as a blocked gate along the Berlin Wall made it a frequent site for demonstrations by West Berliners, and it is famous for being the backdrop of US President Ronald Reagans 1987 entreaty to Soviet leader Mikhail Gorbachev to tear down the wall. It was also the scene of a poignant gesture when German Chancellor Angela Merkel, Russias Mikhail Gorbachev, and Polands Lech Walesa walked through the gate in 1999 to commemorate the tearing down of the Berlin Wall 20 years earlier. Visiting the Brandenburg Gate at night is a special treat, and undoubtedly one of the top free things to do in Berlin.'],
-        picture: 'https://i2-prod.birminghammail.co.uk/incoming/article17854600.ece/ALTERNATES/s615/1_ViewNorthUppercorner.jpg',
+        picture: '/images/Brandenburger.jpg',
       },
       {
         location: 'Germany',
@@ -229,7 +229,7 @@ export const AttractionsList = [
         Attraction: 'The Rebuilt Reichstag',
         status: 'Status: Open',
         longAbout: ['The Reichstag (Reichstagsgebäude) was originally completed in 1894 where the Neo-Renaissance palace served as the home of the German Empires Imperial Diet until it burned in 1933. It was not used again until after the reunification of Germany, at which point it underwent a 10-year reconstruction and finally became the home of the German Parliament in 1999.  A highlight of this magnificent reconstruction is the replacement dome, the Kuppel, made of glass and offering superb views of the surrounding city, especially at night from the Rooftop Restaurant.  Note that entry to the Dome and Terrace is ticketed, and due to demand, its recommended that tickets be requested in advance (registration is available on the day, but expect a two- or three-hour wait). Free English language audio guides are available.'],
-        picture: 'https://i2-prod.birminghammail.co.uk/incoming/article17854600.ece/ALTERNATES/s615/1_ViewNorthUppercorner.jpg',
+        picture: '/images/Reichstag.jpg',
       },
       {
         location: 'Germany',
@@ -237,7 +237,7 @@ export const AttractionsList = [
         Attraction: 'Berlin Wall Memorial',
         status: 'Status: Open',
         longAbout: ['The Berlin Wall originated in 1961 when East Germany sealed off that half of the city to prevent citizens from fleeing to West Germany. By the time it was torn down in 1989, the four-meter-high wall extended 155 kilometers, dissected 55 streets, and possessed 293 observation towers and 57 bunkers. Today, only small stretches of this graffiti-covered travesty remain, including a 1.4-kilometer stretch preserved as part of the Berlin Wall Memorial (Gedenkstätte Berliner Mauer), a chilling reminder of the animosity that once divided Europe. Highlights of a visit include the Marienfelde Refugee Center Museum, with its exhibits relating to the one-and-a-half million people who passed through Berlin as refugees; the Günter Litfin Memorial, a former watchtower now set up as a memorial, which pays tribute to the first civilian killed trying to cross from east to west; the Monument in Memory of the Divided City and the Victims of Communist Tyranny; the Window of Remembrance; and a Visitor Center, with views over the remains of the wall. Guided tours are available in English.'],
-        picture: 'https://i2-prod.birminghammail.co.uk/incoming/article17854600.ece/ALTERNATES/s615/1_ViewNorthUppercorner.jpg',
+        picture: '/images/berlinwall.jpg',
       },
       {
         location: 'Germany',
@@ -245,7 +245,7 @@ export const AttractionsList = [
         Attraction: ' Berliner Fernsehturm',
         status: 'Status: Open',
         longAbout: ['Despite celebrating its 50th anniversary in 2020, the 368-meter-tall Berliner Fernsehturm (Berlin Television Tower) has lost none of its appeal to visitors to the city. Since opening in 1970, Europes third-tallest freestanding structure has attracted over 60 million visitors, most of them drawn for the spectacular views over Germanys capital.  Originally constructed to mark the prowess of communism (its located in the former East Berlin district), the landmark can be picked out from pretty much every corner of the city, making it more significant as a symbol of the citys reunification in the 1980s. Be sure to include the structures observation deck in your visit, and if youre able to linger awhile, book a reservation at the 207-meter-high revolving restaurant.'],
-        picture: 'https://i2-prod.birminghammail.co.uk/incoming/article17854600.ece/ALTERNATES/s615/1_ViewNorthUppercorner.jpg',
+        picture: '/images/berlintower.jpeg',
       },
       {
         location: 'Germany',
@@ -253,7 +253,105 @@ export const AttractionsList = [
         Attraction: 'Checkpoint Charlie Museum',
         status: 'Status: Open',
         longAbout: ['Also of interest is Checkpoint Charlie Museum (Museum Haus am Checkpoint Charlie). Marking the best-known crossing point between East and West Berlin, this fascinating tourist attraction features numerous displays and artifacts tracing the history of human rights, along with exhibits dealing specifically with the history of the Berlin Wall, and Checkpoint Charlie. Situated next to the original guardhouse, the museum also highlights some of the most interesting attempts made by those trying to escape communist rule, including an original homemade air balloon used in one successful attempt. Also of interest is the nearby open-air BlackBox Cold War exhibit, which features sections of the Berlin Wall and related information stations.'],
-        picture: 'https://i2-prod.birminghammail.co.uk/incoming/article17854600.ece/ALTERNATES/s615/1_ViewNorthUppercorner.jpg',
+        picture: '/images/charlie.jpeg',
       },
+      {
+        location: 'Italy',
+        city: 'Rome',
+        Attraction: 'Colosseum',
+        status: 'Status: Closed',
+        longAbout: ['The Colosseum, is an oval amphitheatre in the centre of the city of Rome, Italy, just east of the Roman Forum and is the largest ancient amphitheatre ever built. Construction began under the emperor Vespasian in 72 and was completed in AD 80 under his successor and heir, Titus. Further modifications were made during the reign of Domitian. The three emperors that were patrons of the work are known as the Flavian dynasty, and the amphitheatre was named the Flavian Amphitheatre by later classicists and archaeologists for its association with their family name. The Colosseum is built of travertine limestone, tuff, and brick-faced concrete. The Colosseum could hold an estimated 50,000 to 80,000 spectators at various points of its history over the centuries, having an average audience of some 65,000; it was used for gladiatorial contests and public spectacles such as mock sea battles, animal hunts, executions, re-enactments of famous battles, and dramas based on Roman mythology. The building ceased to be used for entertainment in the early medieval era.'],
+        picture: '/images/Colosseum.jpg',
+      },
+      {
+        location: 'Italy',
+        city: 'Rome',
+        Attraction: 'Trevi Fountain',
+        status: 'Status: Open',
+        longAbout: ["The Trevi Fountain is a fountain in the Trevi district in Rome, Italy, designed by Italian architect Nicola Salvi and completed by Giuseppe Pannini and several others. Standing 26.3 metres high and 49.15 metres wide, it is the largest Baroque fountain in the city and one of the most famous fountains in the world. The fountain has appeared in several notable films, including Roman Holiday, the eponymous Three Coins in the Fountain, Federico Fellini's La Dolce Vita, and The Lizzie McGuire Movie."],
+        picture: '/images/trevi.jpeg',
+      },
+      {
+        location: 'Italy',
+        city: 'Rome',
+        Attraction: 'Pantheon',
+        status: 'Status: Open',
+        longAbout: [`The Pantheon is a former Roman temple, now a Catholic church, in Rome, Italy, on the site of an earlier temple commissioned by Marcus Agrippa during the reign of Augustus. It was rebuilt by the emperor Hadrian and probably dedicated about 126 AD. Its date of construction is uncertain, because Hadrian chose not to inscribe the new temple but rather to retain the inscription of Agrippa's older temple, which had burned down. The building is cylindrical with a portico of large granite Corinthian columns under a pediment. A rectangular vestibule links the porch to the rotunda, which is under a coffered concrete dome, with a central opening to the sky. Almost two thousand years after it was built, the Pantheon's dome is still the world's largest unreinforced concrete dome. The height to the oculus and the diameter of the interior circle are the same, 43 metres. It is one of the best-preserved of all Ancient Roman buildings, in large part because it has been in continuous use throughout its history and, since the 7th century, the Pantheon has been in use as a church dedicated to "St. Mary and the Martyrs" but informally known as "Santa Maria Rotonda"`],
+        picture: '/images/pantheon.jpeg',
+      },
+      {
+        location: 'Italy',
+        city: 'Napels',
+        Attraction: 'Mount Vesuvius',
+        status: 'Status: Open',
+        longAbout: [`Mount Vesuvius is a somma-stratovolcano located on the Gulf of Naples in Campania, Italy, about 9 km east of Naples and a short distance from the shore. It is one of several volcanoes which form the Campanian volcanic arc. Vesuvius consists of a large cone partially encircled by the steep rim of a summit caldera caused by the collapse of an earlier and originally much higher structure. The eruption of Mount Vesuvius in AD 79 destroyed the Roman cities of Pompeii, Herculaneum, Oplontis and Stabiae, as well as several other settlements. The eruption ejected a cloud of stones, ashes and volcanic gases to a height of 33 km, erupting molten rock and pulverized pumice at the rate of 6×10⁵ cubic metres per second, ultimately releasing 100,000 times the thermal energy released by the atomic bombings of Hiroshima and Nagasaki. More than 1,000 people are thought to have died in the eruption, though the exact toll is unknown. The only surviving eyewitness account of the event consists of two letters by Pliny the Younger to the historian Tacitus. Vesuvius has erupted many times since, and is the only volcano on the European mainland to have erupted within the last hundred years.`],
+        picture: '/images/mount.jpeg',
+      },
+      {
+        location: 'Italy',
+        city: 'Pompei',
+        Attraction: 'Archaeological Park of Pompeii',
+        status: 'Status: Open',
+        longAbout: [`Ruins of a Roman city, buried by Mt. Vesuvius in 79 A.D., including villas, temples & bathhouses.`],
+        picture: '/images/pompei.jpg',
+      },
+      {
+        location: 'Italy',
+        city: 'Pisa',
+        Attraction: 'Duomo di Milano',
+        status: 'Status: Open',
+        longAbout: [`Milan Cathedral is the cathedral church of Milan, Lombardy, Italy. Dedicated to the Nativity of St Mary, it is the seat of the Archbishop of Milan, currently Archbishop Mario Delpini. The cathedral took nearly six centuries to complete: construction began in 1386, and the final details were completed in 1965. It is the largest church in Italy—the larger St. Peter's Basilica is in the State of Vatican City, a sovereign nation—and the second largest in Europe and the fourth largest in the world.`],
+        picture: '/images/duomo.jpeg',
+      },
+      {
+        location: 'Italy',
+        city: 'Pisa',
+        Attraction: 'Leaning Tower of Pisa',
+        status: 'Status: Open',
+        longAbout: [`The Leaning Tower of Pisa or simply the Tower of Pisa is the campanile, or freestanding bell tower, of the cathedral of the Italian city of Pisa, known worldwide for its nearly four-degree lean, the result of an unstable foundation. The tower is situated behind the Pisa Cathedral and is the third-oldest structure in the city's Cathedral Square, after the cathedral and the Pisa Baptistry. The height of the tower is 55.86 metres from the ground on the low side and 56.67 metres on the high side. The width of the walls at the base is 2.44 m. Its weight is estimated at 14,500 metric tons. The tower has 296 or 294 steps; the seventh floor has two fewer steps on the north-facing staircase. The tower began to lean during construction in the 12th century, due to soft ground which could not properly support the structure's weight, and it worsened through the completion of construction in the 14th century. By 1990, the tilt had reached 5.5 degrees. The structure was stabilized by remedial work between 1993 and 2001, which reduced the tilt to 3.97 degrees.`],
+        picture: '/images/pisa.jpeg',
+      },
+      
+      {
+        location: 'Italy',
+        city: 'Milan',
+        Attraction: 'Galleria Vittorio Emanuele II',
+        status: 'Status: Open',
+        longAbout: [`The Galleria Vittorio Emanuele II is Italy's oldest active shopping mall and a major landmark of Milan, Italy. Housed within a four-story double arcade in the center of town, the Galleria is named after Victor Emmanuel II, the first king of the Kingdom of Italy. It was designed in 1861 and built by architect Giuseppe Mengoni between 1865 and 1877.`],
+        picture: '/images/gallery.jpeg',
+      },
+      {
+        location: 'Italy',
+        city: 'Florence',
+        Attraction: 'Cathedral of Santa Maria del Fiore',
+        status: 'Status: Open',
+        longAbout: ["Florence Cathedral, formally the Cattedrale di Santa Maria del Fiore, is the cathedral of Florence, Italy. It was begun in 1296 in the Gothic style to a design of Arnolfo di Cambio and was structurally completed by 1436, with the dome engineered by Filippo Brunelleschi. The exterior of the basilica is faced with polychrome marble panels in various shades of green and pink, bordered by white, and has an elaborate 19th-century Gothic Revival façade by Emilio De Fabris. The cathedral complex, in Piazza del Duomo, includes the Baptistery and Giotto's Campanile. These three buildings are part of the UNESCO World Heritage Site covering the historic centre of Florence and are a major tourist attraction of Tuscany. The basilica is one of Italy's largest churches, and until the development of new structural materials in the modern era, the dome was the largest in the world. It remains the largest brick dome ever constructed. The cathedral is the mother church of the Roman Catholic Archdiocese of Florence, whose archbishop is Giuseppe Betori."],
+        picture: '/images/florence-cathedral.jpeg',
+      },
+      {
+        location: 'Italy',
+        city: 'Florence',
+        Attraction: 'Palazzo Vecchio',
+        status: 'Status: Open',
+        longAbout: ["The Palazzo Vecchio is the town hall of Florence, Italy. It overlooks the Piazza della Signoria, which holds a copy of Michelangelo's David statue, and the gallery of statues in the adjacent Loggia dei Lanzi. Originally called the Palazzo della Signoria, after the Signoria of Florence, the ruling body of the Republic of Florence, this building was also known by several other names: Palazzo del Popolo, Palazzo dei Priori, and Palazzo Ducale, in accordance with the varying use of the palace during its long history. The building acquired its current name when the Medici duke's residence was moved across the Arno River to the Palazzo Pitti."],
+        picture: '/images/palazzo.jpeg',
+      },
+      {
+        location: 'Italy',
+        city: 'Vatican',
+        Attraction: 'Sistine Chapel',
+        status: 'Status: Open',
+        longAbout: ["The Sistine Chapel is a chapel in the Apostolic Palace, the official residence of the pope, in Vatican City. Originally known as the Cappella Magna, the chapel takes its name from Pope Sixtus IV, who restored it between 1473 and 1481. Since that time, the chapel has served as a place of both religious and functionary papal activity. Today, it is the site of the papal conclave, the process by which a new pope is selected. The fame of the Sistine Chapel lies mainly in the frescos that decorate the interior, most particularly the Sistine Chapel ceiling and The Last Judgment by Michelangelo. During the reign of Sixtus IV, a team of Renaissance painters that included Sandro Botticelli, Pietro Perugino, Pinturicchio, Domenico Ghirlandaio and Cosimo Rosselli, created a series of frescos depicting the Life of Moses and the Life of Christ, offset by papal portraits above and trompe-l'œil drapery below. These paintings were completed in 1482, and on 15 August 1483 Sixtus IV celebrated the first mass in the Sistine Chapel for the Feast of the Assumption, at which ceremony the chapel was consecrated and dedicated to the Virgin Mary."],
+        picture: '/images/sistine.jpeg',
+      },
+      {
+        location: 'Italy',
+        city: 'Vatican',
+        Attraction: "St. Peter's Basilica",
+        status: 'Status: Open',
+        longAbout: [`The Papal Basilica of Saint Peter in the Vatican, or simply Saint Peter's Basilica, is a church built in the Renaissance style located in Vatican City, the papal enclave which is within the city of Rome. Designed principally by Donato Bramante, Michelangelo, Carlo Maderno and Gian Lorenzo Bernini, St. Peter's is the most renowned work of Renaissance architecture and the largest church in the world. While it is neither the mother church of the Catholic Church nor the cathedral of the Diocese of Rome, St. Peter's is regarded as one of the holiest Catholic shrines. It has been described as "holding a unique position in the Christian world" and as "the greatest of all churches of Christendom". Catholic tradition holds that the basilica is the burial site of Saint Peter, chief among Jesus's apostles and also the first Bishop of Rome. Saint Peter's tomb is supposedly directly below the high altar of the basilica. For this reason, many popes have been interred at St. Peter's since the Early Christian period. A church has stood on this site since the time of the Roman emperor Constantine the Great. Old St. Peter's Basilica dates from the 4th century AD.`],
+        picture: '/images/peters-basilica.jpeg',
+      },
+      
       
     ]
