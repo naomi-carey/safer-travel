@@ -18,6 +18,7 @@ class Statistics extends React.Component {
     let countryInfo = this.state.countryCovidStats.filter(
       (country) => country.country === selectedCountry
     );
+    this.props.getChangeCases(countryInfo[0].increment);
 
     this.setState({
       todayCases: countryInfo[0].cases,
@@ -164,10 +165,10 @@ class Statistics extends React.Component {
                         this.state.changeCases === Infinity
                           ? "indicator indicator-grey"
                           : this.state.changeCases < 80
-                          ? "indicator indicator-green"
+                          ? "arrow-green bounce"
                           : this.state.changeCases > 120
-                          ? "indicator indicator-red"
-                          : "indicator indicator-yellow"
+                          ? "arrow-red bounce"
+                          : "arrow-yellow bounce"
                       }
                     ></div>
                   </div>
