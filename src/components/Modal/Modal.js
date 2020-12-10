@@ -16,9 +16,9 @@ export const Modal = ({ close, index, data }) => {
       </div>
       <div className="modal-content">
         <div className="modal-body">
-          <p>Cases:{data.cases}</p>
-          <p>Recovered:{data.recovered}</p>
-          <p>Active:{data.active}</p>
+          <p>Daily Cases:{data.todayCases}</p>
+          <p>Daily Recovered:{data.todayRecovered}</p>
+          <p>Total Cases:{data.cases}</p>
           <p>Last Updated:{lastUpdated}</p>
         </div>
         <div className="modal-footer">

@@ -33,7 +33,19 @@ const light = [{
         "elementType": "all",
         "stylers": [
             {
-                "visibility": "off"
+                "visibility": "on"
+            },
+            {
+                "gamma": 0.1
+            },
+            {
+                "lightness": 1
+            },
+            {
+                "weight": "0.01"
+            },
+            {
+                "color": "#a6a6a6"
             }
         ]
     },

@@ -1,39 +1,24 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import GoogleMapReact from 'google-map-react';
-import axios from "axios";
+// import axios from "axios";
 import { FaGenderless } from "react-icons/fa";
 import './Map-style';
 import './Map.css';
 import { Modal } from '../Modal/Modal';
 import MapStyle from './Map-style';
-// import Statistics from '../Statistics';
 
 const apiUrl = 'https://corona.lmao.ninja/v2/countries?sort=countries'
 const API_KEY = `${process.env.REACT_APP_API_GOOGLEMAP_KEY}`;
 
 
 
-function Map() {
-
-  const [result, setResult] = useState([]);
-
-  useEffect(() => {
-    axios.get(apiUrl)
-      .then(response => {
-
-        let responseWithToggleShow = response.data.map(data => ({ ...data, showModal: false }))
-        // console.log(responseWithToggleShow)
-        setResult(responseWithToggleShow);
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  }, []);
+function Map(props) {
+  const [result, setLatest] = useState([...props.countryCovidStats]);
 
   const toggleShowModal = index => {
     let newResults = [...result]
     newResults[index].showModal = !result[index].showModal
-    setResult(newResults)
+    setLatest(newResults)
   }
 
   return (
@@ -45,30 +30,17 @@ function Map() {
                   scrollwheel:false }}
         defaultZoom={0}
       >
-        {result.map((data, index, countryData, changeCases) => {
-        // console.log(countryData);
-
-        let getColorInfected = () => {
-          
-                // changeCases.toString() === "NaN" ||
-                // changeCases === Infinity
-                //   ? "grey"
-                //   : changeCases < 80
-                //   ? "green"
-                //   : changeCases > 120
-                //   ? "red"
-                //   : "yellow" 
-          
-          if (data.cases >= 10000) {
-            return "#cc0000"
-          }
-          else if (data.cases >= 1000) {
-            return "#FFD700"
-          }
-          else {
-            return "#00b300"
-          } 
-        }
+        {result.map((data, index) => {
+        const getColorInfected = () => (
+                data.increment.toString() === "NaN" ||
+                data.increment === Infinity
+                  ? "grey"
+                  : data.increment < 80
+                  ? "green"
+                  : data.increment > 120
+                  ? "red"
+                  : "gold"
+        )
           return (
             <div key={index}
               lat={data.countryInfo.lat}
@@ -77,7 +49,6 @@ function Map() {
               <div>
                 <button onClick={() => toggleShowModal(index)} className="marker"
                 style={{color: getColorInfected()}}
-
                   ><FaGenderless /></button>
                 {
                   data.showModal &&

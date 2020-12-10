@@ -1,0 +1,14 @@
+.loading {
+    size: 72;
+    background-color: blue;
+    color: blue;
+}
+
+.loading-header {
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+.loading-div {
+    height: 100vh;
+}
