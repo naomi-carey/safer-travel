@@ -165,10 +165,10 @@ class Statistics extends React.Component {
                         this.state.changeCases === Infinity
                           ? "indicator indicator-grey"
                           : this.state.changeCases < 80
-                          ? "arrow-green bounce"
+                          ? "arrow-green bounce-up-down"
                           : this.state.changeCases > 120
-                          ? "arrow-red bounce"
-                          : "arrow-yellow bounce"
+                          ? "arrow-red bounce-up-down"
+                          : "arrow-yellow bounceRight"
                       }
                     ></div>
                   </div>

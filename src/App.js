@@ -4,7 +4,7 @@ import Statistics from "./components/Statistics/Statistics";
 import Banner from "./components/Banner/Banner";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
-import Footer from './components/Footer/Footer_one';
+import Footer from "./components/Footer/Footer_one";
 import AttractionsCard from "./components/TravelCards/AttractionsCard";
 import FlightCard from "./components/Flights/FlightCard";
 import Airport from "./components/Airport/Airport";
@@ -42,7 +42,6 @@ export default class App extends Component {
         })
       );
 
-
     let incrementArray = [];
     let myHistoricalData = [];
     let firstdata = [];
@@ -66,23 +65,23 @@ export default class App extends Component {
             increment =
               ((country.timeline.cases[
                 Object.keys(country.timeline.cases)[
-                Object.keys(country.timeline.cases).length - 1
+                  Object.keys(country.timeline.cases).length - 1
                 ]
               ] -
                 country.timeline.cases[
-                Object.keys(country.timeline.cases)[
-                Object.keys(country.timeline.cases).length - 8
-                ]
+                  Object.keys(country.timeline.cases)[
+                    Object.keys(country.timeline.cases).length - 8
+                  ]
                 ]) /
                 (country.timeline.cases[
                   Object.keys(country.timeline.cases)[
-                  Object.keys(country.timeline.cases).length - 8
+                    Object.keys(country.timeline.cases).length - 8
                   ]
                 ] -
                   country.timeline.cases[
-                  Object.keys(country.timeline.cases)[
-                  Object.keys(country.timeline.cases).length - 15
-                  ]
+                    Object.keys(country.timeline.cases)[
+                      Object.keys(country.timeline.cases).length - 15
+                    ]
                   ])) *
               100;
             incrementArray.push({
@@ -103,7 +102,82 @@ export default class App extends Component {
                   todayCases: first.todayCases,
                   todayRecovered: first.todayRecovered,
                   updated: first.updated,
-                  showModal: false
+                  showModal: false,
+                });
+            });
+          });
+
+          this.setState({
+            countryCovidStats: myFinalData,
+          });
+        });
+    };
+    apiCall();
+  }
+
+  componentDidMount() {
+    let incrementArray = [];
+    let myHistoricalData = [];
+    let firstdata = [];
+    let increment = "";
+    let myFinalData = [];
+
+    const apiCall = () => {
+      Promise.all([
+        fetch("https://corona.lmao.ninja/v2/countries?sort=countries"),
+        fetch("https://disease.sh/v3/covid-19/historical?/"),
+      ])
+        .then(([response1, response2]) => {
+          return Promise.all([response1.json(), response2.json()]);
+        })
+
+        .then(([response1, response2]) => {
+          firstdata = response1;
+          myHistoricalData = response2;
+
+          myHistoricalData.map((country) => {
+            increment =
+              ((country.timeline.cases[
+                Object.keys(country.timeline.cases)[
+                  Object.keys(country.timeline.cases).length - 1
+                ]
+              ] -
+                country.timeline.cases[
+                  Object.keys(country.timeline.cases)[
+                    Object.keys(country.timeline.cases).length - 8
+                  ]
+                ]) /
+                (country.timeline.cases[
+                  Object.keys(country.timeline.cases)[
+                    Object.keys(country.timeline.cases).length - 8
+                  ]
+                ] -
+                  country.timeline.cases[
+                    Object.keys(country.timeline.cases)[
+                      Object.keys(country.timeline.cases).length - 15
+                    ]
+                  ])) *
+              100;
+            console.log(myHistoricalData);
+            incrementArray.push({
+              name: country.country,
+              increment: increment,
+            });
+          });
+
+          firstdata.map((first) => {
+            incrementArray.map((second) => {
+              first.country.toLowerCase() === second.name.toLowerCase() &&
+                myFinalData.push({
+                  country: first.country,
+                  active: first.active,
+                  cases: first.cases,
+                  increment: second.increment,
+                  countryInfo: first.countryInfo,
+                  todayCases: first.todayCases,
+                  todayRecovered: first.todayRecovered,
+                  updated: first.updated,
+                  showModal: false,
                 });
             });
           });
@@ -253,19 +327,22 @@ export default class App extends Component {
             startDate={this.state.finalStartDate}
           />
         )}
-        {this.state.countryCovidStats.length > 0 &&
+        {this.state.countryCovidStats.length > 0 && (
           <>
-            <Map countryCovidStats={this.state.countryCovidStats} changedCases={this.state.stabilityStat} />
-            <Statistics countryCovidStats={this.state.countryCovidStats} getChangeCases={this.getChangeCases} />
+            <Map
+              countryCovidStats={this.state.countryCovidStats}
+              changedCases={this.state.stabilityStat}
+            />
+            <Statistics
+              countryCovidStats={this.state.countryCovidStats}
+              getChangeCases={this.getChangeCases}
+            />
           </>
-        }
+        )}
 
         <div>
-
           <div>
-
             <AttractionsCard />
-
 
             <Loading />
             <Footer />

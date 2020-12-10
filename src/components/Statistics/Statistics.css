@@ -161,9 +161,9 @@ tr {
   margin: 8% 0;
   width: 0;
   height: 0;
-  border-top: 20px solid rgb(247, 228, 62);
+  border-top: 20px solid transparent;
   border-bottom: 20px solid transparent;
-  border-left: 20px solid transparent;
+  border-left: 20px solid rgb(247, 228, 62);
   font-size: 0;
   line-height: 0;
   float: left;
@@ -182,7 +182,7 @@ tr {
   float: left;
 }
 
-.bounce {
+.bounce-up-down {
   -moz-animation: bounce 2s infinite;
   -webkit-animation: bounce 2s infinite;
   animation: bounce 2s infinite;
@@ -203,6 +203,30 @@ tr {
     transform: translateY(-15px);
   }
 }
+
+/* .bounce-right {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+@keyframes bounce2 {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  40% {
+    -webkit-transform: translateX(-30px);
+    transform: translateX(-30px);
+  }
+  60% {
+    -webkit-transform: translateX(-15px);
+    transform: translateX(-15px);
+  }
+} */
 
 .indicator {
   width: 15px;
