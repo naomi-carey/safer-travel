@@ -4,7 +4,7 @@ import Statistics from "./components/Statistics/Statistics";
 import Banner from "./components/Banner/Banner";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
-import Footer from "./components/Footer/Footer_one";
+import Footer from './components/Footer/Footer_one';
 import AttractionsCard from "./components/TravelCards/AttractionsCard";
 import FlightCard from "./components/Flights/FlightCard";
 import Airport from "./components/Airport/Airport";
@@ -15,6 +15,7 @@ import { airports } from "./components/Airport/AirportMap";
 import moment from "moment";
 import Loading from "./components/LoadingScreen/Loading";
 // import "./react_dates_overrides.css";
+
 export default class App extends Component {
   state = {
     showFlights: false,
@@ -181,10 +182,16 @@ export default class App extends Component {
         <Map changedCases={this.state.stabilityStat} />
         <Statistics getChangeCases={this.getChangeCases} />
         <div>
+
+          <div>
+         
           <AttractionsCard />
+        
+        
           <Loading />
           <Footer />
         </div>
+      </div>
       </div>
     );
   }
