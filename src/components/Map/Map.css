@@ -3,11 +3,11 @@
     outline:none;
     background: none;
     width: 15px;
-    color: #05752a;
+    color: black;
     
 }
 
 .marker:hover {
-    transform: scale(1.5);
+    transform: scale(2);
     transition-duration: 0.5s;
 }

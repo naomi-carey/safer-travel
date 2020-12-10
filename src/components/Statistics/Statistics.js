@@ -7,7 +7,7 @@ class Statistics extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      countryCovidStats: [],
+      countryCovidStats: this.props.countryCovidStats,
       selectedCountry: {},
       showDetailedStats: false,
     };
@@ -31,74 +31,74 @@ class Statistics extends React.Component {
   getDetailedStats = () =>
     this.setState({ showDetailedStats: !this.state.showDetailedStats });
 
-  componentDidMount() {
-    let incrementArray = [];
-    let myHistoricalData = [];
-    let firstdata = [];
-    let increment = "";
-    let myFinalData = [];
+  // componentDidMount() {
+  //   let incrementArray = [];
+  //   let myHistoricalData = [];
+  //   let firstdata = [];
+  //   let increment = "";
+  //   let myFinalData = [];
 
-    const apiCall = () => {
-      Promise.all([
-        fetch("https://corona.lmao.ninja/v2/countries?sort=countries"),
-        fetch("https://disease.sh/v3/covid-19/historical?/"),
-      ])
-        .then(([response1, response2]) => {
-          return Promise.all([response1.json(), response2.json()]);
-        })
+  //   const apiCall = () => {
+  //     Promise.all([
+  //       fetch("https://corona.lmao.ninja/v2/countries?sort=countries"),
+  //       fetch("https://disease.sh/v3/covid-19/historical?/"),
+  //     ])
+  //       .then(([response1, response2]) => {
+  //         return Promise.all([response1.json(), response2.json()]);
+  //       })
 
-        .then(([response1, response2]) => {
-          firstdata = response1;
-          myHistoricalData = response2;
+  //       .then(([response1, response2]) => {
+  //         firstdata = response1;
+  //         myHistoricalData = response2;
 
-          myHistoricalData.map((country) => {
-            increment =
-              ((country.timeline.cases[
-                Object.keys(country.timeline.cases)[
-                  Object.keys(country.timeline.cases).length - 1
-                ]
-              ] -
-                country.timeline.cases[
-                  Object.keys(country.timeline.cases)[
-                    Object.keys(country.timeline.cases).length - 8
-                  ]
-                ]) /
-                (country.timeline.cases[
-                  Object.keys(country.timeline.cases)[
-                    Object.keys(country.timeline.cases).length - 8
-                  ]
-                ] -
-                  country.timeline.cases[
-                    Object.keys(country.timeline.cases)[
-                      Object.keys(country.timeline.cases).length - 15
-                    ]
-                  ])) *
-              100;
-            incrementArray.push({
-              name: country.country,
-              increment: increment,
-            });
-          });
+  //         myHistoricalData.map((country) => {
+  //           increment =
+  //             ((country.timeline.cases[
+  //               Object.keys(country.timeline.cases)[
+  //                 Object.keys(country.timeline.cases).length - 1
+  //               ]
+  //             ] -
+  //               country.timeline.cases[
+  //                 Object.keys(country.timeline.cases)[
+  //                   Object.keys(country.timeline.cases).length - 8
+  //                 ]
+  //               ]) /
+  //               (country.timeline.cases[
+  //                 Object.keys(country.timeline.cases)[
+  //                   Object.keys(country.timeline.cases).length - 8
+  //                 ]
+  //               ] -
+  //                 country.timeline.cases[
+  //                   Object.keys(country.timeline.cases)[
+  //                     Object.keys(country.timeline.cases).length - 15
+  //                   ]
+  //                 ])) *
+  //             100;
+  //           incrementArray.push({
+  //             name: country.country,
+  //             increment: increment,
+  //           });
+  //         });
 
-          firstdata.map((first) => {
-            incrementArray.map((second) => {
-              first.country.toLowerCase() === second.name.toLowerCase() &&
-                myFinalData.push({
-                  country: first.country,
-                  active: first.active,
-                  cases: first.cases,
-                  increment: second.increment,
-                });
-            });
-          });
+  //         firstdata.map((first) => {
+  //           incrementArray.map((second) => {
+  //             first.country.toLowerCase() === second.name.toLowerCase() &&
+  //               myFinalData.push({
+  //                 country: first.country,
+  //                 active: first.active,
+  //                 cases: first.cases,
+  //                 increment: second.increment,
+  //               });
+  //           });
+  //         });
 
-          this.setState({
-            countryCovidStats: myFinalData,
-          });
-        });
-    };
-    apiCall();
-  }
+  //         this.setState({
+  //           countryCovidStats: myFinalData,
+  //         });
+  //       });
+  //   };
+  //   apiCall();
+  // }
 
   render() {
     const countries = require("./Country.json");
