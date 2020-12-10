@@ -7,7 +7,7 @@ import './Map.css';
 import { Modal } from '../Modal/Modal';
 import MapStyle from './Map-style';
 
-const apiUrl = 'https://corona.lmao.ninja/v2/countries?sort=countries'
+// const apiUrl = 'https://corona.lmao.ninja/v2/countries?sort=countries'
 const API_KEY = `${process.env.REACT_APP_API_GOOGLEMAP_KEY}`;
 
 

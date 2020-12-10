@@ -14,7 +14,7 @@
     "@testing-library/react": "^11.2.1",
     "@testing-library/user-event": "^12.2.2",
     "axios": "^0.21.0",
-    "font-awesome": "file:../../../../usr/local/lib/node_modules/font-awesome",
+    "font-awesome": "^4.7.0",
     "google-map-react": "^2.1.9",
     "map-react": "^1.0.0",
     "moment": "^2.29.1",

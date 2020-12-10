@@ -1,4 +1,4 @@
-.attractionscard-container {
+.attractions-container {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -17,14 +17,27 @@
     
 }
 
+.modal {
+  position: fixed;
+  z-index: 1;
+  top: 10%;
+  left: 25%;
+  width: 40%;
+  height: 600px;
+  background-color: rgb(255, 255, 255);
+  padding: 40px;
+  box-shadow: 50px 50px 280px 80px rgba(226, 226, 226, 0.4);
+}
+
 .card-button {
     width: 120px;
     height: 40px;
     border-radius: 15px;
-    background-color: rgb(101, 137, 228);
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border: 1px solid rgb(94, 93, 93);
     margin: 10px;
-    border: 0;
+    
 }
 
 .card-image {
