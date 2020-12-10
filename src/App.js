@@ -15,6 +15,7 @@ import { airports } from "./components/Airport/AirportMap";
 import moment from "moment";
 import Loading from "./components/LoadingScreen/Loading";
 // import "./react_dates_overrides.css";
+
 export default class App extends Component {
   state = {
     showFlights: false,
@@ -40,6 +41,78 @@ export default class App extends Component {
           flightData: data,
         })
       );
+
+    let incrementArray = [];
+    let myHistoricalData = [];
+    let firstdata = [];
+    let increment = "";
+    let myFinalData = [];
+
+    const apiCall = () => {
+      Promise.all([
+        fetch("https://corona.lmao.ninja/v2/countries?sort=countries"),
+        fetch("https://disease.sh/v3/covid-19/historical?/"),
+      ])
+        .then(([response1, response2]) => {
+          return Promise.all([response1.json(), response2.json()]);
+        })
+
+        .then(([response1, response2]) => {
+          firstdata = response1;
+          myHistoricalData = response2;
+
+          myHistoricalData.map((country) => {
+            increment =
+              ((country.timeline.cases[
+                Object.keys(country.timeline.cases)[
+                  Object.keys(country.timeline.cases).length - 1
+                ]
+              ] -
+                country.timeline.cases[
+                  Object.keys(country.timeline.cases)[
+                    Object.keys(country.timeline.cases).length - 8
+                  ]
+                ]) /
+                (country.timeline.cases[
+                  Object.keys(country.timeline.cases)[
+                    Object.keys(country.timeline.cases).length - 8
+                  ]
+                ] -
+                  country.timeline.cases[
+                    Object.keys(country.timeline.cases)[
+                      Object.keys(country.timeline.cases).length - 15
+                    ]
+                  ])) *
+              100;
+            incrementArray.push({
+              name: country.country,
+              increment: increment,
+            });
+          });
+
+          firstdata.map((first) => {
+            incrementArray.map((second) => {
+              first.country.toLowerCase() === second.name.toLowerCase() &&
+                myFinalData.push({
+                  country: first.country,
+                  active: first.active,
+                  cases: first.cases,
+                  increment: second.increment,
+                  countryInfo: first.countryInfo,
+                  todayCases: first.todayCases,
+                  todayRecovered: first.todayRecovered,
+                  updated: first.updated,
+                  showModal: false,
+                });
+            });
+          });
+
+          this.setState({
+            countryCovidStats: myFinalData,
+          });
+        });
+    };
+    apiCall();
   }
 
   componentDidMount() {
@@ -221,7 +294,7 @@ export default class App extends Component {
             cities={this.state.airportsAndCities}
           />
 </div>
-         
+
         </div>
 
         <div className="calendar">
@@ -254,18 +327,26 @@ export default class App extends Component {
             startDate={this.state.finalStartDate}
           />
         )}
-        <Map
-          countryCovidStats={this.state.countryCovidStats}
-          changedCases={this.state.stabilityStat}
-        />
-        <Statistics
-          countryCovidStats={this.state.countryCovidStats}
-          getChangeCases={this.getChangeCases}
-        />
+        {this.state.countryCovidStats.length > 0 && (
+          <>
+            <Map
+              countryCovidStats={this.state.countryCovidStats}
+              changedCases={this.state.stabilityStat}
+            />
+            <Statistics
+              countryCovidStats={this.state.countryCovidStats}
+              getChangeCases={this.getChangeCases}
+            />
+          </>
+        )}
+
         <div>
-          <AttractionsCard />
-          <Loading />
-          <Footer />
+          <div>
+            <AttractionsCard />
+
+            <Loading />
+            <Footer />
+          </div>
         </div>
       </div>
     );
