@@ -7,7 +7,7 @@ class Statistics extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      countryCovidStats: [],
+      countryCovidStats: this.props.countryCovidStats,
       selectedCountry: {},
       showDetailedStats: false,
     };
@@ -18,86 +18,28 @@ class Statistics extends React.Component {
     let countryInfo = this.state.countryCovidStats.filter(
       (country) => country.country === selectedCountry
     );
+    this.props.getChangeCases(countryInfo[0].increment);
+    /*TRICK FOR BIG COUNTRIES*/
+    /*REMOVING NAN AND INFINITY*/
+    let actualCountryInfo = countryInfo
+      .filter((e) => e.increment.toString() !== "NaN")
+      .filter((e) => e.increment !== Infinity);
+    /*INITIALIZING INCREMENT. ADDING INCREMENT WITH MAP*/
+    let increment = 0;
+    actualCountryInfo.map((e) => (increment = increment + e.increment));
+    /*DIVIDING INCREMENT TO DO THE AVAREGE*/
+    increment = increment / actualCountryInfo.length;
 
     this.setState({
       todayCases: countryInfo[0].cases,
       activeCases: countryInfo[0].active,
-      changeCases: countryInfo[0].increment,
+      changeCases: increment,
       showDetailedStats: false,
     });
   };
 
   getDetailedStats = () =>
     this.setState({ showDetailedStats: !this.state.showDetailedStats });
-
-  componentDidMount() {
-    let incrementArray = [];
-    let myHistoricalData = [];
-    let firstdata = [];
-    let increment = "";
-    let myFinalData = [];
-
-    const apiCall = () => {
-      Promise.all([
-        fetch("https://corona.lmao.ninja/v2/countries?sort=countries"),
-        fetch("https://disease.sh/v3/covid-19/historical?/"),
-      ])
-        .then(([response1, response2]) => {
-          return Promise.all([response1.json(), response2.json()]);
-        })
-
-        .then(([response1, response2]) => {
-          firstdata = response1;
-          myHistoricalData = response2;
-
-          myHistoricalData.map((country) => {
-            increment =
-              ((country.timeline.cases[
-                Object.keys(country.timeline.cases)[
-                  Object.keys(country.timeline.cases).length - 1
-                ]
-              ] -
-                country.timeline.cases[
-                  Object.keys(country.timeline.cases)[
-                    Object.keys(country.timeline.cases).length - 8
-                  ]
-                ]) /
-                (country.timeline.cases[
-                  Object.keys(country.timeline.cases)[
-                    Object.keys(country.timeline.cases).length - 8
-                  ]
-                ] -
-                  country.timeline.cases[
-                    Object.keys(country.timeline.cases)[
-                      Object.keys(country.timeline.cases).length - 15
-                    ]
-                  ])) *
-              100;
-            incrementArray.push({
-              name: country.country,
-              increment: increment,
-            });
-          });
-
-          firstdata.map((first) => {
-            incrementArray.map((second) => {
-              first.country.toLowerCase() === second.name.toLowerCase() &&
-                myFinalData.push({
-                  country: first.country,
-                  active: first.active,
-                  cases: first.cases,
-                  increment: second.increment,
-                });
-            });
-          });
-
-          this.setState({
-            countryCovidStats: myFinalData,
-          });
-        });
-    };
-    apiCall();
-  }
 
   render() {
     const countries = require("./Country.json");
@@ -154,7 +96,7 @@ class Statistics extends React.Component {
                     {this.state.changeCases.toString() === "NaN" ||
                     this.state.changeCases === Infinity
                       ? "not available"
-                      : Math.round(this.state.changeCases)}
+                      : `${Math.round(this.state.changeCases)} %`}
                   </h3>
 
                   <div>
@@ -163,11 +105,11 @@ class Statistics extends React.Component {
                         this.state.changeCases.toString() === "NaN" ||
                         this.state.changeCases === Infinity
                           ? "indicator indicator-grey"
-                          : this.state.changeCases < 80
-                          ? "indicator indicator-green"
-                          : this.state.changeCases > 120
-                          ? "indicator indicator-red"
-                          : "indicator indicator-yellow"
+                          : this.state.changeCases < 60
+                          ? "arrow-green bounce-up-down"
+                          : this.state.changeCases > 90
+                          ? "arrow-red bounce-up-down"
+                          : "arrow-yellow bounceRight"
                       }
                     ></div>
                   </div>
@@ -182,6 +124,7 @@ class Statistics extends React.Component {
             <table>
               <tr>
                 <th className="location">Location</th>
+                <th>Province</th>
                 <th>Cases</th>
                 <th>Active</th>
                 <th>Increment</th>
@@ -189,6 +132,7 @@ class Statistics extends React.Component {
               {this.state.countryCovidStats.map((countryData) => (
                 <tr>
                   <td>{countryData.country}</td>
+                  <td>{countryData.province}</td>
                   <td>{countryData.cases}</td>
                   <td>{countryData.active}</td>
                   <td className="incrementContainer">
@@ -204,9 +148,9 @@ class Statistics extends React.Component {
                           countryData.increment.toString() === "NaN" ||
                           countryData.increment === Infinity
                             ? "indicator indicator-grey"
-                            : countryData.increment < 80
+                            : countryData.increment <= 55
                             ? "indicator indicator-green"
-                            : countryData.increment > 120
+                            : countryData.increment > 90
                             ? "indicator indicator-red"
                             : "indicator indicator-yellow"
                         }

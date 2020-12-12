@@ -45,6 +45,16 @@ body {
 }
 
 /* Flight and calendar search area comming from Airport and App.js components */
+.from {
+  flex-wrap: wrap;
+}
+
+.to {
+  margin-bottom: 20px;
+  margin-right: 20px;
+  flex-wrap: wrap;
+}
+
 .airport-search {
   display: flex;
   flex-wrap: wrap;
@@ -52,39 +62,55 @@ body {
   margin-top: 30px;
   justify-content: left;
 }
-
+.from-main {
+  display: flex;
+}
+.to-main {
+  display: flex;
+  margin-left: 8px;
+}
+.main-find-flights {
+  display: flex;
+  justify-content: center;
+}
 .find-flights {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   height: 63px;
-  width: 300px;
+  width: 270px;
   border-radius: 10px;
-  margin-left: 20px;
   background-color: #3b749e;
-  /* background-color: rgb(15, 60, 184); */
   color: white;
   font-size: 18px;
   font-weight: 900;
+  margin-bottom: 20px;
 }
 .find-flights:hover {
-  /* background-color: #0056c8; */
   background-color: #3ea5f0;
 }
 
-/* .DateRangePicker {
-  border-radius: 25px;
-  overflow: hidden;
-} */
 .calendar {
   display: flex;
+  justify-content: left;
   margin-bottom: 20px;
-  margin-left: 10px;
+  margin-left: 70px;
+  margin-top: 10px;
 }
 /* End of Flight and calendar CSS */
 
-/* @media screen and (max-width: 850px) {
+@media screen and (max-width: 850px) {
   .airport-search {
     display: flex;
     text-align: center;
     justify-content: center;
     margin-bottom: 10px;
   }
-} */
+  .find-flights {
+    margin-left: 50px;
+  }
+  .calendar {
+    margin-right: 20px;
+  }
+}

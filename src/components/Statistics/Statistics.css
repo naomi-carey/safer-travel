@@ -144,26 +144,88 @@ tr {
   margin-right: 20%;
 }
 
-/* .indicator-down-red {
+.arrow-green {
+  text-align: center;
+  margin: 8% 0;
   width: 0;
   height: 0;
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
-  border-top: 20px solid red;
+  border-top: 20px solid rgb(19, 170, 62);
+  font-size: 0;
+  line-height: 0;
+  float: left;
+}
+.arrow-yellow {
+  text-align: center;
+  margin: 8% 0;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid rgb(247, 228, 62);
   font-size: 0;
   line-height: 0;
   float: left;
 }
 
-.indicator-up-green {
+.arrow-red {
+  text-align: center;
+  margin: 8% 0;
   width: 0;
   height: 0;
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
-  border-bottom: 20px solid green;
+  border-bottom: 20px solid rgb(216, 6, 6);
   font-size: 0;
   line-height: 0;
   float: left;
+}
+
+.bounce-up-down {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+/* .bounce-right {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+@keyframes bounce2 {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  40% {
+    -webkit-transform: translateX(-30px);
+    transform: translateX(-30px);
+  }
+  60% {
+    -webkit-transform: translateX(-15px);
+    transform: translateX(-15px);
+  }
 } */
 
 .indicator {
@@ -175,13 +237,13 @@ tr {
   width: 20%;
 }
 .indicator-red {
-  background-color: red;
+  background-color: rgb(216, 6, 6);
 }
 .indicator-green {
-  background-color: green;
+  background-color: rgb(19, 170, 62);
 }
 .indicator-yellow {
-  background-color: yellow;
+  background-color: rgb(247, 228, 62);
 }
 .indicator-grey {
   background-color: grey;
