@@ -19,11 +19,21 @@ class Statistics extends React.Component {
       (country) => country.country === selectedCountry
     );
     this.props.getChangeCases(countryInfo[0].increment);
-    console.log(countryInfo);
+    /*TRICK FOR BIG COUNTRIES*/
+    /*REMOVING NAN AND INFINITY*/
+    let actualCountryInfo = countryInfo
+      .filter((e) => e.increment.toString() !== "NaN")
+      .filter((e) => e.increment !== Infinity);
+    /*INITIALIZING INCREMENT. ADDING INCREMENT WITH MAP*/
+    let increment = 0;
+    actualCountryInfo.map((e) => (increment = increment + e.increment));
+    /*DIVIDING INCREMENT TO DO THE AVAREGE*/
+    increment = increment / actualCountryInfo.length;
+
     this.setState({
       todayCases: countryInfo[0].cases,
       activeCases: countryInfo[0].active,
-      changeCases: countryInfo[0].increment,
+      changeCases: increment,
       showDetailedStats: false,
     });
   };
@@ -86,7 +96,7 @@ class Statistics extends React.Component {
                     {this.state.changeCases.toString() === "NaN" ||
                     this.state.changeCases === Infinity
                       ? "not available"
-                      : Math.round(this.state.changeCases)}
+                      : `${Math.round(this.state.changeCases)} %`}
                   </h3>
 
                   <div>
