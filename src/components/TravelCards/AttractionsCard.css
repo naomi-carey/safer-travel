@@ -9,12 +9,17 @@
 .attractions-card {
     border: 1px solid grey;
     width: 270px;
-    border-radius: 15px;
-    border-bottom-left-radius: 0;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 70px;
+    box-shadow: 1px 1px 1px 1px rgba(194, 194, 194, 0.329);
     
+}
+
+.attractions-card-info {
+    margin-top: 5px;
 }
 
 .modal {
@@ -26,7 +31,10 @@
   height: 600px;
   background-color: rgb(255, 255, 255);
   padding: 40px;
-  box-shadow: 50px 50px 280px 80px rgba(226, 226, 226, 0.4);
+  border: black 2px solid;
+  border-radius: 25px;
+  box-shadow: 200px 200px 200px 200px rgba(186, 186, 186, 0.091);
+  
 }
 
 .card-button {
@@ -43,22 +51,26 @@
 .card-image {
     width: 270px;
     height: 220px;
-    border-radius: 15px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+}
+
+.status-color {
+    margin-top: 5px;
 }
 
 .status-yellow {
     color: orange;
 }
 
-.status-green {
+.status-open{
     color: green;
 }
 
-.status-red {
+.status-closed {
     color: red;
 }
+
 
 .attractions-btn {
     width: 270px;
@@ -79,6 +91,19 @@
     justify-content: left;
     margin-left: 30px;
     
+}
+
+.attractions-search-box {
+    height: 40px;
+    width: 500px;
+    border-radius: 15px;
+    border: 1px solid gray;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+
 }
 
 @media screen and (max-width: 850px){

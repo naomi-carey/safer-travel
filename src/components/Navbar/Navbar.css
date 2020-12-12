@@ -36,7 +36,9 @@
     font-weight: bold;
     margin-right: 25px;
     text-decoration: none;
-    color: rgb(0, 97, 162)
+    color: rgb(0, 97, 162);
+  
+    
 }
 
 .link a:hover {
@@ -87,5 +89,30 @@
 
     .active {
         transform: translateX(0%);
+    }
+}
+
+.Banner {
+    width: 100%;
+    height: 100vh;
+}
+
+.Banner2 {
+    width: 100%;
+    height: 100vh;
+}
+
+@media screen and (max-width: 751px){
+    .Banner2 {
+        display: none;
+ 
+     }
+}
+
+@media screen and (min-width: 750px){
+
+    .Banner {
+       display: none;
+
     }
 }

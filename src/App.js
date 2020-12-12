@@ -14,6 +14,7 @@ import "react-dates/lib/css/_datepicker.css";
 import { airports } from "./components/Airport/AirportMap";
 import moment from "moment";
 import Loading from "./components/LoadingScreen/Loading";
+import { AttractionsList } from "./components/TravelCards/AttractionsList";
 // import "./react_dates_overrides.css";
 
 export default class App extends Component {
@@ -174,7 +175,7 @@ export default class App extends Component {
       <div className="App">
         <div>
           <Navbar />
-          <Banner />
+       <Banner />
         </div>
 
         <div className="airport-search">
@@ -225,6 +226,10 @@ export default class App extends Component {
             startDate={this.state.finalStartDate}
           />
         )}
+ 
+        <div>
+  
+
         {this.state.countryCovidStats.length > 0 && (
           <>
             <Map
@@ -245,6 +250,7 @@ export default class App extends Component {
             <Loading />
             <Footer />
           </div>
+
         </div>
       </div>
     );
