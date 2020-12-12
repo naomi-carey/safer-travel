@@ -1,12 +1,15 @@
 import React from "react";
 import "./FlightCard.css";
 import axios from "axios";
+import Loading from "/Users/deanleonard/Documents/saferTravel/safer-travel/src/components/LoadingScreen/Loading.js";
+
 
 class FlightCard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       TravelInfo: {},
+      apiFinished: false
     };
   }
 
@@ -28,6 +31,7 @@ class FlightCard extends React.Component {
           flyTo: response.data.data[0].flyTo,
           duration: response.data.data[0].fly_duration,
           price: response.data.data[0].price,
+          apiFinished: true
         });
       });
 
@@ -40,6 +44,13 @@ class FlightCard extends React.Component {
 
     return (
         <div>
+          {
+              !this.state.apiFinished
+                ? <Loading />
+                : 
+                // {getTravelInfo().map ((flight) => {
+                  
+                // })}}
             <div className='flightcard-container'>
                     <div className='flight-card'>
                         <div className='flight-card'>
@@ -72,7 +83,9 @@ class FlightCard extends React.Component {
             </div>
             
           </div>
+  }
         </div>
+          
       
     );
   }
