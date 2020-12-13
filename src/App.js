@@ -15,10 +15,9 @@ import { airports } from "./components/Airport/AirportMap";
 import moment from "moment";
 import Loading from "./components/LoadingScreen/Loading";
 // import "./react_dates_overrides.css";
-
 export default class App extends Component {
   state = {
-    showFlights: false,
+    // showFlights: false,
     flightData: {},
     cityFrom: {},
     cityTo: {},
@@ -41,13 +40,11 @@ export default class App extends Component {
           flightData: data,
         })
       );
-
     let incrementArray = [];
     let myHistoricalData = [];
     let firstdata = [];
     let increment = "";
     let myFinalData = [];
-
     const apiCall = () => {
       Promise.all([
         fetch("https://corona.lmao.ninja/v2/countries?sort=countries"),
@@ -56,11 +53,9 @@ export default class App extends Component {
         .then(([response1, response2]) => {
           return Promise.all([response1.json(), response2.json()]);
         })
-
         .then(([response1, response2]) => {
           firstdata = response1;
           myHistoricalData = response2;
-
           myHistoricalData.map((country) => {
             increment =
               ((country.timeline.cases[
@@ -70,31 +65,53 @@ export default class App extends Component {
               ] -
                 country.timeline.cases[
                   Object.keys(country.timeline.cases)[
-                    Object.keys(country.timeline.cases).length - 8
+                    Object.keys(country.timeline.cases).length - 4
                   ]
                 ]) /
                 (country.timeline.cases[
                   Object.keys(country.timeline.cases)[
-                    Object.keys(country.timeline.cases).length - 8
+                    Object.keys(country.timeline.cases).length - 15
                   ]
                 ] -
                   country.timeline.cases[
                     Object.keys(country.timeline.cases)[
-                      Object.keys(country.timeline.cases).length - 15
+                      Object.keys(country.timeline.cases).length - 18
                     ]
                   ])) *
-              100;
+                50 +
+              ((country.timeline.cases[
+                Object.keys(country.timeline.cases)[
+                  Object.keys(country.timeline.cases).length - 6
+                ]
+              ] -
+                country.timeline.cases[
+                  Object.keys(country.timeline.cases)[
+                    Object.keys(country.timeline.cases).length - 9
+                  ]
+                ]) /
+                (country.timeline.cases[
+                  Object.keys(country.timeline.cases)[
+                    Object.keys(country.timeline.cases).length - 20
+                  ]
+                ] -
+                  country.timeline.cases[
+                    Object.keys(country.timeline.cases)[
+                      Object.keys(country.timeline.cases).length - 23
+                    ]
+                  ])) *
+                50;
             incrementArray.push({
               name: country.country,
+              province: country.province,
               increment: increment,
             });
           });
-
           firstdata.map((first) => {
             incrementArray.map((second) => {
               first.country.toLowerCase() === second.name.toLowerCase() &&
                 myFinalData.push({
                   country: first.country,
+                  province: second.province,
                   active: first.active,
                   cases: first.cases,
                   increment: second.increment,
@@ -106,7 +123,6 @@ export default class App extends Component {
                 });
             });
           });
-
           this.setState({
             countryCovidStats: myFinalData,
           });
@@ -114,111 +130,23 @@ export default class App extends Component {
     };
     apiCall();
   }
-
-  componentDidMount() {
-    let incrementArray = [];
-    let myHistoricalData = [];
-    let firstdata = [];
-    let increment = "";
-    let myFinalData = [];
-
-    const apiCall = () => {
-      Promise.all([
-        fetch("https://corona.lmao.ninja/v2/countries?sort=countries"),
-        fetch("https://disease.sh/v3/covid-19/historical?/"),
-      ])
-        .then(([response1, response2]) => {
-          return Promise.all([response1.json(), response2.json()]);
-        })
-
-        .then(([response1, response2]) => {
-          firstdata = response1;
-          myHistoricalData = response2;
-
-          myHistoricalData.map((country) => {
-            increment =
-              ((country.timeline.cases[
-                Object.keys(country.timeline.cases)[
-                  Object.keys(country.timeline.cases).length - 1
-                ]
-              ] -
-                country.timeline.cases[
-                  Object.keys(country.timeline.cases)[
-                    Object.keys(country.timeline.cases).length - 8
-                  ]
-                ]) /
-                (country.timeline.cases[
-                  Object.keys(country.timeline.cases)[
-                    Object.keys(country.timeline.cases).length - 8
-                  ]
-                ] -
-                  country.timeline.cases[
-                    Object.keys(country.timeline.cases)[
-                      Object.keys(country.timeline.cases).length - 15
-                    ]
-                  ])) *
-              100;
-            console.log(myHistoricalData);
-            incrementArray.push({
-              name: country.country,
-              increment: increment,
-            });
-          });
-
-          firstdata.map((first) => {
-            incrementArray.map((second) => {
-              first.country.toLowerCase() === second.name.toLowerCase() &&
-                myFinalData.push({
-                  country: first.country,
-                  active: first.active,
-                  cases: first.cases,
-                  increment: second.increment,
-                  countryInfo: first.countryInfo,
-                  todayCases: first.todayCases,
-                  todayRecovered: first.todayRecovered,
-                  updated: first.updated,
-                  showModal: false,
-                });
-            });
-          });
-
-          this.setState({
-            countryCovidStats: myFinalData,
-          });
-        });
-    };
-    apiCall();
-  }
-
-  // alertStartDate = () => {
-  //   console.log(this.state.startDate);
-  // };
-
-  // alertEndDate = () => {
-  //   console.log(this.state.endDate);
-  // };
-
   getChangeCases = (changedCases) => {
     this.setState({
       stabilityStat: changedCases,
     });
   };
-
   getCityAutoComplete = (city, originDestination) => {
     this.setState({
       [originDestination]: city,
     });
   };
-
   getDates = (startDate, endDate) => {
     let formattedStartDate = startDate
       ? moment(startDate).format("DD/MM/YYYY")
       : this.state.finalStartDate;
-
     let formattedEndDate = endDate
       ? moment(endDate).format("DD/MM/YYYY")
       : this.state.finalEndDate;
-
     this.setState({
       startDate,
       endDate,
@@ -226,9 +154,7 @@ export default class App extends Component {
       finalEndDate: formattedEndDate,
     });
   };
-
   findFlights = () => this.setState({ showTicket: true });
-
   render() {
     return (
       <div className="App">
@@ -236,7 +162,6 @@ export default class App extends Component {
           <Navbar />
           <Banner />
         </div>
-
         <div className="airport-search">
           <div className="from-main">
             <h2 className="from">From: </h2>
@@ -276,49 +201,6 @@ export default class App extends Component {
             Find Flights
           </button>
         </div>
-
-        {/* <div className="airport-search">
-        <div className="from-main">
-          <h2 className="from">From: </h2>
-          <Airport
-            selectCity={this.getCityAutoComplete}
-            originDestination="cityFrom"
-            cities={this.state.airportsAndCities}
-          />
-          </div>
-          <div className="to-main">
-          <h2 className="to">To: </h2>
-          <Airport
-            selectCity={this.getCityAutoComplete}
-            originDestination="cityTo"
-            cities={this.state.airportsAndCities}
-          />
-</div>
-
-        </div>
-
-        <div className="calendar">
-          <DateRangePicker
-            className="DateRangePicker"
-            startDatePlaceholderText="Depart"
-            endDatePlaceholderText="Return"
-            startDate={this.state.startDate} // momentPropTypes.momentObj or null,
-            startDateId="your_unique_start_date_id" // PropTypes.string.isRequired,
-            endDate={this.state.endDate} // momentPropTypes.momentObj or null,
-            endDateId="your_unique_end_date_id" // PropTypes.string.isRequired,
-            onDatesChange={({ startDate, endDate }) =>
-              this.getDates(startDate, endDate)
-            } // PropTypes.func.isRequired,
-            focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
-            onFocusChange={(focusedInput) => this.setState({ focusedInput })} // PropTypes.func.isRequired,
-          />
-        </div>
-        <div className="main-find-flights">
-          <button className="find-flights" onClick={this.findFlights}>
-            Find Flights
-          </button>
-        </div> */}
-
         {this.state.showTicket && (
           <FlightCard
             cityFrom={this.state.cityFrom}
@@ -339,11 +221,9 @@ export default class App extends Component {
             />
           </>
         )}
-
         <div>
           <div>
             <AttractionsCard />
-
             <Loading />
             <Footer />
           </div>
