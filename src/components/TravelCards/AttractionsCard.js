@@ -9,7 +9,7 @@ class AttractionsCard extends React.Component {
     state = {
         showAbout: false,
         search: '', 
-        attractionslist: AttractionsList
+        attractionslist: AttractionsList, 
     }
 
     // renderCountry = country => {
@@ -23,7 +23,8 @@ class AttractionsCard extends React.Component {
 
     showModal = (itemIndex) => {
         this.setState ({
-            showAbout: true
+            showAbout: true,
+            
         })
     }
 
