@@ -78,7 +78,7 @@ class AttractionsCard extends React.Component {
               
                 {
                     this.state.showAbout &&
-                    <div className='modal'>
+                    <div itemIndex={index} className='modal'>
                         <img className='card-image' src={attractions.picture} alt={attractions.attraction} />
                         <h3>{attractions.location}</h3>
                         <h4>{attractions.city}</h4>
