@@ -14,9 +14,7 @@ import "react-dates/lib/css/_datepicker.css";
 import { airports } from "./components/Airport/AirportMap";
 import moment from "moment";
 import Loading from "./components/LoadingScreen/Loading";
-import { AttractionsList } from "./components/TravelCards/AttractionsList";
 // import "./react_dates_overrides.css";
-
 export default class App extends Component {
   state = {
     // showFlights: false,
@@ -42,13 +40,11 @@ export default class App extends Component {
           flightData: data,
         })
       );
-
     let incrementArray = [];
     let myHistoricalData = [];
     let firstdata = [];
     let increment = "";
     let myFinalData = [];
-
     const apiCall = () => {
       Promise.all([
         fetch("https://corona.lmao.ninja/v2/countries?sort=countries"),
@@ -57,11 +53,9 @@ export default class App extends Component {
         .then(([response1, response2]) => {
           return Promise.all([response1.json(), response2.json()]);
         })
-
         .then(([response1, response2]) => {
           firstdata = response1;
           myHistoricalData = response2;
-
           myHistoricalData.map((country) => {
             increment =
               ((country.timeline.cases[
@@ -112,7 +106,6 @@ export default class App extends Component {
               increment: increment,
             });
           });
-
           firstdata.map((first) => {
             incrementArray.map((second) => {
               first.country.toLowerCase() === second.name.toLowerCase() &&
@@ -130,7 +123,6 @@ export default class App extends Component {
                 });
             });
           });
-
           this.setState({
             countryCovidStats: myFinalData,
           });
@@ -138,28 +130,23 @@ export default class App extends Component {
     };
     apiCall();
   }
-
   getChangeCases = (changedCases) => {
     this.setState({
       stabilityStat: changedCases,
     });
   };
-
   getCityAutoComplete = (city, originDestination) => {
     this.setState({
       [originDestination]: city,
     });
   };
-
   getDates = (startDate, endDate) => {
     let formattedStartDate = startDate
       ? moment(startDate).format("DD/MM/YYYY")
       : this.state.finalStartDate;
-
     let formattedEndDate = endDate
       ? moment(endDate).format("DD/MM/YYYY")
       : this.state.finalEndDate;
-
     this.setState({
       startDate,
       endDate,
@@ -167,17 +154,14 @@ export default class App extends Component {
       finalEndDate: formattedEndDate,
     });
   };
-
   findFlights = () => this.setState({ showTicket: true });
-
   render() {
     return (
       <div className="App">
         <div>
           <Navbar />
-       <Banner />
+          <Banner />
         </div>
-
         <div className="airport-search">
           <div className="from-main">
             <h2 className="from">From: </h2>
@@ -217,7 +201,6 @@ export default class App extends Component {
             Find Flights
           </button>
         </div>
-
         {this.state.showTicket && (
           <FlightCard
             cityFrom={this.state.cityFrom}
@@ -226,10 +209,6 @@ export default class App extends Component {
             startDate={this.state.finalStartDate}
           />
         )}
- 
-        <div>
-  
-
         {this.state.countryCovidStats.length > 0 && (
           <>
             <Map
@@ -242,17 +221,29 @@ export default class App extends Component {
             />
           </>
         )}
-
         <div>
           <div>
             <AttractionsCard />
-
-            <Loading />
             <Footer />
           </div>
-
         </div>
       </div>
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
