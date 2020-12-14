@@ -224,7 +224,6 @@ export default class App extends Component {
         <div>
           <div>
             <AttractionsCard />
-            <Loading />
             <Footer />
           </div>
         </div>
