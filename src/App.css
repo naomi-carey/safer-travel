@@ -1,3 +1,5 @@
+
+
 body {
   background-color: rgb(255, 255, 255);
 }
@@ -79,13 +81,11 @@ body {
   height: 63px;
   width: 270px;
   border-radius: 10px;
-  /* margin-left: 40px; */
   background-color: #3b749e;
   color: white;
   font-size: 18px;
   font-weight: 900;
   margin-bottom: 20px;
-  /* margin-right: 50px; */
 }
 .find-flights:hover {
   background-color: #3ea5f0;
