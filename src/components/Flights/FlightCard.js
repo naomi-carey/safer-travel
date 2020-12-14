@@ -1,15 +1,14 @@
 import React from "react";
 import "./FlightCard.css";
 import axios from "axios";
-import Loading from "/Users/deanleonard/Documents/saferTravel/safer-travel/src/components/LoadingScreen/Loading.js";
-
+import Loading from "../LoadingScreen/Loading.js";
 
 class FlightCard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       TravelInfo: {},
-      apiFinished: false
+      apiFinished: false,
     };
   }
 
@@ -31,7 +30,7 @@ class FlightCard extends React.Component {
           flyTo: response.data.data[0].flyTo,
           duration: response.data.data[0].fly_duration,
           price: response.data.data[0].price,
-          apiFinished: true
+          apiFinished: true,
         });
       });
 
@@ -43,50 +42,49 @@ class FlightCard extends React.Component {
     const hour1_min = date2.toLocaleTimeString().slice(0, 5);
 
     return (
-        <div>
-          {
-              !this.state.apiFinished
-                ? <Loading />
-                : 
-                // {getTravelInfo().map ((flight) => {
-                  
-                // })}}
-            <div className='flightcard-container'>
-                    <div className='flight-card'>
-                        <div className='flight-card'>
-                            <div className='airline'>
-                                <img className='ryanair' src='https://i0.wp.com/www.logoquizcheat.com/1984kqjmmm-22lqc/uploads/ryanair-meeyo-logo-quiz.jpg' alt='Ryanair Logo' />
-                                <p className='flight-info'>Ryanair</p>
-                            </div>
-                            <div className='departure'>
-                                <h2 className='flight-info'>{hour_min}</h2>
-                                <h3 className='flight-info'>{this.state.flyFrom}</h3>
-                            </div>
-                            <div className='duration'>
-                                <p className='flight-info'>{this.state.duration}</p>
-                                <hr className='flight-hr'></hr>
-                            </div>
-                            <div className='arrival'>
-                                <h2 className='flight-info'>{hour1_min}</h2>
-                                <h3 className='flight-info'>{this.state.flyTo}</h3>
-                            </div>
-                        
-                    </div>
-                        <div className='price-card'>
-                            <div className='price'>
-                                <h2 className='price-figure'>£ {this.state.price}</h2>
-                            </div>
-                            <div className='price-button'>
-                                <button className='price-btn'>SELECT</button>
-                            </div>
-                        </div>
+      <div>
+        {!this.state.apiFinished ? (
+          <Loading />
+        ) : (
+          // {getTravelInfo().map ((flight) => {
+
+          // })}}
+          <div className="flightcard-container">
+            <div className="flight-card">
+              <div className="flight-card">
+                <div className="airline">
+                  <img
+                    className="ryanair"
+                    src="https://i0.wp.com/www.logoquizcheat.com/1984kqjmmm-22lqc/uploads/ryanair-meeyo-logo-quiz.jpg"
+                    alt="Ryanair Logo"
+                  />
+                  <p className="flight-info">Ryanair</p>
+                </div>
+                <div className="departure">
+                  <h2 className="flight-info">{hour_min}</h2>
+                  <h3 className="flight-info">{this.state.flyFrom}</h3>
+                </div>
+                <div className="duration">
+                  <p className="flight-info">{this.state.duration}</p>
+                  <hr className="flight-hr"></hr>
+                </div>
+                <div className="arrival">
+                  <h2 className="flight-info">{hour1_min}</h2>
+                  <h3 className="flight-info">{this.state.flyTo}</h3>
+                </div>
+              </div>
+              <div className="price-card">
+                <div className="price">
+                  <h2 className="price-figure">£ {this.state.price}</h2>
+                </div>
+                <div className="price-button">
+                  <button className="price-btn">SELECT</button>
+                </div>
+              </div>
             </div>
-            
           </div>
-  }
-        </div>
-          
-      
+        )}
+      </div>
     );
   }
 }
