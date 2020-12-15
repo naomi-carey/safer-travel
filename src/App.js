@@ -189,7 +189,7 @@ export default class App extends Component {
       showHome: false,
       showTravel: true,
       showAttractions: false,
-      showMap: false,
+      showMap: true,
     });
   };
 
