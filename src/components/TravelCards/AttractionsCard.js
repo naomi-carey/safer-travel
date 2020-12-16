@@ -22,6 +22,7 @@ class AttractionsCard extends React.Component {
     // }
 
     showModal = (itemIndex) => {
+        console.log(itemIndex)
         this.setState ({
             showAbout: true,
             
@@ -40,7 +41,6 @@ class AttractionsCard extends React.Component {
         })
     }
 
-
     render() {
 
         const {search} = this.state;
@@ -48,7 +48,6 @@ class AttractionsCard extends React.Component {
             return country.location.toLowerCase().indexOf(search.toLowerCase()) !== -1 
             || country.city.toLowerCase().indexOf(search.toLowerCase()) !== -1
         })
-        
 
     return (
         <div>
@@ -94,14 +93,9 @@ class AttractionsCard extends React.Component {
             })}
             </div>
             </div>
-        
-
-           
-
-            
        
-    )
-}
+        )
+    }
 }
 
 export default AttractionsCard;

@@ -1,5 +1,5 @@
 import React from "react";
-import { FaCreativeCommonsPd } from "react-icons/fa";
+// import { FaCreativeCommonsPd } from "react-icons/fa";
 import "./Country.json";
 import "./Statistics.css";
 
@@ -45,14 +45,14 @@ class Statistics extends React.Component {
     const countries = require("./Country.json");
     return (
       <div className="container">
-        <h1>Popular Destinations</h1>
+        <h1>COVID Country Statistics</h1>
         <h3>Get the latest COVID updates before booking your trip!</h3>
 
         <div className="statistics-info">
           <div className="stats-dropdown">
             <button className="total-btn" onClick={this.getDetailedStats}>
               {this.state.showDetailedStats ? true : false}
-              Total
+              World Wide
             </button>
 
             <form>
