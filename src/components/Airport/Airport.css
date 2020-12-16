@@ -14,6 +14,11 @@ body {
   justify-content: center;
 } */
 
+.airport-main {
+  display: flex;
+  flex-direction: row;
+}
+
 #searchBar {
   height: 50px;
   width: 270px;

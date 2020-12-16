@@ -161,7 +161,6 @@ export default class App extends Component {
     });
   };
 
-
   showStatistics = () => {
     this.setState({
       showStatistics: true,
@@ -210,20 +209,17 @@ export default class App extends Component {
     });
   };
 
-
-
   findFlights = () => this.setState({ showTicket: true });
   render() {
     return (
       <div className="App">
         <div>
-
           <Navbar
             showTravel={this.showTravel}
             showStatistics={this.showStatistics}
             showAttractions={this.showAttractions}
           />
-          
+
           <Banner />
         </div>
 
@@ -274,7 +270,6 @@ export default class App extends Component {
           </div>
         )}
 
-
         {this.state.showTicket && (
           <FlightCard
             cityFrom={this.state.cityFrom}
@@ -305,7 +300,6 @@ export default class App extends Component {
         )}
         <div>
           <div>
-
             {this.state.showAttractions && (
               <div>
                 <AttractionsCard />
@@ -319,4 +313,3 @@ export default class App extends Component {
     );
   }
 }
-

@@ -18,6 +18,7 @@ class Statistics extends React.Component {
     let countryInfo = this.state.countryCovidStats.filter(
       (country) => country.country === selectedCountry
     );
+
     this.props.getChangeCases(countryInfo[0].increment);
     /*TRICK FOR BIG COUNTRIES*/
     /*REMOVING NAN AND INFINITY*/
