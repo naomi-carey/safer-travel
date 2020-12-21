@@ -36,7 +36,7 @@ export default class Airport extends Component {
 
   render() {
     return (
-      <div className="main">
+      <div className="airport-main">
         <input
           autoComplete="off"
           id="searchBar"

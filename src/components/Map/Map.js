@@ -31,9 +31,9 @@ function Map(props) {
           const getColorInfected = () =>
             data.increment.toString() === "NaN" || data.increment === Infinity
               ? "grey"
-              : data.increment < 80
+              : data.increment < 55
               ? "green"
-              : data.increment > 120
+              : data.increment > 90
               ? "red"
               : "gold";
           return (
