@@ -3,15 +3,16 @@ export const AttractionsList = [
       location: 'United Kingdom',
       city: 'London',
       Attraction: 'Big Ben',
-      status: true,
+      status: "Open",
       longAbout: ['Big Ben is the nickname for the Great Bell of the striking clock at the north end of the Palace of Westminster in London;[1] the name is frequently extended to refer to both the clock and the clock tower.[2][3] The official name of the tower in which Big Ben is located was originally the Clock Tower; it was renamed Elizabeth Tower in 2012 to mark the Diamond Jubilee of Elizabeth II, Queen of the United Kingdom. The tower was designed by Augustus Pugin in a neo-Gothic style. When completed in 1859, its clock was the largest and most accurate four-faced striking and chiming clock in the world. The tower stands 315 feet (96 m) tall, and the climb from ground level to the belfry is 334 steps. Its base is square, measuring 39 feet (12 m) on each side. Dials of the clock are 23 feet (7.0 m) in diameter. On 31 May 2009 celebrations were held to mark the towers 150th anniversary.'],
       picture: '/images/bigben.jpg',
+
     },
     {
         location: 'United Kingdom',
         city: 'London',
         Attraction: 'White Heart Lane',
-        status: false,
+        status: "Moderate",
         longAbout: ['White Hart Lane was a football stadium in Tottenham, North London and the home of Tottenham Hotspur Football Club from 1899 to 2017. Its capacity varied over the years; when changed to all-seater it had a capacity of 36,284 before demolition. The stadium was fully demolished after the end of the 2016–17 season and was replaced by Tottenham Hotspur Stadium as the clubs home ground. The stadium, which was known amongst Spurs fans as The Lane, had hosted 2,533 competitive Spurs games in its 118-year history. It had also been used for England national football matches and England under-21 football matches. White Hart Lane once had capacity of nearly 80,000 with attendances in the early 1950s that reached the 70,000s, but as seating was introduced, the stadiums capacity decreased to a modest number in comparison to other Premier League clubs. The record attendance at the ground was 75,038, for an FA Cup tie on 5 March 1938 against Sunderland. Tottenhams final game at White Hart Lane was played on 14 May 2017 with a 2–1 victory against Manchester United. In 2019, Tottenham moved to a new stadium with a capacity of 62,062 designed by Populous. The new stadium was built in almost the exact same location, instead of moving elsewhere within or away from the borough of Haringey.'],
         picture: '/images/whl.jpg',
       },

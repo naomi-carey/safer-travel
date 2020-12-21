@@ -7,14 +7,14 @@
 }
 
 .attractions-card {
-    border: 1px solid grey;
+    border: 1px solid rgba(126, 126, 126, 0.61);
     width: 270px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 70px;
-    box-shadow: 1px 1px 1px 1px rgba(194, 194, 194, 0.329);
+    box-shadow: 0 0 8px 6px rgba(111, 111, 111, 0.329);
     
 }
 
@@ -41,15 +41,16 @@
     width: 120px;
     height: 40px;
     border-radius: 15px;
-    background-color: rgb(255, 255, 255);
-    color: black;
-    border: 1px solid rgb(94, 93, 93);
+    background-color: rgb(71, 115, 191);
+    color: white;
+    border: 1px solid rgb(71, 115, 191);
     margin: 10px;
+    cursor: pointer;
     
 }
 
 .card-image {
-    width: 270px;
+    width: 100%;
     height: 220px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
@@ -59,7 +60,7 @@
     margin-top: 5px;
 }
 
-.status-yellow {
+.status-moderate{
     color: orange;
 }
 
@@ -69,6 +70,11 @@
 
 .status-closed {
     color: red;
+}
+
+.status-text {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 
@@ -112,5 +118,18 @@
         text-align: center;
         justify-content: center;
         margin-bottom: 10px;
+    }
+
+    .attractions-search-box {
+        height: 40px;
+        width: 300px;
+        border-radius: 15px;
+        border: 1px solid gray;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: larger;
+        font-weight: bold;
+    
     }
 }
