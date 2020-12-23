@@ -22,7 +22,7 @@ class FlightCard extends React.Component {
         `https://api.skypicker.com/flights?flyFrom=${this.props.cityFrom["iata_code"]}&to=${this.props.cityTo["iata_code"]}&dateFrom=${this.props.startDate}&dateTo=${this.props.endDate}&partner=picky&v=3`
       )
       .then((response) => {
-        console.log(response);
+        // console.log(response);
         this.setState({
           flight_test:response.data.data,
           apiFinished: true,

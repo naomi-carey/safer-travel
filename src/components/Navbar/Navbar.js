@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Navbar.css";
 
 const Navbar = (props) => {
-  console.log(props);
+  // console.log(props);
   const [navLinkOpen, navLinkToggle] = useState(false);
 
   const handleNavLinksToggle = () => {
@@ -21,7 +21,7 @@ const Navbar = (props) => {
   return (
     <nav className="Navbar">
       <div>
-        <img className="NavbarLogo" src="https://safetravel.id/img/ico.jpg" />
+        <img className="NavbarLogo" src="https://safetravel.id/img/ico.jpg" alt="NavbarLogo" />
       </div>
       <div>
         <ul className={renderClasses()}>

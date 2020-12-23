@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import GoogleMapReact from "google-map-react";
-// import axios from "axios";
 import { FaGenderless } from "react-icons/fa";
 import "./Map-style";
 import "./Map.css";
 import { Modal } from "../Modal/Modal";
 import MapStyle from "./Map-style";
 
-// const apiUrl = 'https://corona.lmao.ninja/v2/countries?sort=countries'
 const API_KEY = `${process.env.REACT_APP_API_GOOGLEMAP_KEY}`;
 
 function Map(props) {
@@ -28,6 +26,7 @@ function Map(props) {
         defaultZoom={0}
       >
         {result.map((data, index) => {
+
           const getColorInfected = () =>
             data.increment.toString() === "NaN" || data.increment === Infinity
               ? "grey"
@@ -36,13 +35,8 @@ function Map(props) {
               : data.increment > 90
               ? "red"
               : "gold";
-          return (
-            <div
-              key={index}
-              lat={data.countryInfo.lat}
-              lng={data.countryInfo.long}
-            >
-              <div>
+
+          const AnyReactComponent = () => <div>
                 <button
                   onClick={() => toggleShowModal(index)}
                   className="marker"
@@ -53,8 +47,14 @@ function Map(props) {
                 {data.showModal && (
                   <Modal index={index} data={data} close={toggleShowModal} />
                 )}
-              </div>
-            </div>
+              </div>;
+          
+          return (
+            <AnyReactComponent
+              key={index}
+              lat={data.countryInfo.lat}
+              lng={data.countryInfo.long}
+            />
           );
         })}
       </GoogleMapReact>
