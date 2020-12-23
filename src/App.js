@@ -14,7 +14,7 @@ import "react-dates/lib/css/_datepicker.css";
 import { airports } from "./components/Airport/AirportMap";
 import moment from "moment";
 import Loading from "./components/LoadingScreen/Loading";
-import FlightBooking from './components/FlightBooking/FlightBooking';
+import FlightBooking from "./components/FlightBooking/FlightBooking";
 // import "./react_dates_overrides.css";
 export default class App extends Component {
   state = {
