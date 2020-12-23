@@ -20,7 +20,7 @@ function Map(props) {
   };
 
   return (
-    <div style={{ height: "100vh", width: "100%", border: "0" }}>
+    <div style={{ height: "100vh", width: "97%", border: "0", margin: "20px" }}>
       <GoogleMapReact
         bootstrapURLKeys={{ key: API_KEY }}
         defaultCenter={{ lat: 46, lng: 2 }}
