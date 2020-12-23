@@ -32,7 +32,8 @@ class FlightCard extends React.Component {
   render() {
 
     return (
-      <div>
+      <div className='flightcard-section'>
+        <div className='flight-cards'>
         {!this.state.apiFinished ?
           <Loading />
           : 
@@ -85,6 +86,11 @@ class FlightCard extends React.Component {
             )})
           
         }
+        </div>
+        <div className='flight-card-img'>
+          <img className='bupa-img' src='/images/bupa.png' />
+          <img className='bookingcom-img' src='/images/booking.jpg' />
+        </div>
       </div>
     );
   }
