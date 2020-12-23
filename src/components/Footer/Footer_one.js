@@ -8,9 +8,9 @@ import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   return (
-    <footer class="footer">
-      <div class="footer__addr">
-        <h1 class="footer__logo">Safer Travel App</h1>
+    <footer className="footer">
+      <div className="footer__addr">
+        <h1 className="footer__logo">Safer Travel App</h1>
 
         <h2>Contact</h2>
 
@@ -19,17 +19,17 @@ const Footer = () => {
           <br />
           Nova Scotia, Canada
           <br />
-          <a class="footer__btn" href="mailto:example@safer-travel.com">
+          <a className="footer__btn" href="mailto:example@safer-travel.com">
             Email Us
           </a>
         </address>
       </div>
 
-      <ul class="footer__nav">
-        <li class="nav__item">
-          <h2 class="nav__title">Stay connected</h2>
+      <ul className="footer__nav">
+        <li className="nav__item">
+          <h2 className="nav__title">Stay connected</h2>
 
-          <ul class="nav__ul">
+          <ul className="nav__ul">
             <li>
               <a href="https://19grams.coffee/en/coffee/berlinkaffee/organic-fairtrade">
                 <FontAwesomeIcon icon={faCoffee} size="2x" />
@@ -56,10 +56,10 @@ const Footer = () => {
           </ul>
         </li>
 
-        <li class="nav__item nav__item--extra">
-          <h2 class="nav__title">Explore</h2>
+        <li className="nav__item nav__item--extra">
+          <h2 className="nav__title">Explore</h2>
 
-          <ul class="nav__ul nav__ul--extra">
+          <ul className="nav__ul nav__ul--extra">
             <li>
               <a href="#">Attractions</a>
             </li>
@@ -86,10 +86,10 @@ const Footer = () => {
           </ul>
         </li>
 
-        <li class="nav__item">
-          <h2 class="nav__title">Legal</h2>
+        <li className="nav__item">
+          <h2 className="nav__title">Legal</h2>
 
-          <ul class="nav__ul">
+          <ul className="nav__ul">
             <li>
               <a href="#">Privacy Policy</a>
             </li>
@@ -105,15 +105,15 @@ const Footer = () => {
         </li>
       </ul>
 
-      <div class="legal">
+      <div className="legal">
         <p>
           &copy; {new Date().getFullYear()} Safer Travel App Inc. All rights
           reserved.
         </p>
 
-        <div class="legal__links">
+        <div className="legal__links">
           <span>
-            Made with <span class="heart">♥</span> remotely from around the
+            Made with <span className="heart">♥</span> remotely from around the
             world
           </span>
         </div>

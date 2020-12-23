@@ -21,7 +21,11 @@ const Navbar = (props) => {
   return (
     <nav className="Navbar">
       <div>
-        <img className="NavbarLogo" src="https://safetravel.id/img/ico.jpg" />
+        <img
+          className="NavbarLogo"
+          src="https://safetravel.id/img/ico.jpg"
+          alt="S with plane logo"
+        />
       </div>
       <div>
         <ul className={renderClasses()}>
