@@ -13,10 +13,15 @@ import "react-dates/initialize";
 import "react-dates/lib/css/_datepicker.css";
 import { airports } from "./components/Airport/AirportMap";
 import moment from "moment";
+
+// import Loading from "./components/LoadingScreen/Loading";
+// import FlightBooking from './components/FlightBooking/FlightBooking';
+
 import Loading from "./components/LoadingScreen/Loading";
 
 import FlightBooking from './components/FlightBooking/FlightBooking';
 import CollabBanner from './components/CollaborationBanner/ColabBanner'
+
 
 // import "./react_dates_overrides.css";
 export default class App extends Component {
@@ -249,7 +254,7 @@ export default class App extends Component {
               </div>
               <div className="calendar">
                 <DateRangePicker
-                  className="DateRangePicker"
+                  // className="DateRangePicker"
                   startDatePlaceholderText="Depart"
                   endDatePlaceholderText="Return"
                   startDate={this.state.startDate} // momentPropTypes.momentObj or null,
@@ -282,7 +287,6 @@ export default class App extends Component {
             startDate={this.state.finalStartDate}
           />
         )}
-
         {this.state.countryCovidStats.length > 0 && (
           <>
             {this.state.showMap && (

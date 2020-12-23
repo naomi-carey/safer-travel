@@ -70,7 +70,9 @@ class AttractionsCard extends React.Component {
         <div className="attractions-container">
           {filteredCountries.map((attractions, index) => {
             return (
-              <div className="attractions-card">
+              <div 
+              key={index}
+              className="attractions-card">
                 <div className="card">
                   <img
                     className="card-image"

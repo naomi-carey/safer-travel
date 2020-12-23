@@ -61,27 +61,27 @@ const Footer = () => {
 
           <ul className="nav__ul nav__ul--extra">
             <li>
-              <a href="#">Attractions</a>
+              <a href="/#">Attractions</a>
             </li>
 
             <li>
-              <a href="#">Flights</a>
+              <a href="/#">Flights</a>
             </li>
 
             <li>
-              <a href="#">Statistics</a>
+              <a href="/#">Statistics</a>
             </li>
 
             <li>
-              <a href="#">Map</a>
+              <a href="/#">Map</a>
             </li>
 
             <li>
-              <a href="#">Blog</a>
+              <a href="/#">Blog</a>
             </li>
 
             <li>
-              <a href="#">Community</a>
+              <a href="/#">Community</a>
             </li>
           </ul>
         </li>
@@ -91,15 +91,15 @@ const Footer = () => {
 
           <ul className="nav__ul">
             <li>
-              <a href="#">Privacy Policy</a>
+              <a href="/#">Privacy Policy</a>
             </li>
 
             <li>
-              <a href="#">Terms of Use</a>
+              <a href="/#">Terms of Use</a>
             </li>
 
             <li>
-              <a href="#">Sitemap</a>
+              <a href="/#">Sitemap</a>
             </li>
           </ul>
         </li>

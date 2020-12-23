@@ -51,7 +51,7 @@ export default class Airport extends Component {
             <div className="dropdown-flights">
               {this.state.filteredSuggestions.map((suggestion, index) => (
                 <option
-                  classname="options"
+                  // classname="options"
                   key={index}
                   onClick={(event) => this.suggestionClicked(event, suggestion)}
                 >
