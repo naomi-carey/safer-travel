@@ -62,7 +62,9 @@ class FlightCard extends React.Component {
                   </div>
                   <div className="duration">
                     <p className="flight-info">{flight.fly_duration}</p>
+                    {/* <div>
                     <hr className="flight-hr"></hr>
+                    </div> */}
                   </div>
                   <div className="arrival">
                     <h2 className="flight-info">{hour1_min}</h2>
