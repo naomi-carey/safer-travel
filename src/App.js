@@ -15,6 +15,7 @@ import { airports } from "./components/Airport/AirportMap";
 import moment from "moment";
 import Loading from "./components/LoadingScreen/Loading";
 import FlightBooking from './components/FlightBooking/FlightBooking';
+import CollabBanner from './components/CollaborationBanner/ColabBanner'
 // import "./react_dates_overrides.css";
 export default class App extends Component {
   state = {
@@ -306,7 +307,7 @@ export default class App extends Component {
                 <AttractionsCard />
               </div>
             )}
-
+            <CollabBanner />
             <Footer />
           </div>
         </div>

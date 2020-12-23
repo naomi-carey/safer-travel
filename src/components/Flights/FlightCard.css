@@ -1,6 +1,39 @@
+
+.flightcard-section{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+     flex-direction: row;
+    justify-content: center;
+}
+
+.flight-cards{
+    margin-left: 20px;
+    overflow-y: auto;
+    max-height: 1420px;
+    width: 80%;
+    text-align: center;
+    justify-content: center;
+}
+
+.flight-card-img {
+    text-align: center;
+    align-items: center;
+}
+
+.bupa-img {
+    width: 300px;
+    margin: 100px ;
+}
+.bookingcom-img {
+    width: 300px;
+    margin: 100px ;
+    margin-top:20px;
+}
+
 .flightcard-container {
     margin: 100px;
-    margin-bottom: 300px;
+    margin-bottom: 20px;
     font-weight: bold;
 }
 
@@ -17,11 +50,6 @@
     box-shadow: 0px 6px 6px #cac9c9;  
     background-color: white; 
 
-}
-.flight-hr {
-    background-color: black;
-    
-    width: 8px;
 }
 
 .ryanair {
@@ -42,6 +70,7 @@
     margin-left: 40px;
    
 }
+
 
 .departure {
     margin: 20px;

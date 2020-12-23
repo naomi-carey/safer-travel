@@ -4,6 +4,7 @@
     justify-content: space-around;
     margin-top: 50px;
     flex-wrap: wrap;
+    text-align: center;
 }
 
 .attractions-card {
@@ -28,13 +29,14 @@
   z-index: 1;
   top: 10%;
   left: 25%;
-  width: 40%;
+  width: 800px;
   height: 600px;
   background-color: rgb(255, 255, 255);
   padding: 40px;
   border: black 2px solid;
   border-radius: 25px;
-  box-shadow: 200px 200px 200px 200px rgba(186, 186, 186, 0.091);
+  box-shadow: 200px 200px 200px 400px rgba(62, 62, 62, 0.534);
+  overflow-y:auto ;
   
 }
 
@@ -51,7 +53,7 @@
 }
 
 .card-image {
-    width: 100%;
+    width: 268px;
     height: 220px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
