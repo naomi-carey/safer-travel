@@ -6,7 +6,7 @@ export default class AttractionsHomePage extends Component {
         return (
             <div className='attractions-home-div'>
             <div className='attractions-home-heading-div' >
-                    <h3 className='attractions-home-heading'>Plan your next getaway</h3>
+                    <h3 className='attractions-home-heading'>PLAN YOUR NEXT GETAWAY</h3>
                 </div>
             <div >
                   <div className='attractions-home-card-div'>

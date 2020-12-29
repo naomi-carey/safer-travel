@@ -4,7 +4,11 @@ import './Subscription.css'
 export default class Subscription extends Component {
     render() {
         return (
-            <div className='sub-body-div'>
+            <div className='sub-body-div'
+            style={{
+                backgroundImage: `url("/images/safetravelsubbanner.jpg")`,backgroundRepeat: 'no-repeat',width:'100%',height:'300px',color:'white'
+             }}
+            >
                 <div className='sub-div'>
                 <h3 className='sub-heading'>Explore the world with us</h3>
                 <p  className='sub-p'>Sign up for our newsletter and we'll send you the best, and safest offers each week.</p>
