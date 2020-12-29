@@ -28,7 +28,7 @@ const Navbar = (props) => {
         />
 
       </div>
-      <div>
+      <div className='navbar-collapse-menu'>
         <ul className={renderClasses()}>
           <li className="link">
             <a href="@">Home</a>

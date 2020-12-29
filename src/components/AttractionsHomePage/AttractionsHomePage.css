@@ -1,31 +1,33 @@
-
 .attractions-home-card-div {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-top: 100px;
     margin-bottom: 100px;
     flex-wrap: wrap;
     background: rgb(151, 215, 153);
-    height: 300px;
-}
-
-.attractions-home-card-img1, .attractions-home-card-img {
+    /* height: 300px; */
+    height: 265px;
+  }
+  .attractions-home-card-img1,
+  .attractions-home-card-img {
     width: 260px;
     height: 350px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 25px;
+    margin-right: 25px;
     margin-bottom: 20px;
     border-radius: 8px;
+    margin-top: -85px;
+  }
+
+
+.attractions-home-heading-div {
+    text-align: center;
+    margin-bottom: 120px;
 }
 
 .attractions-home-heading {
-    text-align: left;
-    margin-left: 100px;
-    margin-bottom: 20px;
-}
-
-.attractions-home-heading {
-    font-size: 25px;
+    font-size: 20px;
     color: rgb(99, 99, 99);
 }
 
