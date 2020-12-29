@@ -2,6 +2,7 @@ import React from "react";
 // import { FaCreativeCommonsPd } from "react-icons/fa";
 import "./Country.json";
 import "./Statistics.css";
+import { nanoid } from "nanoid";
 
 class Statistics extends React.Component {
   constructor(props) {
@@ -121,45 +122,47 @@ class Statistics extends React.Component {
         </div>
 
         {this.state.showDetailedStats && (
-          <div class="table-props">
+          <div className="table-props">
             <table>
-              <tr>
-                <th className="location">Location</th>
-                <th>Province</th>
-                <th>Cases</th>
-                <th>Active</th>
-                <th>Increment</th>
-              </tr>
-              {this.state.countryCovidStats.map((countryData) => (
+              <thead>
                 <tr>
-                  <td>{countryData.country}</td>
-                  <td>{countryData.province}</td>
-                  <td>{countryData.cases}</td>
-                  <td>{countryData.active}</td>
-                  <td className="incrementContainer">
-                    <div className="increment-data">
-                      {countryData.increment.toString() === "NaN" ||
-                      countryData.increment === Infinity
-                        ? "not available"
-                        : Math.round(countryData.increment)}
-                    </div>
-                    <div className="indicator-container">
-                      <div
-                        className={
-                          countryData.increment.toString() === "NaN" ||
-                          countryData.increment === Infinity
-                            ? "indicator indicator-grey"
-                            : countryData.increment <= 55
-                            ? "indicator indicator-green"
-                            : countryData.increment > 90
-                            ? "indicator indicator-red"
-                            : "indicator indicator-yellow"
-                        }
-                      ></div>
-                    </div>
-                  </td>
+                  <th className="location">Location</th>
+                  <th>Province</th>
+                  <th>Cases</th>
+                  <th>Active</th>
+                  <th>Increment</th>
                 </tr>
-              ))}
+                {this.state.countryCovidStats.map((countryData) => (
+                  <tr key={nanoid()}>
+                    <td>{countryData.country}</td>
+                    <td>{countryData.province}</td>
+                    <td>{countryData.cases}</td>
+                    <td>{countryData.active}</td>
+                    <td className="incrementContainer">
+                      <div className="increment-data">
+                        {countryData.increment.toString() === "NaN" ||
+                        countryData.increment === Infinity
+                          ? "not available"
+                          : Math.round(countryData.increment)}
+                      </div>
+                      <div className="indicator-container">
+                        <div
+                          className={
+                            countryData.increment.toString() === "NaN" ||
+                            countryData.increment === Infinity
+                              ? "indicator indicator-grey"
+                              : countryData.increment <= 55
+                              ? "indicator indicator-green"
+                              : countryData.increment > 90
+                              ? "indicator indicator-red"
+                              : "indicator indicator-yellow"
+                          }
+                        ></div>
+                      </div>
+                    </td>
+                  </tr>
+                ))}
+              </thead>
             </table>
           </div>
         )}
