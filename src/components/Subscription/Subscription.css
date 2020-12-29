@@ -1,0 +1,38 @@
+.sub-body-div {
+    background:blue;
+    height: 300px;
+    
+}
+
+.sub-div {
+    color: white;
+    text-align: left;
+    margin-left: 50px;
+    align-items: center;
+    width: 600px;
+}
+
+.sub-email-box {
+    height: 35px;
+    width: 450px;
+    border-radius: 5px;
+    margin: 10px;
+    border: 0
+}
+
+.sub-btn {
+    height: 35px;
+    width: 100px;
+    margin-left: 5px;
+    border-radius: 5px;
+    border: 0
+}
+
+.sub-p {
+    margin:10px;
+}
+
+.sub-heading {
+    font-size: 25px;
+    color: white;
+}

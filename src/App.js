@@ -13,6 +13,8 @@ import "react-dates/initialize";
 import "react-dates/lib/css/_datepicker.css";
 import { airports } from "./components/Airport/AirportMap";
 import moment from "moment";
+import Subscription from './components/Subscription/Subscription';
+import AttractionsHomePage from './components/AttractionsHomePage/AttractionsHomePage';
 
 // import Loading from "./components/LoadingScreen/Loading";
 // import FlightBooking from './components/FlightBooking/FlightBooking';
@@ -313,7 +315,9 @@ export default class App extends Component {
                 <AttractionsCard />
               </div>
             )}
+            <AttractionsHomePage />
             <CollabBanner />
+            <Subscription />
             <Footer />
           </div>
         </div>
