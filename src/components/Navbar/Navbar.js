@@ -33,7 +33,7 @@ const Navbar = (props) => {
           alt="S with plane logo"
         /> */}
       </div>
-      <div>
+      <div className='navbar-collapse-menu'>
         <ul className={renderClasses()}>
           <li className="link">
             <a href="@">Home</a>

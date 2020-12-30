@@ -1,5 +1,6 @@
 .Navbar{
     height: 100px;
+    width: 100%;
     text-align: left;
     border-bottom: 1.5px solid rgb(194, 194, 194);
     display: flex;
@@ -72,10 +73,10 @@
         right: 0px;
         display: flex;
         flex-direction: column;
-        height:90vh ;
+        height:100vh ;
         align-items: center;
         width: 100%;
-        top:7vh;
+        top:7.5vh;
         background-color: rgb(33, 107, 186);
         transition: transform 0.3s ease-in;
         transform: translateY(-120%);
