@@ -15,6 +15,9 @@ import { airports } from "./components/Airport/AirportMap";
 import moment from "moment";
 import Subscription from './components/Subscription/Subscription';
 import AttractionsHomePage from './components/AttractionsHomePage/AttractionsHomePage';
+import TravelPoster from './components/TravelPoster/TravelPoster';
+import TravelBanner from './components/Banners/TravelBanner';
+import StatisticsBanner from './components/Banners/StatisticsBanner'
 
 // import Loading from "./components/LoadingScreen/Loading";
 // import FlightBooking from './components/FlightBooking/FlightBooking';
@@ -43,7 +46,7 @@ export default class App extends Component {
     showStatistics: true,
     showHome: true,
     showTravel: true,
-    showAttractions: true,
+    showAttractions: false,
     showMap: true,
   };
 
@@ -230,8 +233,9 @@ export default class App extends Component {
             showStatistics={this.showStatistics}
             showAttractions={this.showAttractions}
           />
-
+          <TravelBanner />
           <Banner />
+          <StatisticsBanner />
         </div>
 
         {this.state.showTravel && (
@@ -317,6 +321,7 @@ export default class App extends Component {
             )}
             <AttractionsHomePage />
             <CollabBanner />
+            <TravelPoster />
             <Subscription />
             <Footer />
           </div>

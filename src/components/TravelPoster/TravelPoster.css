@@ -1,0 +1,14 @@
+.travel-destinations-img {
+    width: 80%;
+    margin-bottom: 200px;
+    border-radius: 10px;
+    margin-top: -80px;
+}
+
+.travel-destinations-img-div {
+       /* height: 300px; */
+       height: 350px;
+       background: rgb(151, 215, 153);
+       margin-bottom: 200px;
+       margin-top: 200px;
+}

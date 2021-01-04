@@ -2,6 +2,8 @@ import React from "react";
 import "./FlightCard.css";
 import axios from "axios";
 import Loading from "../LoadingScreen/Loading.js";
+import TravelBanner from '../Banners/TravelBanner'
+
 
 class FlightCard extends React.Component {
   constructor(props) {
@@ -32,7 +34,8 @@ class FlightCard extends React.Component {
   render() {
 
     return (
-      <div className='flightcard-section'>
+      <div>     
+ <div className='flightcard-section'>
         <div className='flight-cards'>
         {!this.state.apiFinished ?
           <Loading />
@@ -91,7 +94,12 @@ class FlightCard extends React.Component {
           <img className='bupa-img' src='/images/bupa.png' />
           <img className='bookingcom-img' src='/images/booking.jpg' />
         </div>
+        <div>
+
+        </div>
       </div>
+      </div>
+     
     );
   }
 }
