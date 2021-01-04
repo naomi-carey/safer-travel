@@ -6,10 +6,12 @@ import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 
-const Footer = () => {
+const Footer = (props) => {
   return (
     <footer className="footer">
       <div className="footer__addr">
+
+        <h2 className="about__us" onClick={props.showAboutUs}>About Us</h2>
 
         <h2>Contact</h2>
 

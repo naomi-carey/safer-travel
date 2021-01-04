@@ -15,9 +15,13 @@ import { airports } from "./components/Airport/AirportMap";
 import moment from "moment";
 import Subscription from './components/Subscription/Subscription';
 import AttractionsHomePage from './components/AttractionsHomePage/AttractionsHomePage';
+
+import AboutUs from './components/AboutUs/AboutUs'
+
 import TravelPoster from './components/TravelPoster/TravelPoster';
 import TravelBanner from './components/Banners/TravelBanner';
 import StatisticsBanner from './components/Banners/StatisticsBanner'
+
 
 // import Loading from "./components/LoadingScreen/Loading";
 // import FlightBooking from './components/FlightBooking/FlightBooking';
@@ -48,6 +52,7 @@ export default class App extends Component {
     showTravel: true,
     showAttractions: false,
     showMap: true,
+    showAboutUs: false
   };
 
   componentDidMount() {
@@ -222,6 +227,11 @@ export default class App extends Component {
       showMap: false,
     });
   };
+  showAboutUs = () => {
+    this.setState({
+      showAboutUs:true
+    })
+  }
 
   findFlights = () => this.setState({ showTicket: true });
   render() {
@@ -320,10 +330,20 @@ export default class App extends Component {
                 <AttractionsCard />
               </div>
             )}
+    
+            <AttractionsHomePage />
+
             <CollabBanner />
             <TravelPoster />
             <Subscription />
-            <Footer />
+            {this.state.showAboutUs && (
+              <div>
+                <AboutUs />
+              </div>
+            )}
+            <Footer 
+            showAboutUs={this.showAboutUs}
+            />
           </div>
         </div>
       </div>
