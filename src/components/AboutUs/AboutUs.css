@@ -1,6 +1,6 @@
 :root {
-    --primary: rgb(194, 229, 243);
-    --secondary: rgb(56, 160, 245);
+    --primary: rgb(218, 237, 247);
+    --secondary: #18c2bcbb;
     --dark: black;
     --light: white;
 }
@@ -17,7 +17,6 @@
     font-family: 'Courier New', Courier, monospace;
     width: 100%;
     min-height: 100vh;
-    /* margin-bottom: -200px; */
     /* border: 1px solid black; */
 }
 
@@ -154,7 +153,7 @@
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: center;
-        /* margin-bottom: 100px; */
+        margin-bottom: -200px;
     }
 }
 

@@ -229,9 +229,10 @@ export default class App extends Component {
   };
   showAboutUs = () => {
     this.setState({
-      showAboutUs:true
+      showAboutUs: !
+      this.state.showAboutUs,
     })
-  }
+  };
 
   findFlights = () => this.setState({ showTicket: true });
   render() {
