@@ -1,14 +1,33 @@
 .travel-destinations-img {
-    width: 80%;
-    margin-bottom: 200px;
+    width: 70%;
     border-radius: 10px;
-    margin-top: -80px;
+    margin-top: -100px;
+    margin-bottom: -100px;
 }
 
 .travel-destinations-img-div {
        /* height: 300px; */
-       height: 350px;
+       height: 100%;
        background: rgb(151, 215, 153);
        margin-bottom: 200px;
        margin-top: 200px;
+
+}
+
+@media screen and (max-width: 850px) {
+    .travel-destinations-img-div {
+        /* height: 300px; */
+        height: 100%;
+        background: rgb(151, 215, 153);
+        margin-bottom: 100px;
+        margin-top: 100px;
+ 
+ }
+
+ .travel-destinations-img {
+    width: 85%;
+    border-radius: 10px;
+    margin-top: -50px;
+    margin-bottom: -50px;
+}
 }

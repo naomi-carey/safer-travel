@@ -23,7 +23,7 @@ const Navbar = (props) => {
       <div>
         <img
           className="NavbarLogo"
-          src="https://safetravel.id/img/ico.jpg"
+          src="images/logo.png"
           alt="NavbarLogo"
         />
 
