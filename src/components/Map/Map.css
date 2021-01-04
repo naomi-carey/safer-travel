@@ -85,3 +85,9 @@
 .color__rating input[type="radio"]:checked ~ label {
     background: transparent;
 }
+
+@media screen and (max-width: 900px) {
+    .color__box, .map__border {
+        display: none;
+    }
+}
