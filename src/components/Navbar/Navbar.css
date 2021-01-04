@@ -1,8 +1,7 @@
 .Navbar{
-    height: 100px;
+    height: 80px;
     width: 100%;
     text-align: left;
-    border-bottom: 1.5px solid rgb(194, 194, 194);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -18,7 +17,7 @@
     list-style: none;
     text-decoration: none;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 .hamburger-toggle {
@@ -53,10 +52,10 @@
 }
 
 .NavbarLogo {
-    height: 80px;
-    width: 100px;
-    margin-left: 50px;
-    margin-top: 10px;
+    height: 50px;
+    width: 150px;
+    margin-left: 70px;
+    margin-top: 15px;
 }
 
 @media screen and (max-width: 850px){

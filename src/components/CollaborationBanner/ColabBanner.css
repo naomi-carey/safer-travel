@@ -80,3 +80,15 @@
     margin-left: 50px;
     margin-right: 50px;
 }
+
+
+@media screen and (max-width: 850px){
+  .colab-img1, .colab-img2, .colab-img3, .colab-img4, .colab-img5, .colab-img8 {
+    display: none;
+  }
+
+  .colab-img6, .colab-img7, .colab-img9, .colab-img10 {
+    margin-top:15px;
+    margin-bottom: 15px;
+  }
+}

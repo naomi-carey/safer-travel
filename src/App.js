@@ -233,9 +233,7 @@ export default class App extends Component {
             showStatistics={this.showStatistics}
             showAttractions={this.showAttractions}
           />
-          <TravelBanner />
           <Banner />
-          <StatisticsBanner />
         </div>
 
         {this.state.showTravel && (
@@ -314,12 +312,14 @@ export default class App extends Component {
         )}
         <div>
           <div>
+            <div>
+            <AttractionsHomePage  showAttractions={this.showAttractions} />
+            </div>
             {this.state.showAttractions && (
               <div>
                 <AttractionsCard />
               </div>
             )}
-            <AttractionsHomePage />
             <CollabBanner />
             <TravelPoster />
             <Subscription />
