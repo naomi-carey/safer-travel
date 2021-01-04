@@ -8,7 +8,7 @@ import Usa from '../images/Usa.jpg'
 import Ire from '../images/Ire.jpg'
 import Ger from '../images/Ger.jpg'
 import Aus from '../images/Aus.jpg'
-import Airbus from '../images/airbus.png'
+// import Airbus from '../images/airbus.png'
 import { FaGithub } from "react-icons/fa";
 
 const AboutUs = () => {
