@@ -10,7 +10,9 @@
   height: 265px;
 }
 .attractions-home-card-img1,
-.attractions-home-card-img {
+.attractions-home-card-img2,
+.attractions-home-card-img3,
+.attractions-home-card-img4 {
   width: 260px;
   height: 350px;
   margin-left: 25px;
@@ -18,6 +20,16 @@
   margin-bottom: 20px;
   border-radius: 8px;
   margin-top: -85px;
+}
+
+.attractions-home-card-img5 {
+  width: 260px;
+  height: 320px;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  margin-top: -55px;
 }
 
 .attractions-home-heading-div {
@@ -41,15 +53,47 @@
   }
 }
 
-@media screen and (max-width: 900px) {
-  .attractions-home-card-img1,
+@media screen and (max-width: 1300px) {
+
   .attractions-home-card-img {
     margin: 20px;
+  }
+
+  .attractions-home-card-img4 {
+    display:none;
+  }
+
+  .attractions-home-card-div {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
   }
 
   .attractions-home-heading {
     text-align: center;
     margin: 0;
     margin-bottom: 20px;
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  .attractions-home-card-img1,
+.attractions-home-card-img2,
+.attractions-home-card-img3,
+.attractions-home-card-img4 {
+  display:none;
+}
+
+.attractions-home-card-img5 {
+  display:inline;
+}
+
+
+}
+
+@media screen and (min-width: 800px) {
+  .attractions-home-card-img5 {
+    display:none;
   }
 }

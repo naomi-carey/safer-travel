@@ -10,18 +10,19 @@ const Footer = (props) => {
   return (
     <footer className="footer">
       <div className="footer__addr">
-        <h1 className="footer__logo">Safer Travel App</h1>
+
         <h2 className="about__us" onClick={props.showAboutUs}>About Us</h2>
+
         <h2>Contact</h2>
 
         <address>
           5534 The Other Street
           <br />
-          Nova Scotia, Canada
+          West Upper Road, London
           <br />
-          <a className="footer__btn" href="mailto:example@safer-travel.com">
+          <button className="footer__btn" href="mailto:example@safer-travel.com">
             Email Us
-          </a>
+          </button>
         </address>
       </div>
 
@@ -75,14 +76,6 @@ const Footer = (props) => {
             <li>
               <a href="/#">Map</a>
             </li>
-
-            <li>
-              <a href="/#">Blog</a>
-            </li>
-
-            <li>
-              <a href="/#">Community</a>
-            </li>
           </ul>
         </li>
 
@@ -112,10 +105,7 @@ const Footer = (props) => {
         </p>
 
         <div className="legal__links">
-          <span>
-            Made with <span className="heart">♥</span> remotely from around the
-            world
-          </span>
+        
         </div>
       </div>
     </footer>
