@@ -49,6 +49,7 @@ class FlightCard extends React.Component {
             const hour1_min = date2.toLocaleTimeString().slice(0, 5);
 
             return (
+              <div>
               <div key={index} className="flightcard-container">
               <div className="flight-card">
                 <div className="flight-card">
@@ -66,6 +67,9 @@ class FlightCard extends React.Component {
                   </div>
                   <div className="duration">
                     <p className="flight-info">{flight.fly_duration}</p>
+                    <div>
+                      <img className='flight-card-plane' src='images/plane.png' alt='HR' />
+                    </div>
                     {/* <div>
                     <hr className="flight-hr"></hr>
                     </div> */}
@@ -85,13 +89,13 @@ class FlightCard extends React.Component {
                 </div>
               </div>
             </div>
-            
+            </div>
             )})
           
         }
         </div>
         <div className='flight-card-img'>
-          <img className='bupa-img' src='/images/bupa.png' />
+          <img className='bupa-img' src='/images/Travel-safe.jpg' />
           <img className='bookingcom-img' src='/images/booking.jpg' />
         </div>
         <div>

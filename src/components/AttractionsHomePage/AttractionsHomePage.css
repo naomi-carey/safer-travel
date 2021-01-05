@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 170px;
   margin-bottom: 100px;
   flex-wrap: wrap;
   background: rgb(151, 215, 153);
@@ -34,11 +34,12 @@
 
 .attractions-home-heading-div {
   text-align: center;
-  margin-bottom: 120px;
+  margin-top: 60px;
+  margin-bottom: -60px;
 }
 
 .attractions-home-heading {
-  font-size: 20px;
+  font-size: 23px;
   color: rgb(99, 99, 99);
 }
 

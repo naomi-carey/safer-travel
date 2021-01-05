@@ -64,18 +64,20 @@
     }
 
     .hamburger-toggle {
-        display: block;
-        margin: 50px;
+         display: block;
+       margin-top:35px;
+       margin-right: 40px;
     }
     .NavbarLinks {
         position: absolute;
         right: 0px;
         display: flex;
         flex-direction: column;
-        height:100vh ;
+        height:92vh ;
         align-items: center;
         width: 100%;
-        top:7.5vh;
+        z-index: +1;
+        top:6vh;
         background-color: rgb(33, 107, 186);
         transition: transform 0.3s ease-in;
         transform: translateY(-120%);
@@ -90,6 +92,13 @@
 
     .active {
         transform: translateX(0%);
+    }
+
+    .NavbarLogo {
+        height: 40px;
+        width: 120px;
+        margin-left: 40px;
+        margin-top: 20px;
     }
 }
 

@@ -152,6 +152,15 @@
     .about__us {
         margin-left: 145px;
     }
+    .footer-links {
+      display: none;
+    }
+
+    .footer-link-div {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
   }
   
   @media screen and (min-width: 24.375em) {
@@ -160,7 +169,7 @@
     }
   }
   
-  @media screen and (min-width: 40.375em) {
+  @media screen and (min-width: 500px) {
     .footer__nav > * {
       flex: 1;
     }
