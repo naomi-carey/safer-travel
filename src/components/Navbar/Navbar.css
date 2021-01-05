@@ -64,8 +64,9 @@
     }
 
     .hamburger-toggle {
-        display: block;
-        margin: 50px;
+         display: block;
+       margin-top:35px;
+       margin-right: 40px;
     }
     .NavbarLinks {
         position: absolute;
@@ -90,6 +91,13 @@
 
     .active {
         transform: translateX(0%);
+    }
+
+    .NavbarLogo {
+        height: 40px;
+        width: 120px;
+        margin-left: 40px;
+        margin-top: 20px;
     }
 }
 
