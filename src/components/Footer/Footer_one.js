@@ -14,6 +14,10 @@ const Footer = (props) => {
         <h2 className="about__us" onClick={props.showAboutUs}>About Us</h2>
         <h2>Contact</h2>
 
+    
+
+
+
         <address>
           5534 The Other Street
           <br />
