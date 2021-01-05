@@ -185,6 +185,7 @@ export default class App extends Component {
       showTravel: false,
       showAttractions: false,
       showMap: false,
+      // showTicket: false,
     });
   };
   showTravel = () => {
@@ -194,6 +195,7 @@ export default class App extends Component {
       showTravel: true,
       showAttractions: false,
       showMap: true,
+      // showTicket: true,
     });
   };
 
@@ -204,6 +206,7 @@ export default class App extends Component {
       showTravel: false,
       showAttractions: true,
       showMap: false,
+      showTicket: false,
     });
   };
 
@@ -295,6 +298,19 @@ export default class App extends Component {
                 Find Flights
               </button>
             </div>
+
+            {this.state.showTicket && (
+              <FlightCard
+                cityFrom={this.state.cityFrom}
+                cityTo={this.state.cityTo}
+                endDate={this.state.finalEndDate}
+                startDate={this.state.finalStartDate}
+              />
+            )}
+
+            <div>
+              <AttractionsHomePage showAttractions={this.showAttractions} />
+            </div>
           </div>
         )}
 
@@ -343,9 +359,18 @@ export default class App extends Component {
                 Find Flights
               </button>
             </div>
+
+            {this.state.showTicket && (
+              <FlightCard
+                cityFrom={this.state.cityFrom}
+                cityTo={this.state.cityTo}
+                endDate={this.state.finalEndDate}
+                startDate={this.state.finalStartDate}
+              />
+            )}
           </div>
         )}
-
+        {/* 
         {this.state.showTicket && (
           <FlightCard
             cityFrom={this.state.cityFrom}
@@ -353,7 +378,7 @@ export default class App extends Component {
             endDate={this.state.finalEndDate}
             startDate={this.state.finalStartDate}
           />
-        )}
+        )} */}
         {this.state.countryCovidStats.length > 0 && (
           <>
             {this.state.showMap && (
@@ -376,16 +401,16 @@ export default class App extends Component {
         )}
         <div>
           <div>
-            <div>
+            {/* <div>
               <AttractionsHomePage showAttractions={this.showAttractions} />
-            </div>
+            </div> */}
             {this.state.showAttractions && (
               <div>
                 <TravelBanner />
                 <AttractionsCard />
               </div>
             )}
-            <AttractionsHomePage />
+            {/* <AttractionsHomePage /> */}
 
             <CollabBanner />
             <TravelPoster />
