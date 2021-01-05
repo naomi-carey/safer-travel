@@ -376,13 +376,15 @@ export default class App extends Component {
         )}
         <div>
           <div>
+            <div>
+              <AttractionsHomePage showAttractions={this.showAttractions} />
+            </div>
             {this.state.showAttractions && (
               <div>
                 <TravelBanner />
                 <AttractionsCard />
               </div>
             )}
-
             <AttractionsHomePage />
 
             <CollabBanner />

@@ -18,7 +18,8 @@ function Map(props) {
   };
 
   return (
-    <div style={{ height: "100vh", width: "97%", border: "0", margin: "20px" }}>
+    <div className="map__border">
+    <div className="GoogleMapReact">
       <GoogleMapReact
         bootstrapURLKeys={{ key: API_KEY }}
         defaultCenter={{ lat: 46, lng: 2 }}
@@ -58,6 +59,32 @@ function Map(props) {
           );
         })}
       </GoogleMapReact>
+        <div className="color__box">
+          <p>Incremental Cases Per Population (Past 30 days)</p>
+          <div className="color__rating">
+            <input type="radio" name="rating" id="rate100"/>
+            <label htmlFor="rate100">100%</label>
+            <input type="radio" name="rating" id="rate90"/>
+            <label htmlFor="rate90">90%</label>
+            <input type="radio" name="rating" id="rate80"/>
+            <label htmlFor="rate80">80%</label>
+            <input type="radio" name="rating" id="rate70"/>
+            <label htmlFor="rate70">70%</label>
+            <input type="radio" name="rating" id="rate60"/>
+            <label htmlFor="rate60">60%</label>
+            <input type="radio" name="rating" id="rate50"/>
+            <label htmlFor="rate50">50%</label>
+            <input type="radio" name="rating" id="rate40"/>
+            <label htmlFor="rate40">40%</label>
+            <input type="radio" name="rating" id="rate30"/>
+            <label htmlFor="rate30">30%</label>
+            <input type="radio" name="rating" id="rate20"/>
+            <label htmlFor="rate20">20%</label>
+            <input type="radio" name="rating" id="rate10"/>
+            <label htmlFor="rate10">10%</label>
+          </div>
+        </div>
+    </div>
     </div>
   );
 }

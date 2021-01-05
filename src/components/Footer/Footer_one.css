@@ -33,16 +33,15 @@
   .footer__addr {
     margin-right: 1.25em;
     margin-bottom: 2em;
-  }
-  
-  .footer__logo {
-    font-weight: 400;
-    font-size: 1.5rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
   }
   
   .footer__addr h2 {
-    margin-top: 1.3em;
-    font-size: 15px;
+    margin-top: .5em;
+    font-size: 17px;
     font-weight: 400;
   }
   
@@ -73,24 +72,22 @@
     cursor: pointer;
   }
 
-  .about__us:hover {
-    background-color: rgba(33, 33, 33, 0.158);
-  }
-
-  
   .footer__btn {
-    display: flex;
     align-items: center;
+    margin-top: 20px;
+    border:0;
     justify-content: center;
     height: 36px;
     max-width: max-content;
     background-color: rgb(33, 33, 33, 0.07);
     border-radius: 100px;
     color: #2f2f2f;
-    line-height: 0;
-    margin:0.6em 0 0 3.2em;
     font-size: 1rem;
     padding: 0 1.3em;
+  }
+
+  .about__us:hover {
+    background-color: rgba(33, 33, 33, 0.158);
   }
   
   .footer ul {
@@ -104,6 +101,16 @@
   
   .footer a {
     text-decoration: none;
+  }
+
+  .nav__item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav__ul {
+    display: flex;
+    flex-direction: column;
   }
   
   .footer__nav {
@@ -126,9 +133,10 @@
   }
   
   .legal {
-    display: flex;
-    flex-wrap: wrap;
+    font-size: 18px;
     color: #999;
+    text-align: center;
+    margin-top: 40px;
   }
     
   .legal__links {
@@ -138,6 +146,12 @@
   
   .heart {
     color: #2f2f2f;
+  }
+
+  @media screen and (max-width: 900px) {
+    .about__us {
+        margin-left: 145px;
+    }
   }
   
   @media screen and (min-width: 24.375em) {
