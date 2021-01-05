@@ -23,7 +23,6 @@
     background: none;
     width: 15px;
     color: black;
-    
 }
 
 .marker:hover {
@@ -86,8 +85,11 @@
     background: transparent;
 }
 
-@media screen and (max-width: 900px) {
-    .color__box, .map__border {
+@media screen and (max-width: 580px) {
+    /* .color__box, .map__border {
         display: none;
+    }  */
+    .color__rating label {
+        font-size: 14px;
     }
 }
