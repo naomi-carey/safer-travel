@@ -54,7 +54,24 @@
     font-style: normal;
     color: #999;
   }
-  
+
+  .about__us {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    height: 36px;
+    max-width: max-content;
+    background-color: rgb(33, 33, 33, 0.07);
+    border-radius: 100px;
+    color: #2f2f2f;
+    line-height: 0;
+    margin-left: 175px;
+    font-size: 1rem;
+    padding: 0 1.3em;
+    cursor: pointer;
+  }
+
   .footer__btn {
     align-items: center;
     margin-top: 20px;
@@ -67,6 +84,10 @@
     color: #2f2f2f;
     font-size: 1rem;
     padding: 0 1.3em;
+  }
+
+  .about__us:hover {
+    background-color: rgba(33, 33, 33, 0.158);
   }
   
   .footer ul {
@@ -125,6 +146,12 @@
   
   .heart {
     color: #2f2f2f;
+  }
+
+  @media screen and (max-width: 900px) {
+    .about__us {
+        margin-left: 145px;
+    }
   }
   
   @media screen and (min-width: 24.375em) {

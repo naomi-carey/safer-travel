@@ -16,10 +16,10 @@ export const Modal = ({ close, index, data }) => {
       </div>
       <div className="modal-content">
         <div className="modal-body">
-          <p>Daily Cases:{data.todayCases}</p>
+          <p className='daily__d'>Daily Cases:{data.todayCases}</p>
           <p>Daily Recovered:{data.todayRecovered}</p>
           <p>Total Cases:{data.cases}</p>
-          <p>Last Updated:{lastUpdated}</p>
+          <p className='last__l'>Last Updated:{lastUpdated}</p>
         </div>
         <div className="modal-footer">
           <button onClick={() => close(index)} className="btn-cancel">Close</button>
