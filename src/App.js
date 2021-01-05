@@ -30,10 +30,8 @@ import Loading from "./components/LoadingScreen/Loading";
 import FlightBooking from "./components/FlightBooking/FlightBooking";
 import CollabBanner from "./components/CollaborationBanner/ColabBanner";
 
-// import "./react_dates_overrides.css";
 export default class App extends Component {
   state = {
-    // showFlights: false,
     flightData: {},
     cityFrom: {},
     cityTo: {},
@@ -49,7 +47,7 @@ export default class App extends Component {
     showHome: true,
     showTravel: false,
     showAttractions: false,
-    showMap: false,
+    showMap: true,
     showAboutUs: false,
   };
 
@@ -193,7 +191,7 @@ export default class App extends Component {
       showHome: false,
       showTravel: true,
       showAttractions: false,
-      showMap: true,
+      showMap: false,
     });
   };
 
@@ -204,6 +202,7 @@ export default class App extends Component {
       showTravel: false,
       showAttractions: true,
       showMap: false,
+      showTicket: false,
     });
   };
 
@@ -245,9 +244,6 @@ export default class App extends Component {
             showAttractions={this.showAttractions}
             showHome={this.showHome}
           />
-          {/* <TravelBanner /> */}
-          {/* <Banner /> */}
-          {/* <StatisticsBanner />  */}
         </div>
 
         {this.state.showHome && (
@@ -294,6 +290,29 @@ export default class App extends Component {
               <button className="find-flights" onClick={this.findFlights}>
                 Find Flights
               </button>
+            </div>
+
+            {this.state.showTicket && (
+              <FlightCard
+                cityFrom={this.state.cityFrom}
+                cityTo={this.state.cityTo}
+                endDate={this.state.finalEndDate}
+                startDate={this.state.finalStartDate}
+              />
+            )}
+
+            {this.state.countryCovidStats.length > 0 && (
+              <>
+                {this.state.showMap && (
+                  <Map
+                    countryCovidStats={this.state.countryCovidStats}
+                    changedCases={this.state.stabilityStat}
+                  />
+                )}
+              </>
+            )}
+            <div>
+              <AttractionsHomePage showAttractions={this.showAttractions} />
             </div>
           </div>
         )}
@@ -343,9 +362,29 @@ export default class App extends Component {
                 Find Flights
               </button>
             </div>
+
+            {this.state.showTicket && (
+              <FlightCard
+                cityFrom={this.state.cityFrom}
+                cityTo={this.state.cityTo}
+                endDate={this.state.finalEndDate}
+                startDate={this.state.finalStartDate}
+              />
+            )}
+
+            {this.state.countryCovidStats.length > 0 && (
+              <>
+                {this.state.showMap && (
+                  <Map
+                    countryCovidStats={this.state.countryCovidStats}
+                    changedCases={this.state.stabilityStat}
+                  />
+                )}
+              </>
+            )}
           </div>
         )}
-
+        {/* 
         {this.state.showTicket && (
           <FlightCard
             cityFrom={this.state.cityFrom}
@@ -353,15 +392,15 @@ export default class App extends Component {
             endDate={this.state.finalEndDate}
             startDate={this.state.finalStartDate}
           />
-        )}
+        )} */}
         {this.state.countryCovidStats.length > 0 && (
           <>
-            {this.state.showMap && (
+            {/* {this.state.showMap && (
               <Map
                 countryCovidStats={this.state.countryCovidStats}
                 changedCases={this.state.stabilityStat}
               />
-            )}
+            )} */}
 
             {this.state.showStatistics && (
               <div>
@@ -376,19 +415,20 @@ export default class App extends Component {
         )}
         <div>
           <div>
-            <div>
+            {/* <div>
               <AttractionsHomePage showAttractions={this.showAttractions} />
-            </div>
+            </div> */}
             {this.state.showAttractions && (
               <div>
                 <TravelBanner />
                 <AttractionsCard />
+                <TravelPoster />
               </div>
             )}
-            <AttractionsHomePage />
+            {/* <AttractionsHomePage /> */}
 
             <CollabBanner />
-            <TravelPoster />
+            {/* <TravelPoster /> */}
             <Subscription />
             {this.state.showAboutUs && (
               <div>
