@@ -13,24 +13,22 @@ import "react-dates/initialize";
 import "react-dates/lib/css/_datepicker.css";
 import { airports } from "./components/Airport/AirportMap";
 import moment from "moment";
-import Subscription from './components/Subscription/Subscription';
-import AttractionsHomePage from './components/AttractionsHomePage/AttractionsHomePage';
+import Subscription from "./components/Subscription/Subscription";
+import AttractionsHomePage from "./components/AttractionsHomePage/AttractionsHomePage";
 
-import AboutUs from './components/AboutUs/AboutUs'
+import AboutUs from "./components/AboutUs/AboutUs";
 
-import TravelPoster from './components/TravelPoster/TravelPoster';
-import TravelBanner from './components/Banners/TravelBanner';
-import StatisticsBanner from './components/Banners/StatisticsBanner'
-
+import TravelPoster from "./components/TravelPoster/TravelPoster";
+import TravelBanner from "./components/Banners/TravelBanner";
+import StatisticsBanner from "./components/Banners/StatisticsBanner";
 
 // import Loading from "./components/LoadingScreen/Loading";
 // import FlightBooking from './components/FlightBooking/FlightBooking';
 
 import Loading from "./components/LoadingScreen/Loading";
 
-import FlightBooking from './components/FlightBooking/FlightBooking';
-import CollabBanner from './components/CollaborationBanner/ColabBanner'
-
+import FlightBooking from "./components/FlightBooking/FlightBooking";
+import CollabBanner from "./components/CollaborationBanner/ColabBanner";
 
 // import "./react_dates_overrides.css";
 export default class App extends Component {
@@ -47,12 +45,12 @@ export default class App extends Component {
     showTicket: false,
     stabilityStat: "",
     countryCovidStats: [],
-    showStatistics: true,
+    showStatistics: false,
     showHome: true,
-    showTravel: true,
+    showTravel: false,
     showAttractions: false,
-    showMap: true,
-    showAboutUs: false
+    showMap: false,
+    showAboutUs: false,
   };
 
   componentDidMount() {
@@ -224,15 +222,17 @@ export default class App extends Component {
       showHome: true,
       showTravel: false,
       showAttractions: false,
-      showMap: false,
+      showMap: true,
     });
   };
   showAboutUs = () => {
     this.setState({
-      showAboutUs: !
-      this.state.showAboutUs,
-    })
+      showAboutUs: !this.state.showAboutUs,
+    });
   };
+
+  getDetailedStats = () =>
+    this.setState({ showDetailedStats: !this.state.showDetailedStats });
 
   findFlights = () => this.setState({ showTicket: true });
   render() {
@@ -243,12 +243,64 @@ export default class App extends Component {
             showTravel={this.showTravel}
             showStatistics={this.showStatistics}
             showAttractions={this.showAttractions}
+            showHome={this.showHome}
           />
-          <Banner />
+          {/* <TravelBanner /> */}
+          {/* <Banner /> */}
+          {/* <StatisticsBanner />  */}
         </div>
+
+        {this.state.showHome && (
+          <div>
+            <Banner />
+            <div className="airport-search">
+              <div className="from-main">
+                <h2 className="from">From: </h2>
+
+                <Airport
+                  selectCity={this.getCityAutoComplete}
+                  originDestination="cityFrom"
+                  cities={this.state.airportsAndCities}
+                />
+              </div>
+              <div className="to-main">
+                <h2 className="to">To: </h2>
+                <Airport
+                  selectCity={this.getCityAutoComplete}
+                  originDestination="cityTo"
+                  cities={this.state.airportsAndCities}
+                />
+              </div>
+              <div className="calendar">
+                <DateRangePicker
+                  // className="DateRangePicker"
+                  startDatePlaceholderText="Depart"
+                  endDatePlaceholderText="Return"
+                  startDate={this.state.startDate} // momentPropTypes.momentObj or null,
+                  startDateId="your_unique_start_date_id" // PropTypes.string.isRequired,
+                  endDate={this.state.endDate} // momentPropTypes.momentObj or null,
+                  endDateId="your_unique_end_date_id" // PropTypes.string.isRequired,
+                  onDatesChange={({ startDate, endDate }) =>
+                    this.getDates(startDate, endDate)
+                  } // PropTypes.func.isRequired,
+                  focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
+                  onFocusChange={(focusedInput) =>
+                    this.setState({ focusedInput })
+                  } // PropTypes.func.isRequired,
+                />
+              </div>
+            </div>
+            <div className="main-find-flights">
+              <button className="find-flights" onClick={this.findFlights}>
+                Find Flights
+              </button>
+            </div>
+          </div>
+        )}
 
         {this.state.showTravel && (
           <div>
+            <TravelBanner />
             <div className="airport-search">
               <div className="from-main">
                 <h2 className="from">From: </h2>
@@ -313,6 +365,7 @@ export default class App extends Component {
 
             {this.state.showStatistics && (
               <div>
+                <StatisticsBanner />
                 <Statistics
                   countryCovidStats={this.state.countryCovidStats}
                   getChangeCases={this.getChangeCases}
@@ -324,14 +377,14 @@ export default class App extends Component {
         <div>
           <div>
             <div>
-            <AttractionsHomePage  showAttractions={this.showAttractions} />
+              <AttractionsHomePage showAttractions={this.showAttractions} />
             </div>
             {this.state.showAttractions && (
               <div>
+                <TravelBanner />
                 <AttractionsCard />
               </div>
             )}
-    
             <AttractionsHomePage />
 
             <CollabBanner />
@@ -342,9 +395,7 @@ export default class App extends Component {
                 <AboutUs />
               </div>
             )}
-            <Footer 
-            showAboutUs={this.showAboutUs}
-            />
+            <Footer showAboutUs={this.showAboutUs} />
           </div>
         </div>
       </div>

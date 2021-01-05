@@ -15,6 +15,10 @@ const Footer = (props) => {
 
         <h2>Contact</h2>
 
+    
+
+
+
         <address>
           5534 The Other Street
           <br />
