@@ -385,7 +385,7 @@ export default class App extends Component {
                 <AttractionsCard />
               </div>
             )}
-            <AttractionsHomePage />
+         
 
             <CollabBanner />
             <TravelPoster />
