@@ -3,6 +3,7 @@ import React from "react";
 import "./Country.json";
 import "./Statistics.css";
 import { nanoid } from "nanoid";
+// import StatisticsBanner from "../Banners/StatisticsBanner";
 
 class Statistics extends React.Component {
   constructor(props) {
@@ -47,6 +48,7 @@ class Statistics extends React.Component {
     const countries = require("./Country.json");
     return (
       <div className="container">
+        {/* <StatisticsBanner /> */}
         <h1>COVID Country Statistics</h1>
         <h3>Get the latest COVID updates before booking your trip!</h3>
 
