@@ -6,7 +6,7 @@ export default class ColabBanner extends Component {
         return (
             <div>
             <div>
-                        <h2>IN COLLABORATION WITH</h2>
+                        <h2 className='colab-heading'>IN COLLABORATION WITH</h2>
                     </div>
             <div className='colab-container'>
                     <div>
