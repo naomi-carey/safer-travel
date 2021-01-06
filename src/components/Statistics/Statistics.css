@@ -32,6 +32,7 @@ h3 {
   /* text-align: center; */
   text-align: center;
   border: black solid 1px;
+  border-radius: 20px;
   margin: 20px;
 }
 
