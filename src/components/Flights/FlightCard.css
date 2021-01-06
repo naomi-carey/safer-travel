@@ -1,6 +1,7 @@
 
 .flightcard-section{
-    margin-top: 100px;
+    width: 95%;
+    margin-top: 20px;
     margin-bottom: 100px;
     display: flex;
      flex-direction: row;
@@ -10,10 +11,11 @@
 .flight-cards{
     margin-left: 20px;
     overflow-y: auto;
-    max-height: 1420px;
-    width: 80%;
+    max-height: 1650px;
+    width: 100%;
     text-align: center;
     justify-content: center;
+
 }
 
 .flight-card-img {
@@ -22,25 +24,30 @@
 }
 
 .bupa-img {
-    width: 300px;
-    margin: 100px ;
+    width: 400px;
+    margin-top:10px;
+    margin-bottom: 70px;
 }
 .bookingcom-img {
-    width: 300px;
-    margin: 100px ;
+    width: 400px;
     margin-top:20px;
 }
 
 .flightcard-container {
     margin: 100px;
-    margin-bottom: 20px;
+    margin-top: 0;
+    margin-bottom: 70px;
     font-weight: bold;
+}
+
+.flight-card-plane {
+    width: 70px;
 }
 
 .flight-card {
     display: flex;
     flex-direction: row;
-    width: 500px;
+    width: 510px;
     border-radius: 10px;
     border: 1px black solid;
     height: 200px;
@@ -62,6 +69,7 @@
 .flight-card {
     display: flex;
     flex-direction: row;
+    margin-top: 0;
     
 
 }
@@ -273,5 +281,58 @@
     }
 
 
+
+}
+
+@media screen and (max-width: 400px){
+
+    .flightcard-section{
+        width: 100%;
+        margin-top: 30px;
+        margin-bottom: 100px;
+        display: flex;
+        margin-right: 20px;
+    }
+
+    .flight-card {
+        box-shadow: 0px 0px 0px 0px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        border-bottom: 0;
+        align-items: center;
+        height: 120px;
+        width: 300px;
+
+    }
+    
+    .flight-cards{
+        margin-left: 0px;
+        overflow-y: auto;
+        max-height: 1420px;
+        width: 350px;
+        text-align: center;
+        justify-content: center;
+    }
+
+     .price-card {
+        width: 300px;
+    }
+    
+    .flight-card-img {
+        display:none;
+    }
+
+    .airline {
+        display:none;
+    }
+
+    .flight-card-plane {
+        width: 40px;
+    }
+
+    .flightcard-container {
+        margin-left: 25px;
+    }
 
 }
