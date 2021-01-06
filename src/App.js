@@ -313,6 +313,7 @@ export default class App extends Component {
             )}
             <div>
               <AttractionsHomePage showAttractions={this.showAttractions} />
+            
             </div>
           </div>
         )}
@@ -357,12 +358,14 @@ export default class App extends Component {
                 />
               </div>
             </div>
-            <div className="main-find-flights">
+ 
+            
+              <div className="main-find-flights">
               <button className="find-flights" onClick={this.findFlights}>
                 Find Flights
               </button>
-            </div>
 
+            </div>
             {this.state.showTicket && (
               <FlightCard
                 cityFrom={this.state.cityFrom}
@@ -422,6 +425,8 @@ export default class App extends Component {
               <div>
                 <TravelBanner />
                 <AttractionsCard />
+            
+
                 <TravelPoster />
               </div>
             )}

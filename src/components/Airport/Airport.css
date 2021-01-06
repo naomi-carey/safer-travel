@@ -16,7 +16,7 @@ body {
 
 .airport-main {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 #searchBar {
@@ -27,7 +27,7 @@ body {
   margin-bottom: 20px;
   margin-right: 20px;
   border-radius: 20px;
-  color: grey;
+  color: rgb(135, 135, 135);
   display: flex;
   flex-direction: column;
 }
@@ -52,12 +52,16 @@ h2 {
 .dropdown-flights {
   border: grey 1px solid;
   border-radius: 10px;
-  margin-top: 3px;
+  margin-top: 70px;
   /* background-color: rgb(15, 60, 184); */
   background-color: #3b749e;
   box-shadow: 1px 1px 1px black;
   color: white;
   width: 270px;
+  position: absolute;
+  z-index: +1;
+  overflow: auto;
+  height: 200px;
 }
 
 option {
