@@ -1,5 +1,5 @@
 .sub-body-div {
-    background-color: rgb(54, 93, 251);
+    background-color: rgba(53, 82, 198, 0.962);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -54,7 +54,7 @@
     margin-left: 5px;
     border-radius: 5px;
     border: 0;
-    background-color: rgb(43, 157, 75);
+    background-color: rgb(76, 176, 104);
     color:white;
     font-weight: bold;
 }
@@ -75,7 +75,7 @@
         text-align: center;
         align-items: center;
         margin:0;
-        padding:0;
+        padding:20px;
     }
 }
 

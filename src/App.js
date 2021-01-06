@@ -252,7 +252,7 @@ export default class App extends Component {
             <div className="airport-search">
               <div className="from-main">
                 <h2 className="from">From: </h2>
-
+                
                 <Airport
                   selectCity={this.getCityAutoComplete}
                   originDestination="cityFrom"
@@ -313,7 +313,6 @@ export default class App extends Component {
             )}
             <div>
               <AttractionsHomePage showAttractions={this.showAttractions} />
-            
             </div>
           </div>
         )}

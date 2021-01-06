@@ -47,7 +47,7 @@ export default class FlightBooking extends Component {
                 </div>
                     <div className="seat-div">
                             <div classNames='seat-div-icon'>
-                            <img className='flight-type-icon' src='images/Background-.png' alt="seat" />
+                            <img className='flight-type-icon' src='images/seat.png' alt="seat" />
                             </div>
                             <div className='seat-div-info'>
                                 <p className='flight-type-1'>Researved Seat</p>
@@ -79,7 +79,7 @@ export default class FlightBooking extends Component {
                 </div>
                     <div className="seat-div">
                             <div classNames='seat-div-icon'>
-                            <img className='flight-type-icon' src='https://w7.pngwing.com/pngs/342/328/png-transparent-airplane-flight-computer-icons-airline-seat-aircraft-icon-blue-angle-text-thumbnail.png' alt="seat" />
+                            <img className='flight-type-icon' src='images/seat.png' alt="seat" />
                             </div>
                             <div className='seat-div-info'>
                                 <p className='flight-type-1'>Researved Seat</p>
@@ -89,11 +89,11 @@ export default class FlightBooking extends Component {
                     </div>
                     <div className="seat-div">
                             <div classNames='seat-div-icon'>
-                            <img className='flight-type-icon' src='images/Background-.png' alt="seat" />
+                            <img className='flight-type-icon' src='images/cocktail.png' alt="seat" />
                             </div>
                             <div className='seat-div-info'>
-                                <p className='flight-type-1'>Researved Seat</p>
-                                <p className='flight-type-2'>Specific rows available</p>
+                                <p className='flight-type-1'>Unlimited Alcohol</p>
+                                <p className='flight-type-2'>Even the good stuff </p>
                             </div>
                         
                     </div>
@@ -121,7 +121,7 @@ export default class FlightBooking extends Component {
                 </div>
                     <div className="seat-div">
                             <div classNames='seat-div-icon'>
-                            <img className='flight-type-icon' src='images/Background-.png' alt="seat" />
+                            <img className='flight-type-icon' src='images/seat.png' alt="seat" />
                             </div>
                             <div className='seat-div-info'>
                                 <p className='flight-type-1'>Researved Seat</p>
@@ -131,21 +131,21 @@ export default class FlightBooking extends Component {
                     </div>
                     <div className="seat-div">
                             <div classNames='seat-div-icon'>
-                            <img className='flight-type-icon' src='https://w7.pngwing.com/pngs/342/328/png-transparent-airplane-flight-computer-icons-airline-seat-aircraft-icon-blue-angle-text.png' alt="seat" />
+                            <img className='flight-type-icon' src='images/cocktail.png' alt="seat" />
                             </div>
                             <div className='seat-div-info'>
-                                <p className='flight-type-1'>Researved Seat</p>
-                                <p className='flight-type-2'>Specific rows available</p>
+                                <p className='flight-type-1'>Unlimited Alcohol</p>
+                                <p className='flight-type-2'>Even the good stuff </p>
                             </div>
                         
                     </div>
                     <div className="seat-div">
                             <div classNames='seat-div-icon'>
-                            <img className='flight-type-icon' src='https://w7.pngwing.com/pngs/342/328/png-transparent-airplane-flight-computer-icons-airline-seat-aircraft-icon-blue-angle-text.png' alt="seat" />
+                            <img className='flight-type-icon' src='images/businessclass.png' alt="seat" />
                             </div>
                             <div className='seat-div-info'>
-                                <p className='flight-type-1'>Researved Seat</p>
-                                <p className='flight-type-2'>Specific rows available</p>
+                                <p className='flight-type-1'>Business Class</p>
+                                <p className='flight-type-2'>Better than first class</p>
                             </div>
                         
                     </div>
