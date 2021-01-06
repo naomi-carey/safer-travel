@@ -9,7 +9,7 @@ import Ire from '../images/Ire.jpg'
 import Ger from '../images/Ger.jpg'
 import Aus from '../images/Aus.jpg'
 // import Airbus from '../images/airbus.png'
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const AboutUs = () => {
     return (
@@ -33,8 +33,8 @@ const AboutUs = () => {
                             <div className='card__header'>
                                 <img src={Naomi} alt='naomi' className='pp' />
                                 <h2>Naomi Carey <a href='https://github.com/naomi-carey'>
-                                    <FaGithub/>
-                                        </a> </h2>
+                                    <FaGithub/></a> <a href='https://www.linkedin.com/in/naomi-c-2028b4/'>
+                                    <FaLinkedin/></a></h2>
                             </div>
 
                             <div className='card__body'>
@@ -66,8 +66,8 @@ const AboutUs = () => {
                             <div className='card__header'>
                                 <img src={Dean} alt='dean' className='pp' />
                                 <h2>Dean Leonard <a href='https://github.com/Deanleonard26'>
-                                    <FaGithub/>
-                                        </a></h2>
+                                    <FaGithub/></a> <a href='https://www.linkedin.com/in/deanleonard1/'>
+                                    <FaLinkedin/></a></h2>
                             </div>
 
                             <div className='card__body'>
@@ -99,8 +99,8 @@ const AboutUs = () => {
                             <div className='card__header'>
                                 <img src={Nadine} alt='nadine' className='pp' />
                                 <h2>Nadine Storbel <a href='https://github.com/Nadine1111'>
-                                    <FaGithub/>
-                                        </a>  </h2>
+                                    <FaGithub/></a> <a href='https://www.linkedin.com/in/nadine-strobel-723a9561/'>
+                                    <FaLinkedin/></a></h2>
                             </div>
 
                             <div className='card__body'>
@@ -132,8 +132,8 @@ const AboutUs = () => {
                             <div className='card__header'>
                                 <img src={Viet} alt='viet' className='pp' />
                                 <h2>Viet Pham <a href='https://github.com/VietQuoc356'>
-                                    <FaGithub/>
-                                        </a></h2>
+                                    <FaGithub/></a> <a href='https://www.linkedin.com/in/viet-quoc-pham-2850581ba/'>
+                                    <FaLinkedin/></a></h2>
                                 
                             </div>
 
