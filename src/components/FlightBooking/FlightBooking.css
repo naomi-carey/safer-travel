@@ -1,209 +1,270 @@
 .FlightPage {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 50px;
 }
 
 .banner {
-    margin-top: 0;
-    padding-top:0;
-    width: 100%;
-    margin-bottom: 100px
+  margin-top: 0;
+  padding-top: 0;
+  width: 100%;
+  margin-bottom: 100px;
 }
 
 .flight-hr {
-    background-color: black;
-    height: 900px;
-    margin:0;
-    margin-left:120px;
-    margin-right:120px
+  background-color: black;
+  height: 900px;
+  margin: 0;
+  margin-left: 120px;
+  margin-right: 120px;
 }
 
 .flight-type-cards {
-    display:flex;
-    flex-direction:row ; 
-    justify-content: space-evenly;
-    margin-top: 50px;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  flex-wrap: wrap;
 }
 
-.flight-type-card{
-    border: 1px solid rgba(126, 126, 126, 0.61);
-    width: 270px;
-    height: 440px;
-    border-radius: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 70px;
-    box-shadow: 0 0 8px 6px rgba(111, 111, 111, 0.329);
-    
+.flight-type-card {
+  border: 1px solid rgba(126, 126, 126, 0.61);
+  width: 270px;
+  height: 440px;
+  border-radius: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 70px;
+  box-shadow: 0 0 8px 6px rgba(111, 111, 111, 0.329);
 }
 
-.flight-type-card-1{
-    border: 1px solid rgba(126, 126, 126, 0.61);
-    background-color: rgb(235, 235, 235);
-    width: 270px;
-    border-radius: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 70px;
-    box-shadow: 0 0 8px 6px rgba(111, 111, 111, 0.329);
-    
+.flight-type-card-1 {
+  border: 1px solid rgba(126, 126, 126, 0.61);
+  background-color: rgb(235, 235, 235);
+  width: 270px;
+  border-radius: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 70px;
+  box-shadow: 0 0 8px 6px rgba(111, 111, 111, 0.329);
 }
 
-
-
-.flight-type-banner, .flight-type-banner-1, .flight-type-banner-2, .flight-type-banner-3, .flight-type-banner-4{
-    background-color: rgb(34, 90, 174);
-    height: 10px;
-    width: 100%;
-    border-radius: 10px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    margin-bottom: 10px;
-
+.flight-type-banner,
+.flight-type-banner-1,
+.flight-type-banner-2,
+.flight-type-banner-3,
+.flight-type-banner-4 {
+  background-color: rgb(34, 90, 174);
+  height: 10px;
+  width: 100%;
+  border-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-bottom: 10px;
 }
 
 .flight-type-banner-1 {
-    background-color: grey;
-
+  background-color: grey;
 }
 
 .flight-type-banner-2 {
-    background-color: rgb(74, 128, 210);
-
+  background-color: rgb(74, 128, 210);
 }
 
-
 .flight-type-banner-3 {
-    background-color:green;
+  background-color: green;
 }
 
 .flight-type-banner-4 {
-    background-color: rgb(13, 62, 135);
-
+  background-color: rgb(13, 62, 135);
 }
 
-
 .flight-type {
-    margin: 0;
+  margin: 0;
 }
 
 .flight-type-1 {
-    margin: 0;
-    font-weight: bold;
-    text-align: left;
-    margin-left: 10px;
-   
-
+  margin: 0;
+  font-weight: bold;
+  text-align: left;
+  margin-left: 10px;
 }
 
 .flight-type-2 {
-    margin: 0;
-    font-weight: normal;
-    color: black;
-    font-size: 13px;
-    text-align: left;
-    margin-left: 10px;
+  margin: 0;
+  font-weight: normal;
+  color: black;
+  font-size: 13px;
+  text-align: left;
+  margin-left: 10px;
 }
 
-.bag-div, .seat-div {
-    display: flex;
-    flex-direction: row;
-    margin: 10px;
-    margin-top: 20px;
-
+.bag-div,
+.seat-div {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  margin-top: 20px;
 }
 
-.bag-div-info, .seat-div-info {
-    display: flex;
-    flex-direction: column;
+.bag-div-info,
+.seat-div-info {
+  display: flex;
+  flex-direction: column;
 }
 
 .flight-type-icon {
-    width: 40px;
-    
+  width: 40px;
 }
 
-
 .flight-type-button-2 {
-    width: 90%;
-    height: 50px;
-    border-radius: 5px;
-    background-color: rgb(74, 128, 210);
-    color: white;
-    border: 1px solid  rgb(74, 128, 210);
-    margin: 10px;
-    cursor: pointer;
-    margin-top: 150px;
-    
+  width: 90%;
+  height: 50px;
+  border-radius: 5px;
+  background-color: rgb(74, 128, 210);
+  color: white;
+  border: 1px solid rgb(74, 128, 210);
+  margin: 10px;
+  cursor: pointer;
+  margin-top: 150px;
 }
 
 .flight-type-button-3 {
-    width: 90%;
-    height: 50px;
-    border-radius: 5px;
-    background-color: green;
-    color: white;
-    border: 1px solid green;
-    margin: 10px;
-    cursor: pointer;
-    margin-top: 90px;
-    
+  width: 90%;
+  height: 50px;
+  border-radius: 5px;
+  background-color: green;
+  color: white;
+  border: 1px solid green;
+  margin: 10px;
+  cursor: pointer;
+  margin-top: 90px;
 }
 
 .flight-type-button-4 {
-    width: 90%;
-    height: 50px;
-    border-radius: 5px;
-    background-color: rgb(13, 62, 135);
-    color: white;
-    border: 1px solid rgb(13, 62, 135);
-    margin: 10px;
-    cursor: pointer;
-    margin-top: 30px;
-    
+  width: 90%;
+  height: 50px;
+  border-radius: 5px;
+  background-color: rgb(13, 62, 135);
+  color: white;
+  border: 1px solid rgb(13, 62, 135);
+  margin: 10px;
+  cursor: pointer;
+  margin-top: 30px;
 }
 
 .flight-type-button-1 {
-    width: 90%;
-    height: 50px;
-    border-radius: 5px;
-    color: rgb(0, 0, 0);
-    border: 1px solid black;
-    margin: 10px;
-    cursor: pointer;
-    margin-top: 210px;
-    
+  width: 90%;
+  height: 50px;
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+  border: 1px solid black;
+  margin: 10px;
+  cursor: pointer;
+  margin-top: 210px;
 }
 
-
-
 .attractions-btn {
-    width: 270px;
-    height: 35px;
-    background-color: rgb(247, 247, 247);
-    border: 1px solid rgb(186, 186, 186);
-    margin: 20px;
-    border-radius: 15px;
-    font-size: 15px;
-    margin-top: 40px;
-    margin-right: 65px;
+  width: 270px;
+  height: 35px;
+  background-color: rgb(247, 247, 247);
+  border: 1px solid rgb(186, 186, 186);
+  margin: 20px;
+  border-radius: 15px;
+  font-size: 15px;
+  margin-top: 40px;
+  margin-right: 65px;
 }
 
 .attractionsbtn-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: left;
-    margin-left: 30px;
-    
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: left;
+  margin-left: 30px;
 }
 
 .attractions-search-box {
+  height: 40px;
+  width: 500px;
+  border-radius: 15px;
+  border: 1px solid gray;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.flight-form-div {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.flight-form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 200px;
+}
+
+.input {
+  height: 35px;
+  width: 510px;
+  border-radius: 5px;
+  border: 1px solid rgb(177, 176, 176);
+  margin: 10px;
+  box-shadow: 0 0 8px 6px rgba(111, 111, 111, 0.091);
+}
+
+.flight-info-divs {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-left: 50px;
+}
+
+.covid-guidelines-img {
+  width: 500px;
+  border-radius: 10px;
+  margin-bottom: 50px;
+}
+
+.covid-guidelines {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.flight-info-button {
+  margin-left: 120px;
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(57, 57, 255);
+  background-color: rgb(57, 57, 255);
+  color: white;
+  margin: 10px;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 850px) {
+  .btn-container1 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .attractions-search-box {
     height: 40px;
-    width: 500px;
+    width: 300px;
     border-radius: 15px;
     border: 1px solid gray;
     margin-top: 50px;
@@ -211,90 +272,5 @@
     text-align: center;
     font-size: larger;
     font-weight: bold;
-
-}
-
-.flight-form-div {
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-}
-
-.flight-form {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    margin-bottom: 200px;
-
-}
-
-.input {
-    height: 35px;
-    width: 510px;
-    border-radius: 5px;
-    border: 1px solid rgb(177, 176, 176);
-    margin:10px;
-    box-shadow: 0 0 8px 6px rgba(111, 111, 111, 0.091);
-}
-
-.flight-info-divs {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    margin-left: 50px;
-}
-
-.covid-guidelines-img {
-    width: 500px;
-    border-radius: 10px;
-    margin-bottom: 50px;
-}
-
-.covid-guidelines {
-  
-   margin-top: 50px;
-   display: flex;
-   flex-direction: column;
-}
-
-
-.flight-info-button {
- 
-    margin-left: 120px;
-    width: 200px;
-    height: 40px;
-    border-radius: 5px;
-    color: rgb(0, 0, 0);
-    border: 1px solid  rgb(57, 57, 255);
-    background-color: rgb(57, 57, 255);
-    color: white;
-    margin: 10px;
-    cursor: pointer;
-    text-align: center;
-    margin-top: 40px;
-   
-
-}
-
-@media screen and (max-width: 850px){
-    .btn-container1{
-        display: flex;
-        text-align: center;
-        justify-content: center;
-        margin-bottom: 10px;
-    }
-
-    .attractions-search-box {
-        height: 40px;
-        width: 300px;
-        border-radius: 15px;
-        border: 1px solid gray;
-        margin-top: 50px;
-        margin-bottom: 20px;
-        text-align: center;
-        font-size: larger;
-        font-weight: bold;
-    
-    }
+  }
 }
