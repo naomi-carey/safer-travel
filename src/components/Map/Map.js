@@ -59,7 +59,8 @@ function Map(props) {
           );
         })}
       </GoogleMapReact>
-        <div className="color__box">
+    </div>
+    <div className="color__box">
           <p>Incremental Cases Per Population (Past 30 days)</p>
           <div className="color__rating">
             <input type="radio" name="rating" id="rate100"/>
@@ -84,7 +85,6 @@ function Map(props) {
             <label htmlFor="rate10">10%</label>
           </div>
         </div>
-    </div>
     </div>
   );
 }
