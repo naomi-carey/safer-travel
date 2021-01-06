@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Map from "./components/Map/Map";
 import Statistics from "./components/Statistics/Statistics";
+import { Link } from "react-router-dom";
 import Banner from "./components/Banner/Banner";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
@@ -287,9 +288,11 @@ export default class App extends Component {
               </div>
             </div>
             <div className="main-find-flights">
-              <button className="find-flights" onClick={this.findFlights}>
-                Find Flights
-              </button>
+              <Link to="/">
+                <button className="find-flights" onClick={this.findFlights}>
+                  Find Flights
+                </button>
+              </Link>
             </div>
 
             {this.state.showTicket && (
@@ -357,13 +360,13 @@ export default class App extends Component {
                 />
               </div>
             </div>
- 
-            
-              <div className="main-find-flights">
-              <button className="find-flights" onClick={this.findFlights}>
-                Find Flights
-              </button>
 
+            <div className="main-find-flights">
+              <Link to="/">
+                <button className="find-flights" onClick={this.findFlights}>
+                  Find Flights
+                </button>
+              </Link>
             </div>
             {this.state.showTicket && (
               <FlightCard
@@ -424,7 +427,6 @@ export default class App extends Component {
               <div>
                 <TravelBanner />
                 <AttractionsCard />
-            
 
                 <TravelPoster />
               </div>

@@ -28,8 +28,6 @@ h3 {
   display: flex;
   height: 70%;
   flex-direction: column;
-  /* align-items: left; */
-  /* text-align: center; */
   text-align: center;
   border: black solid 1px;
   border-radius: 20px;
@@ -68,7 +66,6 @@ form {
   display: flex;
   align-content: center;
   justify-content: flex-start;
-  /* background-color: green; */
   margin: 2%;
 }
 .stats-header {
