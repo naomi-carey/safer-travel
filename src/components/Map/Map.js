@@ -22,7 +22,7 @@ function Map(props) {
     <div className="GoogleMapReact">
       <GoogleMapReact
         bootstrapURLKeys={{ key: API_KEY }}
-        defaultCenter={{ lat: 46, lng: 2 }}
+        defaultCenter={{ lat: 28, lng: -15 }}
         options={{ styles: MapStyle.light, scrollwheel: false }}
         defaultZoom={0}
       >
