@@ -13,6 +13,10 @@ body {
   pointer-events: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -46,14 +50,12 @@ body {
 /* Flight and calendar search area comming from Airport and App.js components */
 .from {
   flex-wrap: wrap;
-  margin:0;
+  margin: 0;
 }
 
 .to {
- 
   flex-wrap: wrap;
 }
-
 
 .airport-search {
   display: flex;
@@ -110,24 +112,22 @@ body {
   display: flex;
   flex-direction: row;
   border-radius: 15px;
-  border: 1px solid ;
+  border: 1px solid;
   margin-bottom: 20px;
   margin-left: 20px;
 }
 /* End of Flight and calendar CSS */
 
 .calendar-btn-div {
-  display:flex;
+  display: flex;
   flex-direction: row;
 }
 
-@media screen and (max-width: 1040px) { 
-
+@media screen and (max-width: 1040px) {
   .find-flights {
     margin-left: 30px;
   }
 }
-
 
 @media screen and (max-width: 850px) {
   .airport-search {
@@ -154,7 +154,7 @@ body {
     justify-content: center;
     margin-top: 0;
   }
-  
+
   .to-main {
     display: flex;
     align-items: center;
@@ -165,7 +165,7 @@ body {
   }
 
   .calendar {
-    width:270px;
+    width: 270px;
     height: 110px;
     margin-left: 10px;
   }
