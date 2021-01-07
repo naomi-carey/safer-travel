@@ -430,7 +430,7 @@ export default class App extends Component {
             </div> */}
             {this.state.showAttractions && (
               <div>
-                <TravelBanner />
+               
                 <AttractionsCard />
                 <TravelPoster />
               </div>
