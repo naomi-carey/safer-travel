@@ -1,9 +1,7 @@
 import React from "react";
-// import { FaCreativeCommonsPd } from "react-icons/fa";
 import "./Country.json";
 import "./Statistics.css";
 import { nanoid } from "nanoid";
-// import StatisticsBanner from "../Banners/StatisticsBanner";
 
 class Statistics extends React.Component {
   constructor(props) {
@@ -48,7 +46,6 @@ class Statistics extends React.Component {
     const countries = require("./Country.json");
     return (
       <div className="container">
-        {/* <StatisticsBanner /> */}
         <h1>COVID Country Statistics</h1>
         <h3>Get the latest COVID updates before booking your trip!</h3>
 
@@ -67,7 +64,6 @@ class Statistics extends React.Component {
               >
                 {countries.worldwide.map((item) => (
                   <option key={item.id} value={item.country}>
-                    {/* World Wide */}
                     {item.flag} {item.country}
                   </option>
                 ))}
@@ -109,7 +105,7 @@ class Statistics extends React.Component {
                         this.state.changeCases.toString() === "NaN" ||
                         this.state.changeCases === Infinity
                           ? "indicator indicator-grey"
-                          : this.state.changeCases < 60
+                          : this.state.changeCases < 55
                           ? "arrow-green bounce-up-down"
                           : this.state.changeCases > 90
                           ? "arrow-red bounce-up-down"
