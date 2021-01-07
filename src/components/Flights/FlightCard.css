@@ -132,6 +132,10 @@
   padding: 10px;
 }
 
+a {
+  text-decoration: none;
+}
+
 @media screen and (max-width: 850px) {
   .flightcard-container {
     text-align: center;
