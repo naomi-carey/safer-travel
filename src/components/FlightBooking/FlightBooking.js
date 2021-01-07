@@ -69,7 +69,7 @@ export default class FlightBooking extends Component {
               </div>
             </div>
             <div>
-              <button className="flight-type-button-2">SELECT</button>
+              <button className="flight-type-button-2">SELECT (£10 Extra)</button>
             </div>
           </div>
           {/* +++++++++++   THIRD CARD    ++++++++++++++++                  */}
@@ -121,7 +121,7 @@ export default class FlightBooking extends Component {
               </div>
             </div>
             <div>
-              <button className="flight-type-button-3">SELECT</button>
+              <button className="flight-type-button-3">SELECT (£20 Extra)</button>
             </div>
           </div>
           {/* +++++++++++   FOURTH CARD    ++++++++++++++++                  */}
@@ -186,7 +186,7 @@ export default class FlightBooking extends Component {
               </div>
             </div>
             <div>
-              <button className="flight-type-button-4">SELECT</button>
+              <button className="flight-type-button-4">SELECT (£30 Extra)</button>
             </div>
           </div>
         </div>
