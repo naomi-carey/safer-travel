@@ -81,6 +81,7 @@ body {
 .main-find-flights {
   display: flex;
   justify-content: center;
+  text-decoration: none;
 }
 .find-flights {
   display: flex;
@@ -96,6 +97,7 @@ body {
   margin-bottom: 60px;
   margin-top: 30px;
   margin-left: 85px;
+  text-decoration: none;
 }
 .find-flights:hover {
   background-color: #39749d;
@@ -113,6 +115,8 @@ body {
   border: 1px solid ;
   margin-bottom: 20px;
   margin-left: 20px;
+  border: 2px solid rgba(20, 37, 91, 0.884);
+  text-decoration: none;
 }
 /* End of Flight and calendar CSS */
 

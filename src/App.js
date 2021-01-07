@@ -315,6 +315,7 @@ export default class App extends Component {
               </>
             )}
             <div>
+            
               <AttractionsHomePage showAttractions={this.showAttractions} />
             </div>
           </div>

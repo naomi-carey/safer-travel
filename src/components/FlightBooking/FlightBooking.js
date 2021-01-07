@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./FlightBooking.css";
-
 export default class FlightBooking extends Component {
   render() {
     return (
@@ -33,41 +32,8 @@ export default class FlightBooking extends Component {
                 Continue with Value Fare
               </button>
             </div>
-
-                <div className='flight-type-card'>
-                        <div className='flight-type-banner-2'></div>
-                        <h3 className='flight-type'>Regular</h3>
-                        <h4 className='flight-type'><em>Great for short trips</em></h4>
-                        <div className='bag-div'>
-                            <div className='bag-div-icon'>
-                            <img className='flight-type-icon' src ="https://cdn3.iconfinder.com/data/icons/travel-flat-icons/130/luggage-2-512.png" alt="baggage " />
-                            </div>
-                            <div className='bag-fiv-info'>
-                            <p className='flight-type-1'>Priority and 2 Cabin Bags</p>
-                        <p className='flight-type-2'>Board first, 10kg Cabin Bag and 1 small Bag</p>
-                            </div>
-                
-                </div>
-                    <div className="seat-div">
-                            <div classNames='seat-div-icon'>
-                            <img className='flight-type-icon' src='images/seat.png' alt="seat" />
-                            </div>
-                            <div className='seat-div-info'>
-                                <p className='flight-type-1'>Researved Seat</p>
-                                <p className='flight-type-2'>Specific rows available</p>
-                            </div>
-                        
-                    </div>
-                    <div>
-                                <button className='flight-type-button-2'>SELECT</button>
-                            </div>
-                
-                </div>
-
             {/* +++++++++++   SECOND CARD    ++++++++++++++++                  */}
           </div>
-
-
           <div className="flight-type-card">
             <div className="flight-type-banner-2"></div>
             <h3 className="flight-type">Regular</h3>
@@ -106,47 +72,7 @@ export default class FlightBooking extends Component {
               <button className="flight-type-button-2">SELECT</button>
             </div>
           </div>
-
-                <div className='flight-type-card'>
-                        <div className='flight-type-banner-3'></div>
-                        <h3 className='flight-type'>Plus</h3>
-                        <h4 className='flight-type'><em>Includes 20kg Check-in bag</em></h4>
-                        <div className='bag-div'>
-                            <div className='bag-div-icon'>
-                            <img className='flight-type-icon' src ="https://cdn3.iconfinder.com/data/icons/travel-flat-icons/130/luggage-2-512.png" alt="baggage " />
-                            </div>
-                            <div className='bag-fiv-info'>
-                            <p className='flight-type-1'>Priority and 2 Cabin Bags</p>
-                        <p className='flight-type-2'>Board first, 20kg Cabin Bag and 1 small Bag</p>
-                            </div>
-                
-                </div>
-                    <div className="seat-div">
-                            <div classNames='seat-div-icon'>
-                            <img className='flight-type-icon' src='images/seat.png' alt="seat" />
-                            </div>
-                            <div className='seat-div-info'>
-                                <p className='flight-type-1'>Researved Seat</p>
-                                <p className='flight-type-2'>Specific rows available</p>
-                            </div>
-                        
-                    </div>
-                    <div className="seat-div">
-                            <div classNames='seat-div-icon'>
-                            <img className='flight-type-icon' src='images/cocktail.png' alt="seat" />
-                            </div>
-                            <div className='seat-div-info'>
-                                <p className='flight-type-1'>Unlimited Alcohol</p>
-                                <p className='flight-type-2'>Even the good stuff </p>
-                            </div>
-                        
-                    </div>
-                    <div>
-                                <button className='flight-type-button-3'>SELECT</button>
-                            </div>
-                
-                </div>
-
+          {/* +++++++++++   THIRD CARD    ++++++++++++++++                  */}
           <div className="flight-type-card">
             <div className="flight-type-banner-3"></div>
             <h3 className="flight-type">Plus</h3>
@@ -198,57 +124,7 @@ export default class FlightBooking extends Component {
               <button className="flight-type-button-3">SELECT</button>
             </div>
           </div>
-
-                <div className='flight-type-card'>
-                        <div className='flight-type-banner-4'></div>
-                        <h3 className='flight-type'>Flexi Plus</h3>
-                        <h4 className='flight-type'><em>If you need flexibility</em></h4>
-                        <div className='bag-div'>
-                            <div className='bag-div-icon'>
-                            <img className='flight-type-icon' src ="https://cdn3.iconfinder.com/data/icons/travel-flat-icons/130/luggage-2-512.png" alt="baggage " />
-                            </div>
-                            <div className='bag-fiv-info'>
-                            <p className='flight-type-1'>Priority and 2 Cabin Bags</p>
-                        <p className='flight-type-2'>Board first, 10kg Cabin Bag and 1 small Bag</p>
-                            </div>
-                
-                </div>
-                    <div className="seat-div">
-                            <div classNames='seat-div-icon'>
-                            <img className='flight-type-icon' src='images/seat.png' alt="seat" />
-                            </div>
-                            <div className='seat-div-info'>
-                                <p className='flight-type-1'>Researved Seat</p>
-                                <p className='flight-type-2'>Specific rows available</p>
-                            </div>
-                        
-                    </div>
-                    <div className="seat-div">
-                            <div classNames='seat-div-icon'>
-                            <img className='flight-type-icon' src='images/cocktail.png' alt="seat" />
-                            </div>
-                            <div className='seat-div-info'>
-                                <p className='flight-type-1'>Unlimited Alcohol</p>
-                                <p className='flight-type-2'>Even the good stuff </p>
-                            </div>
-                        
-                    </div>
-                    <div className="seat-div">
-                            <div classNames='seat-div-icon'>
-                            <img className='flight-type-icon' src='images/businessclass.png' alt="seat" />
-                            </div>
-                            <div className='seat-div-info'>
-                                <p className='flight-type-1'>Business Class</p>
-                                <p className='flight-type-2'>Better than first class</p>
-                            </div>
-                        
-                    </div>
-                    <div>
-                                <button className='flight-type-button-4'>SELECT</button>
-                            </div>
-                            </div>
-                </div>
-
+          {/* +++++++++++   FOURTH CARD    ++++++++++++++++                  */}
           <div className="flight-type-card">
             <div className="flight-type-banner-4"></div>
             <h3 className="flight-type">Flexi Plus</h3>
@@ -314,9 +190,7 @@ export default class FlightBooking extends Component {
             </div>
           </div>
         </div>
-
         {/* ++++++++++++++++++++ FLIGHT FORM ++++++++++++++++++++ */}
-
         <div className="flight-form-div">
           <form className="flight-form">
             <div className="flight-info-divs">
@@ -326,9 +200,7 @@ export default class FlightBooking extends Component {
                 className="input"
                 placeholder="Middle Name (If it appears on your passport"
               />
-
               <input className="input" placeholder="Last Name" />
-
               <input className="input" placeholder="Gender" />
             </div>
             <div className="flight-info-divs">
@@ -343,7 +215,6 @@ export default class FlightBooking extends Component {
               <h3>Travel Information</h3>
               <input className="input" placeholder="Passport Number" />
               <input className="input" placeholder="Frequent Flyer Miles" />
-
               <div>
                 <button className="flight-info-button">SUBMIT</button>
               </div>

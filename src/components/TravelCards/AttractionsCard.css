@@ -7,6 +7,10 @@
     text-align: center;
 }
 
+.att-banner {
+    width: 100%;
+}
+
 .attractions-card {
     border: 1px solid rgba(126, 126, 126, 0.61);
     width: 270px;
