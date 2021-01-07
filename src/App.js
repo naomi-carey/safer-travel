@@ -368,6 +368,7 @@ export default class App extends Component {
                 </button>
               </Link>
             </div>
+
             {this.state.showTicket && (
               <FlightCard
                 cityFrom={this.state.cityFrom}
@@ -376,6 +377,9 @@ export default class App extends Component {
                 startDate={this.state.finalStartDate}
               />
             )}
+
+            <AttractionsHomePage />
+            <TravelPoster />
 
             {this.state.countryCovidStats.length > 0 && (
               <>
@@ -427,7 +431,6 @@ export default class App extends Component {
               <div>
                 <TravelBanner />
                 <AttractionsCard />
-
                 <TravelPoster />
               </div>
             )}
