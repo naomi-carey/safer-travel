@@ -22,10 +22,6 @@ import AboutUs from "./components/AboutUs/AboutUs";
 import TravelPoster from "./components/TravelPoster/TravelPoster";
 import TravelBanner from "./components/Banners/TravelBanner";
 import StatisticsBanner from "./components/Banners/StatisticsBanner";
-
-// import Loading from "./components/LoadingScreen/Loading";
-// import FlightBooking from './components/FlightBooking/FlightBooking';
-
 import Loading from "./components/LoadingScreen/Loading";
 
 import FlightBooking from "./components/FlightBooking/FlightBooking";
@@ -378,7 +374,9 @@ export default class App extends Component {
               />
             )}
 
-            <AttractionsHomePage />
+            <div>
+              <AttractionsHomePage showAttractions={this.showAttractions} />
+            </div>
             <TravelPoster />
 
             {this.state.countryCovidStats.length > 0 && (
@@ -393,24 +391,9 @@ export default class App extends Component {
             )}
           </div>
         )}
-        {/* 
-        {this.state.showTicket && (
-          <FlightCard
-            cityFrom={this.state.cityFrom}
-            cityTo={this.state.cityTo}
-            endDate={this.state.finalEndDate}
-            startDate={this.state.finalStartDate}
-          />
-        )} */}
+
         {this.state.countryCovidStats.length > 0 && (
           <>
-            {/* {this.state.showMap && (
-              <Map
-                countryCovidStats={this.state.countryCovidStats}
-                changedCases={this.state.stabilityStat}
-              />
-            )} */}
-
             {this.state.showStatistics && (
               <div>
                 <StatisticsBanner />
@@ -424,9 +407,6 @@ export default class App extends Component {
         )}
         <div>
           <div>
-            {/* <div>
-              <AttractionsHomePage showAttractions={this.showAttractions} />
-            </div> */}
             {this.state.showAttractions && (
               <div>
                 <TravelBanner />
@@ -434,10 +414,9 @@ export default class App extends Component {
                 <TravelPoster />
               </div>
             )}
-            {/* <AttractionsHomePage /> */}
 
             <CollabBanner />
-            {/* <TravelPoster /> */}
+
             <Subscription />
             {this.state.showAboutUs && (
               <div>
