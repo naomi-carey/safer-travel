@@ -34,7 +34,6 @@ export default class FlightBooking extends Component {
               </button>
             </div>
 
-<<<<<<< HEAD
                 <div className='flight-type-card'>
                         <div className='flight-type-banner-2'></div>
                         <h3 className='flight-type'>Regular</h3>
@@ -64,10 +63,10 @@ export default class FlightBooking extends Component {
                             </div>
                 
                 </div>
-=======
+
             {/* +++++++++++   SECOND CARD    ++++++++++++++++                  */}
           </div>
->>>>>>> 1c9dffe5ba3bfc9238754a75f7c6f0f7f37e2645
+
 
           <div className="flight-type-card">
             <div className="flight-type-banner-2"></div>
@@ -108,7 +107,6 @@ export default class FlightBooking extends Component {
             </div>
           </div>
 
-<<<<<<< HEAD
                 <div className='flight-type-card'>
                         <div className='flight-type-banner-3'></div>
                         <h3 className='flight-type'>Plus</h3>
@@ -148,9 +146,6 @@ export default class FlightBooking extends Component {
                             </div>
                 
                 </div>
-=======
-          {/* +++++++++++   THIRD CARD    ++++++++++++++++                  */}
->>>>>>> 1c9dffe5ba3bfc9238754a75f7c6f0f7f37e2645
 
           <div className="flight-type-card">
             <div className="flight-type-banner-3"></div>
@@ -204,7 +199,6 @@ export default class FlightBooking extends Component {
             </div>
           </div>
 
-<<<<<<< HEAD
                 <div className='flight-type-card'>
                         <div className='flight-type-banner-4'></div>
                         <h3 className='flight-type'>Flexi Plus</h3>
@@ -254,9 +248,6 @@ export default class FlightBooking extends Component {
                             </div>
                             </div>
                 </div>
-=======
-          {/* +++++++++++   FOURTH CARD    ++++++++++++++++                  */}
->>>>>>> 1c9dffe5ba3bfc9238754a75f7c6f0f7f37e2645
 
           <div className="flight-type-card">
             <div className="flight-type-banner-4"></div>
