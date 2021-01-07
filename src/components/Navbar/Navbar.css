@@ -56,7 +56,10 @@
     width: 150px;
     margin-left: 70px;
     margin-top: 15px;
+
+
 }
+
 
 @media screen and (max-width: 850px){
     body {
@@ -64,10 +67,58 @@
     }
 
     .hamburger-toggle {
+        display: block;
+       margin-top:35px;
+       margin-right: 70px;
+    }
+    .NavbarLinks {
+        position: absolute;
+        text-align: center;
+        right: 0px;
+        display: flex;
+        flex-direction: column;
+        height:97vh ;
+        align-items: center;
+        width: 100%;
+        margin-left: -40px;
+        z-index: +1;
+        top:5vh;
+        background-color: rgb(27, 90, 157);
+        transition: transform 0.3s ease-in;
+        transform: translateY(-120%);
+        font-size: 30px;
+        color: white;
+    }
+
+    .link a {
+        color: white;
+    }
+
+
+    .active {
+        transform: translateX(0%);
+    }
+
+    .NavbarLogo {
+        height: 40px;
+        width: 120px;
+        margin-left: 40px;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 550px){
+    body {
+        overflow-x: hidden;
+    }
+
+
+    .hamburger-toggle {
          display: block;
        margin-top:35px;
        margin-right: 40px;
     }
+
     .NavbarLinks {
         position: absolute;
         right: 0px;
@@ -104,12 +155,12 @@
 
 .Banner {
     width: 100%;
-    height: 100vh;
+    height: 70%;
 }
 
 .Banner2 {
     width: 100%;
-    height: 100vh;
+    height: 80%;
 }
 
 @media screen and (max-width: 751px){
@@ -124,5 +175,7 @@
     .Banner {
        display: none;
 
+
     }
 }
+

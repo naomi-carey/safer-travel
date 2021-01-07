@@ -60,6 +60,7 @@ class AttractionsCard extends React.Component {
 
     return (
       <div>
+        <img className='att-banner' src='images/ab.jpg' alt='banner' />
         <input
           className="attractions-search-box"
           type="text"

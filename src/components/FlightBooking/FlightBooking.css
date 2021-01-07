@@ -1,8 +1,9 @@
 .FlightPage {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    width: 100%;
 }
 
 .banner {
@@ -13,19 +14,57 @@
 }
 
 .flight-hr {
-  background-color: black;
-  height: 900px;
-  margin: 0;
-  margin-left: 120px;
-  margin-right: 120px;
+    background-color: black;
+    height: 800px;
+    margin:0;
+    margin-left:60px;
+    margin-right:100px;
+    margin-top:50px;
 }
 
 .flight-type-cards {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  margin-top: 50px;
-  flex-wrap: wrap;
+    display:flex;
+    flex-direction:row ; 
+    justify-content: center;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.flight-type-card{
+    border: 1px solid rgba(126, 126, 126, 0.61);
+    width: 270px;
+    height: 440px;
+    border-radius: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 70px;
+    box-shadow: 0 0 8px 6px rgba(111, 111, 111, 0.329);
+    
+}
+
+.flight-type-card-1{
+    border: 1px solid rgba(126, 126, 126, 0.61);
+    background-color: rgb(235, 235, 235);
+    width: 270px;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 70px;
+    box-shadow: 0 0 8px 6px rgba(111, 111, 111, 0.329);
+    
+}
+
+
+
+.flight-type-banner, .flight-type-banner-1, .flight-type-banner-2, .flight-type-banner-3, .flight-type-banner-4{
+    background-color: rgb(34, 90, 174);
+    height: 10px;
+    width: 100%;
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-bottom: 10px;
+
 }
 
 .flight-type-card {
@@ -115,7 +154,8 @@
 }
 
 .flight-type-icon {
-  width: 40px;
+    width: 30px;
+    
 }
 
 .flight-type-button-2 {
@@ -198,17 +238,21 @@
 }
 
 .flight-form-div {
-  text-align: center;
-  display: flex;
-  flex-direction: row;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .flight-form {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-  margin-bottom: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 200px;
+    margin-left: 0;
+
 }
 
 .input {
@@ -221,10 +265,10 @@
 }
 
 .flight-info-divs {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 0;
 }
 
 .covid-guidelines-img {
@@ -234,9 +278,11 @@
 }
 
 .covid-guidelines {
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
+  
+   margin-top: 50px;
+   margin-right: 40px;
+   display: flex;
+   flex-direction: column;
 }
 
 .flight-info-button {

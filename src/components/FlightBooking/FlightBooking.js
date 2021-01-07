@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./FlightBooking.css";
-
 export default class FlightBooking extends Component {
   render() {
     return (
@@ -33,10 +32,8 @@ export default class FlightBooking extends Component {
                 Continue with Value Fare
               </button>
             </div>
-
             {/* +++++++++++   SECOND CARD    ++++++++++++++++                  */}
           </div>
-
           <div className="flight-type-card">
             <div className="flight-type-banner-2"></div>
             <h3 className="flight-type">Regular</h3>
@@ -75,9 +72,7 @@ export default class FlightBooking extends Component {
               <button className="flight-type-button-2">SELECT</button>
             </div>
           </div>
-
           {/* +++++++++++   THIRD CARD    ++++++++++++++++                  */}
-
           <div className="flight-type-card">
             <div className="flight-type-banner-3"></div>
             <h3 className="flight-type">Plus</h3>
@@ -129,9 +124,7 @@ export default class FlightBooking extends Component {
               <button className="flight-type-button-3">SELECT</button>
             </div>
           </div>
-
           {/* +++++++++++   FOURTH CARD    ++++++++++++++++                  */}
-
           <div className="flight-type-card">
             <div className="flight-type-banner-4"></div>
             <h3 className="flight-type">Flexi Plus</h3>
@@ -197,9 +190,7 @@ export default class FlightBooking extends Component {
             </div>
           </div>
         </div>
-
         {/* ++++++++++++++++++++ FLIGHT FORM ++++++++++++++++++++ */}
-
         <div className="flight-form-div">
           <form className="flight-form">
             <div className="flight-info-divs">
@@ -209,9 +200,7 @@ export default class FlightBooking extends Component {
                 className="input"
                 placeholder="Middle Name (If it appears on your passport"
               />
-
               <input className="input" placeholder="Last Name" />
-
               <input className="input" placeholder="Gender" />
             </div>
             <div className="flight-info-divs">
@@ -226,7 +215,6 @@ export default class FlightBooking extends Component {
               <h3>Travel Information</h3>
               <input className="input" placeholder="Passport Number" />
               <input className="input" placeholder="Frequent Flyer Miles" />
-
               <div>
                 <button className="flight-info-button">SUBMIT</button>
               </div>
