@@ -116,7 +116,7 @@ export default class FlightBooking extends Component {
                 />
               </div>
               <div className="seat-div-info">
-                <p className="flight-type-1">Umlimite Alcohol</p>
+                <p className="flight-type-1">Unlimited Alcohol</p>
                 <p className="flight-type-2">Even the good stuff!!</p>
               </div>
             </div>
@@ -168,7 +168,7 @@ export default class FlightBooking extends Component {
                 />
               </div>
               <div className="seat-div-info">
-              <p className="flight-type-1">Umlimite Alcohol</p>
+              <p className="flight-type-1">Unlimited Alcohol</p>
                 <p className="flight-type-2">Even the good stuff!!</p>
               </div>
             </div>
