@@ -30,4 +30,4 @@ Created in 2020 by the above team members.  Working to restore confidence in tra
 
 
   <p align="center">
-  <a href="safe-travels.netlify.app">Check out the DEMO here</a>
+  <a href="https://safe-travels.netlify.app/">Check out the DEMO here</a>
