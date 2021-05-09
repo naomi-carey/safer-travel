@@ -50,7 +50,7 @@ class FlightCard extends React.Component {
                       const hour1_min = date2.toLocaleTimeString().slice(0, 5);
 
                       return (
-                        <div>
+                        <div key={index}>
                           <div key={index} className="flightcard-container">
                             <div className="flight-card">
                               <div className="flight-card">

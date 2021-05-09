@@ -56,7 +56,7 @@ export default class FlightBooking extends Component {
               </div>
             </div>
             <div className="seat-div">
-              <div classNames="seat-div-icon">
+              <div className="seat-div-icon">
                 <img
                   className="flight-type-icon"
                   src="images/seat.png"
@@ -95,7 +95,7 @@ export default class FlightBooking extends Component {
               </div>
             </div>
             <div className="seat-div">
-              <div classNames="seat-div-icon">
+              <div className="seat-div-icon">
                 <img
                   className="flight-type-icon"
                   src="images/seat.png"
@@ -108,7 +108,7 @@ export default class FlightBooking extends Component {
               </div>
             </div>
             <div className="seat-div">
-              <div classNames="seat-div-icon">
+              <div className="seat-div-icon">
                 <img
                   className="flight-type-icon"
                   src="images/cocktail.png"
@@ -147,7 +147,7 @@ export default class FlightBooking extends Component {
               </div>
             </div>
             <div className="seat-div">
-              <div classNames="seat-div-icon">
+              <div className="seat-div-icon">
                 <img
                   className="flight-type-icon"
                   src="images/seat.png"
@@ -160,7 +160,7 @@ export default class FlightBooking extends Component {
               </div>
             </div>
             <div className="seat-div">
-              <div classNames="seat-div-icon">
+              <div className="seat-div-icon">
                 <img
                   className="flight-type-icon"
                   src="images/cocktail.png"
@@ -173,7 +173,7 @@ export default class FlightBooking extends Component {
               </div>
             </div>
             <div className="seat-div">
-              <div classNames="seat-div-icon">
+              <div className="seat-div-icon">
                 <img
                   className="flight-type-icon"
                   src="images/businessclass.png"

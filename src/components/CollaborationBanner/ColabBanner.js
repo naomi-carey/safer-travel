@@ -13,12 +13,12 @@ export default class ColabBanner extends Component {
             <img
               className="colab-img1"
               src="/images/colab1.svg"
-              alt="MTI sponsor image"
+              alt="MTI sponsor"
             />
             <img
               className="colab-img2"
               src="/images/colab2.png"
-              alt="Public Service Division sponsor image"
+              alt="Public Service Division sponsor"
             />
             <img
               className="colab-img3"
