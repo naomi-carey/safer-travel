@@ -15755,18 +15755,7 @@ export const airports = [
     links_count: 12,
     objectID: "1829",
   },
-  //  {
-  //  "name": "London",
-  //  "city": "London",
-  //  "country": "Canada",
-  //  "iata_code": "YXU",
-  //  "_geoloc": {
-  //  "lat": 43.033056,
-  //  "lng": -81.151111
-  //  },
-  //  "links_count": 12,
-  //  "objectID": "174"
-  //  },
+  
   {
     name: "Gibraltar",
     city: "Gibraltar",
