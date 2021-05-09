@@ -23,42 +23,42 @@ export default class ColabBanner extends Component {
             <img
               className="colab-img3"
               src="/images/colab3.svg.png"
-              alt="Ministry of Health sponsor image"
+              alt="Ministry of Health sponsor"
             />
             <img
               className="colab-img4"
               src="/images/colab4.jpg"
-              alt="Ministry of foreign affairs sponsor image"
+              alt="Ministry of foreign affairs sponsor"
             />
             <img
               className="colab-img5"
               src="/images/colab6.png"
-              alt="CAAS sponsor image"
+              alt="CAAS sponsor"
             />
             <img
               className="colab-img6"
               src="/images/colab7.png"
-              alt="Ministry of Manpower sponsor image"
+              alt="Ministry of Manpower sponsor"
             />
             <img
               className="colab-img7"
               src="/images/logo-govtech.gif"
-              alt="Govtech sponsor image"
+              alt="Govtech sponsor"
             />
             <img
               className="colab-img8"
               src="/images/logo-htx.png"
-              alt="HTX sponsor image"
+              alt="HTX sponsor"
             />
             <img
               className="colab-img9"
               src="/images/logo-mot.jpg"
-              alt="Ministry of Transport sponsor image"
+              alt="Ministry of Transport sponsor"
             />
             <img
               className="colab-img10"
               src="/images/logo-sndgo.png"
-              alt="Smart Nation sponsor image"
+              alt="Smart Nation sponsor"
             />
           </div>
         </div>

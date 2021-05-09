@@ -225,12 +225,12 @@ export default class FlightBooking extends Component {
             <img
               className="covid-guidelines-img"
               src="/images/covid-guidelines.jpg"
-              alt="Travel Safe image"
+              alt="Travel Safe"
             />
             <img
               className="covid-guidelines-img"
               src="/images/hotels.jpg"
-              alt="Booking image"
+              alt="Booking"
             />
           </div>
         </div>
