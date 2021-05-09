@@ -10,25 +10,26 @@ const Footer = (props) => {
   return (
     <footer className="footer">
       <div className="footer__addr">
-        <div className='About-us-section'>
-        <h2 className="about__us" onClick={props.showAboutUs}>About Us</h2>
+        <div className="About-us-section">
+          <h2 className="about__us" onClick={props.showAboutUs}>
+            About Us
+          </h2>
 
-        <h2>Contact</h2>
+          <h2>Contact</h2>
 
-    
-
-
-
-        <address>
-          5534 The Other Street
-          <br />
-          West Upper Road, London
-          <br />
-          <button className="footer__btn" href="mailto:example@safer-travel.com">
-            Email Us
-          </button>
-        </address>
-      </div>
+          <address>
+            5534 The Other Street
+            <br />
+            West Upper Road, London
+            <br />
+            <button
+              className="footer__btn"
+              href="mailto:example@safer-travel.com"
+            >
+              Email Us
+            </button>
+          </address>
+        </div>
       </div>
       <ul className="footer__nav">
         <li className="nav__item">
@@ -62,23 +63,31 @@ const Footer = (props) => {
         </li>
 
         <li className="nav__item nav__item--extra">
-          <h2 className='hide-explore' className="nav__title">Explore</h2>
+          <h2 className="hide-explore">Explore</h2>
 
           <ul className="nav__ul nav__ul--extra">
             <li>
-              <a className='hide-explore' href="/#">Attractions</a>
+              <a className="hide-explore" href="/#">
+                Attractions
+              </a>
             </li>
 
             <li>
-              <a className='hide-explore' href="/#">Flights</a>
+              <a className="hide-explore" href="/#">
+                Flights
+              </a>
             </li>
 
             <li>
-              <a className='hide-explore' href="/#">Statistics</a>
+              <a className="hide-explore" href="/#">
+                Statistics
+              </a>
             </li>
 
             <li>
-              <a className='hide-explore' href="/#">Map</a>
+              <a className="hide-explore" href="/#">
+                Map
+              </a>
             </li>
           </ul>
         </li>
@@ -108,9 +117,7 @@ const Footer = (props) => {
           reserved.
         </p>
 
-        <div className="legal__links">
-        
-        </div>
+        <div className="legal__links"></div>
       </div>
     </footer>
   );

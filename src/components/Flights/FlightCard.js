@@ -119,12 +119,12 @@ class FlightCard extends React.Component {
                 <img
                   className="bupa-img"
                   src="/images/Travel-safe.jpg"
-                  alt="Travel Safe image"
+                  alt="Safe Travel image"
                 />
                 <img
                   className="bookingcom-img"
                   src="/images/booking.jpg"
-                  alt="Booking image"
+                  alt="Booking Hotels image"
                 />
               </div>
             </div>
