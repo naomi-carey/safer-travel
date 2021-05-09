@@ -16,14 +16,11 @@ import { airports } from "./components/Airport/AirportMap";
 import moment from "moment";
 import Subscription from "./components/Subscription/Subscription";
 import AttractionsHomePage from "./components/AttractionsHomePage/AttractionsHomePage";
-
 import AboutUs from "./components/AboutUs/AboutUs";
-
 import TravelPoster from "./components/TravelPoster/TravelPoster";
 import TravelBanner from "./components/Banners/TravelBanner";
 import StatisticsBanner from "./components/Banners/StatisticsBanner";
 import Loading from "./components/LoadingScreen/Loading";
-
 import FlightBooking from "./components/FlightBooking/FlightBooking";
 import CollabBanner from "./components/CollaborationBanner/ColabBanner";
 
@@ -47,10 +44,10 @@ export default class App extends Component {
     showMap: true,
     showAboutUs: false,
   };
-
   componentDidMount() {
     fetch(
-      "https://api.skypicker.com/flights?flyFrom=PRG&to=STN&dateFrom=18/12/2020&dateTo=28/12/2020&partner=picky&v=3"
+      "https://api.skypicker.com/flights?flyFrom=PRG&to=LGW&dateFrom=18/11/2021&dateTo=12/12/2021&partner=webdevstudentsafertraveltest&v=3"
+      // "https://api.skypicker.com/flights?flyFrom=PRG&to=STN&dateFrom=18/12/2020&dateTo=28/12/2020&partner=picky&v=3"
     )
       .then((response) => response.json())
       .then((data) =>
@@ -58,6 +55,7 @@ export default class App extends Component {
           flightData: data,
         })
       );
+
     let incrementArray = [];
     let myHistoricalData = [];
     let firstdata = [];
@@ -249,7 +247,7 @@ export default class App extends Component {
             <div className="airport-search">
               <div className="from-main">
                 <h2 className="from">From: </h2>
-                
+
                 <Airport
                   selectCity={this.getCityAutoComplete}
                   originDestination="cityFrom"
@@ -311,7 +309,6 @@ export default class App extends Component {
               </>
             )}
             <div>
-            
               <AttractionsHomePage showAttractions={this.showAttractions} />
             </div>
           </div>
@@ -410,7 +407,6 @@ export default class App extends Component {
           <div>
             {this.state.showAttractions && (
               <div>
-               
                 <AttractionsCard />
                 <TravelPoster />
               </div>

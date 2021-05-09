@@ -28,7 +28,7 @@ class FlightCard extends React.Component {
   getTravelInfo = () =>
     axios
       .get(
-        `https://api.skypicker.com/flights?flyFrom=${this.props.cityFrom["iata_code"]}&to=${this.props.cityTo["iata_code"]}&dateFrom=${this.props.startDate}&dateTo=${this.props.endDate}&partner=picky&v=3`
+        `https://api.skypicker.com/flights?flyFrom=${this.props.cityFrom["iata_code"]}&to=${this.props.cityTo["iata_code"]}&dateFrom=${this.props.startDate}&dateTo=${this.props.endDate}&partner=webdevstudentsafertraveltest&v=3`
       )
       .then((response) => {
         // console.log(response);
