@@ -16,7 +16,7 @@ function Banner() {
         <img
           className="Banner2"
           src="images/main-banner.jpeg"
-          atl="Plane in sky with clouds"
+          alt="Plane in sky with clouds"
         />
       </div>
     </div>

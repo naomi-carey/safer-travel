@@ -20,8 +20,8 @@ import AboutUs from "./components/AboutUs/AboutUs";
 import TravelPoster from "./components/TravelPoster/TravelPoster";
 import TravelBanner from "./components/Banners/TravelBanner";
 import StatisticsBanner from "./components/Banners/StatisticsBanner";
-import Loading from "./components/LoadingScreen/Loading";
-import FlightBooking from "./components/FlightBooking/FlightBooking";
+// import Loading from "./components/LoadingScreen/Loading";
+// import FlightBooking from "./components/FlightBooking/FlightBooking";
 import CollabBanner from "./components/CollaborationBanner/ColabBanner";
 
 export default class App extends Component {

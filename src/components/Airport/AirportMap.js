@@ -239,18 +239,7 @@ export const airports = [
     links_count: 710,
     objectID: "2188",
   },
-  //  {
-  //  "name": "Gatwick",
-  //  "city": "London",
-  //  "country": "United Kingdom",
-  //  "iata_code": "LGW",
-  //  "_geoloc": {
-  //  "lat": 51.148056,
-  //  "lng": -0.190278
-  //  },
-  //  "links_count": 708,
-  //  "objectID": "502"
-  //  },
+
   {
     name: "Baiyun Intl",
     city: "Guangzhou",
@@ -1043,18 +1032,7 @@ export const airports = [
     links_count: 348,
     objectID: "3375",
   },
-  //  {
-  //  "name": "Stansted",
-  //  "city": "London",
-  //  "country": "United Kingdom",
-  //  "iata_code": "STN",
-  //  "_geoloc": {
-  //  "lat": 51.885,
-  //  "lng": 0.235
-  //  },
-  //  "links_count": 343,
-  //  "objectID": "548"
-  //  },
+
   {
     name: "Lukou",
     city: "Nanjing",
@@ -1811,18 +1789,7 @@ export const airports = [
     links_count: 215,
     objectID: "4120",
   },
-  //  {
-  //  "name": "Luton",
-  //  "city": "London",
-  //  "country": "United Kingdom",
-  //  "iata_code": "LTN",
-  //  "_geoloc": {
-  //  "lat": 51.874722,
-  //  "lng": -0.368333
-  //  },
-  //  "links_count": 214,
-  //  "objectID": "492"
-  //  },
+
   {
     name: "Liangjiang",
     city: "Guilin",
@@ -3047,18 +3014,7 @@ export const airports = [
     links_count: 129,
     objectID: "2264",
   },
-  //  {
-  //  "name": "City",
-  //  "city": "London",
-  //  "country": "United Kingdom",
-  //  "iata_code": "LCY",
-  //  "_geoloc": {
-  //  "lat": 51.505278,
-  //  "lng": 0.055278
-  //  },
-  //  "links_count": 128,
-  //  "objectID": "503"
-  //  },
+
   {
     name: "Mashhad",
     city: "Mashhad",
@@ -10487,18 +10443,7 @@ export const airports = [
     links_count: 22,
     objectID: "2856",
   },
-  //   {
-  //     name: "General Jose Antonio Anzoategui Intl",
-  //     city: "Barcelona",
-  //     country: "Venezuela",
-  //     iata_code: "BLA",
-  //     _geoloc: {
-  //       lat: 10.107139,
-  //       lng: -64.689161,
-  //     },
-  //     links_count: 22,
-  //     objectID: "2821",
-  //   },
+
   {
     name: "Teniente Alejandro Velasco Astete Intl",
     city: "Cuzco",
@@ -15755,18 +15700,7 @@ export const airports = [
     links_count: 12,
     objectID: "1829",
   },
-  //  {
-  //  "name": "London",
-  //  "city": "London",
-  //  "country": "Canada",
-  //  "iata_code": "YXU",
-  //  "_geoloc": {
-  //  "lat": 43.033056,
-  //  "lng": -81.151111
-  //  },
-  //  "links_count": 12,
-  //  "objectID": "174"
-  //  },
+
   {
     name: "Gibraltar",
     city: "Gibraltar",

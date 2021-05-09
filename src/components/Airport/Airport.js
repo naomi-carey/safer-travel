@@ -1,13 +1,11 @@
 import React, { Component } from "react";
 import "./Airport.css";
-// import { airports } from "./Airports.js";
 
 export default class Airport extends Component {
   state = {
     filteredSuggestions: [],
     showSuggestions: false,
     userInput: "",
-    // cities: airports.map((city) => city.city),
   };
 
   inputChange = (event) => {
@@ -51,7 +49,6 @@ export default class Airport extends Component {
             <div className="dropdown-flights">
               {this.state.filteredSuggestions.map((suggestion, index) => (
                 <option
-                  // classname="options"
                   key={index}
                   onClick={(event) => this.suggestionClicked(event, suggestion)}
                 >

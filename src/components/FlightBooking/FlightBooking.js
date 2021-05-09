@@ -168,7 +168,7 @@ export default class FlightBooking extends Component {
                 />
               </div>
               <div className="seat-div-info">
-              <p className="flight-type-1">Umlimite Alcohol</p>
+                <p className="flight-type-1">Umlimite Alcohol</p>
                 <p className="flight-type-2">Even the good stuff!!</p>
               </div>
             </div>
@@ -225,8 +225,13 @@ export default class FlightBooking extends Component {
             <img
               className="covid-guidelines-img"
               src="/images/covid-guidelines.jpg"
+              alt="Travel Safe image"
             />
-            <img className="covid-guidelines-img" src="/images/hotels.jpg" />
+            <img
+              className="covid-guidelines-img"
+              src="/images/hotels.jpg"
+              alt="Booking image"
+            />
           </div>
         </div>
       </div>
