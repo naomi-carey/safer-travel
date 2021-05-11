@@ -15,7 +15,6 @@ h1 {
   color: grey;
 }
 h2 {
-  /* text-align: left; */
   padding: 10px;
   color: grey;
 }
@@ -93,17 +92,6 @@ tr {
   border: solid rgb(202, 196, 196) 2px;
 }
 
-/* #btn {
-  background-color: #5387a1;
-  color: white;
-  padding: 10px;
-  font-size: 16px;
-  margin: 4px 2px;
-  border-radius: 12px;
-  cursor: pointer;
-  width: 10%;
-} */
-
 .country-select2 {
   border-radius: 12px;
   font-size: 18px;
@@ -111,16 +99,10 @@ tr {
   padding: 10px;
   margin: 3px;
   width: 70%;
-  /* opacity: 75%; */
   height: 50px;
   color: white;
   font-weight: 900;
 }
-/* .btn:hover {
-  border-radius: 50px;
-  background: #fcad26;
-  color: #fff;
-} */
 
 .incrementContainer {
   width: 60%;
@@ -201,30 +183,6 @@ tr {
     transform: translateY(-15px);
   }
 }
-
-/* .bounce-right {
-  -moz-animation: bounce 2s infinite;
-  -webkit-animation: bounce 2s infinite;
-  animation: bounce 2s infinite;
-}
-@keyframes bounce2 {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-  40% {
-    -webkit-transform: translateX(-30px);
-    transform: translateX(-30px);
-  }
-  60% {
-    -webkit-transform: translateX(-15px);
-    transform: translateX(-15px);
-  }
-} */
 
 .indicator {
   width: 15px;

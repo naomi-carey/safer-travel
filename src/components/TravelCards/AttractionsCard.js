@@ -14,21 +14,6 @@ class AttractionsCard extends React.Component {
     })),
   };
 
-  // renderCountry = country => {
-  //     const {search} = this.state;
-  //     let code  = country.code.toLowerCase()
-
-  //     if (search !== "" && country.name.toLowerCase().indexOf(search.toLowerCase()) === -1 ){
-  //         return null
-  //     }
-  // }
-
-  // showModal = (itemIndex) => {
-  //   this.setState({
-  //     showAbout: true,
-  //   });
-  // };
-
   toggleShowModal = (index) => {
     let newResults = [...this.state.attractionslist];
     newResults[index].showAbout = !this.state.attractionslist[index].showAbout;
@@ -60,7 +45,7 @@ class AttractionsCard extends React.Component {
 
     return (
       <div>
-        <img className='att-banner' src='images/ab.jpg' alt='banner' />
+        <img className="att-banner" src="images/ab.jpg" alt="banner" />
         <input
           className="attractions-search-box"
           type="text"
@@ -71,9 +56,7 @@ class AttractionsCard extends React.Component {
         <div className="attractions-container">
           {filteredCountries.map((attractions, index) => {
             return (
-              <div 
-              key={index}
-              className="attractions-card">
+              <div key={index} className="attractions-card">
                 <div className="card">
                   <img
                     className="card-image"

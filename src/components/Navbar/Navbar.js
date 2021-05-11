@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./Navbar.css";
 
 const Navbar = (props) => {
-  // console.log(props);
   const [navLinkOpen, navLinkToggle] = useState(false);
 
   const handleNavLinksToggle = () => {
@@ -21,31 +20,29 @@ const Navbar = (props) => {
   return (
     <nav className="Navbar">
       <div>
-        <img
-          className="NavbarLogo"
-          src="images/logo.png"
-          alt="NavbarLogo"
-        />
-
-        {/* <img
-          className="NavbarLogo"
-          src="https://safetravel.id/img/ico.jpg"
-          alt="S with plane logo"
-        /> */}
+        <img className="NavbarLogo" src="images/logo.png" alt="NavbarLogo" />
       </div>
       <div className="navbar-collapse-menu">
         <ul className={renderClasses()}>
           <li className="link">
-            <a onClick={props.showHome}>Home</a>
+            <a href="/#" onClick={props.showHome}>
+              Home
+            </a>
           </li>
           <li className="link">
-            <a onClick={props.showStatistics}>Statistics</a>
+            <a href="/#" onClick={props.showStatistics}>
+              Statistics
+            </a>
           </li>
           <li className="link">
-            <a onClick={props.showTravel}>Travel</a>
+            <a href="/#" onClick={props.showTravel}>
+              Travel
+            </a>
           </li>
           <li className="link">
-            <a onClick={props.showAttractions}>Attractions</a>
+            <a href="/#" onClick={props.showAttractions}>
+              Attractions
+            </a>
           </li>
         </ul>
       </div>

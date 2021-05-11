@@ -1,181 +1,166 @@
-.Navbar{
-    height: 80px;
-    width: 100%;
-    text-align: left;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    cursor: pointer;
+.Navbar {
+  height: 80px;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
 }
 
 .NavbarLinks {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    width: 50%;
-    justify-content: space-around;
-    list-style: none;
-    text-decoration: none;
-    align-items: center;
-    margin-top: 30px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  justify-content: space-around;
+  list-style: none;
+  text-decoration: none;
+  align-items: center;
+  margin-top: 30px;
 }
 
 .hamburger-toggle {
-    color: rgb(44, 89, 237);
-    display: none;
-    cursor: pointer;
+  color: rgb(44, 89, 237);
+  display: none;
+  cursor: pointer;
 }
 
 .hamburger-toggle:hover {
-    cursor: pointer;
-    color: rgb(149, 183, 255);
-    
+  cursor: pointer;
+  color: rgb(149, 183, 255);
 }
 
 .link a {
-    font-size: 20px;
-    font-weight: bold;
-    margin-right: 25px;
-    text-decoration: none;
-    color: rgb(0, 97, 162);
-  
-    
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 25px;
+  text-decoration: none;
+  color: rgb(0, 97, 162);
 }
 
 .link a:hover {
-    font-size: 20px;
-    margin-right: 25px;
-    text-decoration: none;
-    color: rgb(230, 206, 113);
-    font-weight: bold;
-    
+  font-size: 20px;
+  margin-right: 25px;
+  text-decoration: none;
+  color: rgb(230, 206, 113);
+  font-weight: bold;
 }
 
 .NavbarLogo {
-    height: 50px;
-    width: 150px;
-    margin-left: 70px;
-    margin-top: 15px;
-
-
+  height: 50px;
+  width: 150px;
+  margin-left: 70px;
+  margin-top: 15px;
 }
 
+@media screen and (max-width: 850px) {
+  body {
+    overflow-x: hidden;
+  }
 
-@media screen and (max-width: 850px){
-    body {
-        overflow-x: hidden;
-    }
+  .hamburger-toggle {
+    display: block;
+    margin-top: 35px;
+    margin-right: 70px;
+  }
+  .NavbarLinks {
+    position: absolute;
+    text-align: center;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    height: 97vh;
+    align-items: center;
+    width: 100%;
+    margin-left: -40px;
+    z-index: +1;
+    top: 5vh;
+    background-color: rgb(27, 90, 157);
+    transition: transform 0.3s ease-in;
+    transform: translateY(-120%);
+    font-size: 30px;
+    color: white;
+  }
 
-    .hamburger-toggle {
-        display: block;
-       margin-top:35px;
-       margin-right: 70px;
-    }
-    .NavbarLinks {
-        position: absolute;
-        text-align: center;
-        right: 0px;
-        display: flex;
-        flex-direction: column;
-        height:97vh ;
-        align-items: center;
-        width: 100%;
-        margin-left: -40px;
-        z-index: +1;
-        top:5vh;
-        background-color: rgb(27, 90, 157);
-        transition: transform 0.3s ease-in;
-        transform: translateY(-120%);
-        font-size: 30px;
-        color: white;
-    }
+  .link a {
+    color: white;
+  }
 
-    .link a {
-        color: white;
-    }
+  .active {
+    transform: translateX(0%);
+  }
 
-
-    .active {
-        transform: translateX(0%);
-    }
-
-    .NavbarLogo {
-        height: 40px;
-        width: 120px;
-        margin-left: 40px;
-        margin-top: 20px;
-    }
+  .NavbarLogo {
+    height: 40px;
+    width: 120px;
+    margin-left: 40px;
+    margin-top: 20px;
+  }
 }
 
-@media screen and (max-width: 550px){
-    body {
-        overflow-x: hidden;
-    }
+@media screen and (max-width: 550px) {
+  body {
+    overflow-x: hidden;
+  }
 
+  .hamburger-toggle {
+    display: block;
+    margin-top: 35px;
+    margin-right: 40px;
+  }
 
-    .hamburger-toggle {
-         display: block;
-       margin-top:35px;
-       margin-right: 40px;
-    }
+  .NavbarLinks {
+    position: absolute;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    height: 92vh;
+    align-items: center;
+    width: 100%;
+    z-index: +1;
+    top: 6vh;
+    background-color: rgb(33, 107, 186);
+    transition: transform 0.3s ease-in;
+    transform: translateY(-120%);
+    font-size: 30px;
+    color: white;
+  }
 
-    .NavbarLinks {
-        position: absolute;
-        right: 0px;
-        display: flex;
-        flex-direction: column;
-        height:92vh ;
-        align-items: center;
-        width: 100%;
-        z-index: +1;
-        top:6vh;
-        background-color: rgb(33, 107, 186);
-        transition: transform 0.3s ease-in;
-        transform: translateY(-120%);
-        font-size: 30px;
-        color: white;
-    }
+  .link a {
+    color: white;
+  }
 
-    .link a {
-        color: white;
-    }
+  .active {
+    transform: translateX(0%);
+  }
 
-
-    .active {
-        transform: translateX(0%);
-    }
-
-    .NavbarLogo {
-        height: 40px;
-        width: 120px;
-        margin-left: 40px;
-        margin-top: 20px;
-    }
+  .NavbarLogo {
+    height: 40px;
+    width: 120px;
+    margin-left: 40px;
+    margin-top: 20px;
+  }
 }
 
 .Banner {
-    width: 100%;
-    height: 70%;
+  width: 100%;
+  height: 70%;
 }
 
 .Banner2 {
-    width: 100%;
-    height: 80%;
+  width: 100%;
+  height: 80%;
 }
 
-@media screen and (max-width: 751px){
-    .Banner2 {
-        display: none;
- 
-     }
+@media screen and (max-width: 751px) {
+  .Banner2 {
+    display: none;
+  }
 }
 
-@media screen and (min-width: 750px){
-
-    .Banner {
-       display: none;
-
-
-    }
+@media screen and (min-width: 750px) {
+  .Banner {
+    display: none;
+  }
 }
-

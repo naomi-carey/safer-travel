@@ -56,7 +56,7 @@ export default class FlightBooking extends Component {
               </div>
             </div>
             <div className="seat-div">
-              <div classNames="seat-div-icon">
+              <div className="seat-div-icon">
                 <img
                   className="flight-type-icon"
                   src="images/seat.png"
@@ -69,7 +69,9 @@ export default class FlightBooking extends Component {
               </div>
             </div>
             <div>
-              <button className="flight-type-button-2">SELECT (£10 Extra)</button>
+              <button className="flight-type-button-2">
+                SELECT (£10 Extra)
+              </button>
             </div>
           </div>
           {/* +++++++++++   THIRD CARD    ++++++++++++++++                  */}
@@ -95,7 +97,7 @@ export default class FlightBooking extends Component {
               </div>
             </div>
             <div className="seat-div">
-              <div classNames="seat-div-icon">
+              <div className="seat-div-icon">
                 <img
                   className="flight-type-icon"
                   src="images/seat.png"
@@ -108,7 +110,7 @@ export default class FlightBooking extends Component {
               </div>
             </div>
             <div className="seat-div">
-              <div classNames="seat-div-icon">
+              <div className="seat-div-icon">
                 <img
                   className="flight-type-icon"
                   src="images/cocktail.png"
@@ -121,7 +123,9 @@ export default class FlightBooking extends Component {
               </div>
             </div>
             <div>
-              <button className="flight-type-button-3">SELECT (£20 Extra)</button>
+              <button className="flight-type-button-3">
+                SELECT (£20 Extra)
+              </button>
             </div>
           </div>
           {/* +++++++++++   FOURTH CARD    ++++++++++++++++                  */}
@@ -147,7 +151,7 @@ export default class FlightBooking extends Component {
               </div>
             </div>
             <div className="seat-div">
-              <div classNames="seat-div-icon">
+              <div className="seat-div-icon">
                 <img
                   className="flight-type-icon"
                   src="images/seat.png"
@@ -160,7 +164,7 @@ export default class FlightBooking extends Component {
               </div>
             </div>
             <div className="seat-div">
-              <div classNames="seat-div-icon">
+              <div className="seat-div-icon">
                 <img
                   className="flight-type-icon"
                   src="images/cocktail.png"
@@ -168,12 +172,12 @@ export default class FlightBooking extends Component {
                 />
               </div>
               <div className="seat-div-info">
-              <p className="flight-type-1">Unlimited Alcohol</p>
+                <p className="flight-type-1">Unlimited Alcohol</p>
                 <p className="flight-type-2">Even the good stuff!!</p>
               </div>
             </div>
             <div className="seat-div">
-              <div classNames="seat-div-icon">
+              <div className="seat-div-icon">
                 <img
                   className="flight-type-icon"
                   src="images/businessclass.png"
@@ -186,7 +190,9 @@ export default class FlightBooking extends Component {
               </div>
             </div>
             <div>
-              <button className="flight-type-button-4">SELECT (£30 Extra)</button>
+              <button className="flight-type-button-4">
+                SELECT (£30 Extra)
+              </button>
             </div>
           </div>
         </div>
@@ -225,8 +231,13 @@ export default class FlightBooking extends Component {
             <img
               className="covid-guidelines-img"
               src="/images/covid-guidelines.jpg"
+              alt="Travel Safe"
             />
-            <img className="covid-guidelines-img" src="/images/hotels.jpg" />
+            <img
+              className="covid-guidelines-img"
+              src="/images/hotels.jpg"
+              alt="Booking Hotels"
+            />
           </div>
         </div>
       </div>

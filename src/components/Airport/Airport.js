@@ -1,13 +1,11 @@
 import React, { Component } from "react";
 import "./Airport.css";
-// import { airports } from "./Airports.js";
 
 export default class Airport extends Component {
   state = {
     filteredSuggestions: [],
     showSuggestions: false,
     userInput: "",
-    // cities: airports.map((city) => city.city),
   };
 
   inputChange = (event) => {
