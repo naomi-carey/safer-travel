@@ -25,7 +25,7 @@ const Navbar = (props) => {
   };
 
   return (
-    <nav onClick={handleNavLinksToggle} className="Navbar">
+    <nav className="Navbar">
       <div>
         <img
           className="NavbarLogo"
@@ -35,7 +35,7 @@ const Navbar = (props) => {
           onClick={props.showHome}
         />
       </div>
-      <div className="navbar-collapse-menu">
+      <div onClick={handleNavLinksToggle} className="navbar-collapse-menu">
         <ul className={renderClasses()}>
           <li className="link">
             <a href="/#" onClick={props.showHome}>
