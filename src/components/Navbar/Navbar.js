@@ -2,16 +2,23 @@ import React, { useState } from "react";
 import "./Navbar.css";
 
 const Navbar = (props) => {
-  const [navLinkOpen, navLinkToggle] = useState(false);
+  // const [navLinkOpen, navLinkToggle] = useState(false);
+
+  // const handleNavLinksToggle = () => {
+  //   navLinkToggle(!navLinkOpen);
+  // };
+
+  const [isNavLinkOpen, setIsNavLinkOpen] = useState(false);
 
   const handleNavLinksToggle = () => {
-    navLinkToggle(!navLinkOpen);
+    let closed = !isNavLinkOpen;
+    setIsNavLinkOpen(closed);
   };
 
   const renderClasses = () => {
     let classes = "NavbarLinks active";
 
-    if (!navLinkOpen) {
+    if (!isNavLinkOpen) {
       classes = "NavbarLinks";
     }
     return classes;
@@ -20,9 +27,15 @@ const Navbar = (props) => {
   return (
     <nav className="Navbar">
       <div>
-        <img className="NavbarLogo" src="images/logo.png" alt="NavbarLogo" />
+        <img
+          className="NavbarLogo"
+          src="images/logo.png"
+          alt="NavbarLogo"
+          to="/"
+          onClick={props.showHome}
+        />
       </div>
-      <div className="navbar-collapse-menu">
+      <div onClick={handleNavLinksToggle} className="navbar-collapse-menu">
         <ul className={renderClasses()}>
           <li className="link">
             <a href="/#" onClick={props.showHome}>
